@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+.w1000 .top{width: 710px;height: 115px;background: url(../images/reg1.png) no-repeat;margin: 40px auto}
+.w1000 .top ul li{float: left;width: 90px;margin-right: 220px;height: 95px;padding-top: 20px;text-align: center;}
+.w1000 .top ul li em{line-height:60px;font-size: 30px;display: block;width: 60px;height: 60px;color: #fff;margin: 0 auto;font-style: normal;}
+.w1000 .top ul li strong{font-size: 14px;line-height: 50px;}
+.w1000 .top ul .step_1 em{background: #2da7e0;border-radius: 30px;}
+.w1000 .top ul .step_1 strong{color: #2da7e0}
+.w1000 .top ul .step_2 em{background: #aecfed;border-radius: 30px;}
+.w1000 .top ul .step_2 strong{color: #7d7d7d}
+.w1000 .form_ol{width:530px; margin: 50px auto;}
+.w1000 .form_ol li {position: relative;height: 48px;padding: 0 0 25px 100px;}
+.w1000 .form_ol li i{font-style: normal;margin-left: 7px;}
+.w1000 .form_ol li strong{height: 45px;line-height: 45px;width:85px;padding-right: 10px;text-align: right;font-size: 14px;font-weight: bold;position: absolute;left: 0;top: 0;font-weight: normal;color: #000}
+.w1000 .form_ol li input{vertical-align: middle;}
+.w1000 .form_ol li .input{height: 42px;width: 240px;padding-left: 50px;border:1px #ccc solid; border-radius: 3px;vertical-align: middle;}
+.w1000 .form_ol li .input_text{display: inline-block;width: 130px;height: 42px;line-height: 42px;border:1px #ccc solid; border-radius: 3px;vertical-align: middle;padding-left: 5px;}
+.w1000 .form_ol li .form_a{background: url(../images/shuaxin.png) no-repeat;width: 64px;height: 25px;display: inline-block;margin-left: 5px;vertical-align: middle;}
+.w1000 .form_ol li .input1{background: url(../images/input1.png) no-repeat left bottom;}
+.w1000 .form_ol li .input2{background: url(../images/input2.png) no-repeat left bottom;}
+.w1000 .form_ol li .input3{background: url(../images/input3.png) no-repeat left bottom;}
+.w1000 .form_ol li .input4{background: url(../images/input4.png) no-repeat left bottom;}
+.w1000 .form_ol li .exactitude{width: 20px;height: 20px;display: inline-block;margin-left: 15px;background: url(../images/exactitude.png) no-repeat right bottom}
+.w1000 .form_ol li .tips{display: block;}
+.w1000 .form_ol li .error{width: 20px;height: 20px;display: inline-block;margin-left: 15px;background: url(../images/error.png) no-repeat right bottom}
+.w1000 .form_ol li .wrong{display: block;padding-left:180px;}
+.w1000 .form_ol li .wrong i{font-size: 12px;width:30px;border-radius:3px;display: inline-block;text-align: center;color: #fff;}
+.w1000 .form_ol li .wrong .wrong_q{background: #2da7e0}
+.w1000 .form_ol li .wrong .wrong_w{background: #aecfed}
+.w1000 .form_ol li .input_span a{color: #2da7e0;}
+.getPwd_btn{border:none;color: #fff;width: 120px;height: 40px;line-height: 40px;text-align:center;font-size: 16px;border-radius: 5px;display: inline-block;cursor:pointer;}
+.getPwd_btn i{cursor:pointer;}
+span.time{font-size:12px;position: absolute;bottom: 32px;}
+.w1000 .form_ol li .input_a{background: #2da7e0;color: #fff;width: 150px;height: 40px;line-height: 40px;text-align:center;font-size: 16px;border-radius: 5px;display: inline-block;margin-right: 20px;border:none;}
+
+.w1000 .form_ol li .input_p{line-height: 45px;font-weight: bold;font-size: 14px;color: #3e3a39;}
+.w1000 .form_ol li .input_p span{color: #c2030c;margin-right: 30px;}
+
+.reg-main-container .reg_h3{width: 800px;margin: 0 auto;padding-top: 10px;text-align: center;font-size: 36px;color: #2da7e0;}
+.reg-main-container .reg_p{width: 800px;margin: 0 auto;text-align: center;margin-top: 60px;margin-bottom: 60px;}

@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<!-- 防止Struts2 的 FilterDispatcher 和 自定义过滤器引发冲突 <constant name="struts.action.extension" 
+		value="action"></constant> -->
+	<constant name="objectFactory" value="spring"></constant>
+	<constant name="struts.i18n.encoding" value="utf-8" />
+
+	<!-- Lcractmerge -->
+	<package name="LcractmergeAction" extends="struts-default"
+		namespace="/lcractmerge">
+		<action name="confirmLcr" class="LcractmergeAction" method="confirmLcr">
+			<!-- <result name="success" type="redirect">/financeact/financeActln.action</result> -->
+		</action>
+		<action name="affirmLcr" class="LcractmergeAction" method="affirmLcr">
+
+		</action>
+	</package>
+
+
+
+	<!-- SMS -->
+	<package name="SmstemplateAction" extends="struts-default"
+		namespace="/sms">
+		<action name="findAllCid" class="SmstemplateAction" method="findAllCid">
+		</action>
+		<action name="findByCid" class="SmstemplateAction" method="findByCid">
+		</action>
+		<action name="findBySmsid" class="SmstemplateAction" method="findBySmsid">
+		</action>
+		<action name="sendSMS" class="SmstemplateAction" method="sendSMS">
+		</action>
+
+
+
+		<action name="findAll" class="SmstemplateAction" method="findAll">
+			<result name="success">/root/template.jsp</result>
+		</action>
+		<action name="findoneById" class="SmstemplateAction" method="findoneById">
+			<result name="success">/root/showOneSms.jsp</result>
+		</action>
+		<action name="addSms" class="SmstemplateAction" method="addSms">
+			<result name="success" type="redirect">/sms/findAll.action</result>
+		</action>
+		<action name="deleteSms" class="SmstemplateAction" method="deleteSms">
+			<result name="success" type="redirect">/sms/findAll.action</result>
+		</action>
+		<action name="findById" class="SmstemplateAction" method="findById">
+			<result name="success">/root/updateSms.jsp</result>
+		</action>
+		<action name="modifySms" class="SmstemplateAction" method="modifySms">
+			<result name="success" type="redirect">/sms/findAll.action</result>
+		</action>
+
+
+
+	</package>
+	<!-- 上传 -->
+	<package name="mypackage" extends="struts-default" namespace="/">
+		<action name="upload" class="BidinfoAction">
+			<result name="success">/background_issuing/addBidinfo.jsp</result>
+		</action>
+	</package>
+	<!-- Text <package name="Text" extends="struts-default" namespace="/text"> 
+		<action name="find" class="TextAction" method="findAll"> <result name="findAll">/findall.jsp</result> 
+		</action> <action name="findById" class="TextAction" method="findById"> <result 
+		name="showone">/one.jsp</result> </action> <action name="delete" class="BookinfoAction" 
+		method="delete"> <result name="delete" type="redirect">/Bookinfo/find.action</result> 
+		</action> </package> -->
+	<!-- ajax <package name="Ajax" extends="struts-default" namespace="/ajax"> 
+		<action name="testAjax" class="TestajaxAction" method="testAjax"> </action> 
+		</package> -->
+	<!--随机验证码 -->
+	<package name="Rand" extends="struts-default">
+		<action name="rand" class="RandomAction">
+
+			<result type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="testLogin" class="RandomAction" method="testLogin"></action>
+	</package>
+
+	<!-- pay -->
+	<package name="Pay" extends="struts-default" namespace="/pay">
+		<action name="fengfuPay" class="FengfupayAction" method="fengfuPay">
+			<result name="jump">/pay/jumpFlag.jsp</result>
+		</action>
+		<action name="fengPayRecharge" class="FengfupayAction" method="fengPayRecharge">
+		</action>
+
+	</package>
+
+	<!-- about -->
+	<package name="About" extends="struts-default" namespace="/about">
+		<action name="about" class="AboutAction" method="jump">
+			<result name="group">/about/group.jsp</result>
+			<result name="com">/about/com.jsp</result>
+			<result name="contact">/about/contact.jsp</result>
+			<result name="news">/about/news.jsp</result>
+			<result name="success">/about/group.jsp</result>
+
+			<result name="bossWord">/about/bossWord.jsp</result>
+			<result name="cooperate">/about/cooperate.jsp</result>
+			<result name="recruit">/about/recruit.jsp</result>
+		</action>
+	</package>
+
+	<!-- homepage -->
+	<package name="HomePage" extends="struts-default" namespace="/home">
+		<action name="homepage" class="BidinfoAction" method="homePage">
+			<result name="homepage">/index.jsp</result>
+		</action>
+		<action name="home" class="BidinfoAction" method="home">
+			<result name="borrowed">/home/borrowed.jsp</result>
+			<result name="lenders">/home/lenders.jsp</result>
+			<result name="New">/home/New_guidelines.jsp</result>
+
+			<result name="insurance">/home/insurance.jsp</result>
+			<result name="introduce">/home/introduce.jsp</result>
+			<result name="agency">/home/agency.jsp</result>
+			<result name="questions">/home/questions.jsp</result>
+		</action>
+	</package>
+
+
+	<!-- bidinfo -->
+	<package name="Bidinfo" extends="struts-default" namespace="/bidinfo">
+		<interceptors>
+			<interceptor name="rootLoginInterceptor" class="filter.RootInterceptors"></interceptor>
+		</interceptors>
+		<action name="upload" class="BidinfoAction">
+			<result name="success">/background_issuing/addBidinfo.jsp</result>
+		</action>
+		<action name="findById" class="BidinfoAction" method="findById">
+			<result name="showone">/bidinfo/showOne.jsp</result>
+		</action>
+		<action name="buyBid" class="BidinfoAction" method="buyBid">
+			<result name="success">/bidinfo/buySuccess.jsp</result>
+			<result name="login">/user/login.jsp</result>
+		</action>
+		<action name="bidSuccessJump" class="BidinfoAction" method="bidSuccessJump">
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="findAll" class="BidinfoAction" method="findAll">
+			<result name="findall">/background_issuing/showAllBidinfo.jsp</result>
+		</action>
+		<action name="findByState" class="BidinfoAction" method="findByState">
+			<result name="wait">/background_issuing/showWaitBidinfo.jsp</result>
+			<result name="havaon">/background_issuing/showHaveOnBidinfo.jsp
+			</result>
+		</action>
+		<action name="addBidinfo" class="BidinfoAction" method="addBidinfo">
+			<result name="add" type="redirect">/bidinfo/findAll.action</result>
+		</action>
+		<!-- 上传 -->
+		<action name="execute" class="BidinfoAction" method="execute">
+			<result name="success">index.jsp</result>
+		</action>
+		<!-- 散标 -->
+		<action name="updateBid" class="BidinfoAction" method="updateBid">
+			<result name="success">/background_issuing/updateBid.jsp</result>
+		</action>
+		<action name="saveBid" class="BidinfoAction" method="saveBid">
+			<result name="success" type="redirect">/bidinfo/findAll.action</result>
+		</action>
+		<action name="delectBid" class="BidinfoAction" method="delectBid">
+			<result name="success" type="redirect">/bidinfo/findAll.action</result>
+		</action>
+		<action name="findByGuacom" class="BidinfoAction" method="findByGuacom">
+			<result name="success">/home/agency-main.jsp</result>
+		</action>
+		<!-- 精选理财 -->
+		<action name="updateFinance" class="BidinfoAction" method="updateFinance">
+			<result name="success">/background_issuing/updateFinance.jsp</result>
+		</action>
+		<action name="upSureFinance" class="BidinfoAction" method="upSureFinance">
+			<result name="success" type="redirect">/bidinfo/findAllFinanceplan.action
+			</result>
+		</action>
+		<action name="saveFinance" class="BidinfoAction" method="saveFinance">
+			<result name="success" type="redirect">/bidinfo/findAllFinanceplan.action
+			</result>
+		</action>
+		<action name="delectFinance" class="BidinfoAction" method="delectFinance">
+			<result name="success" type="redirect">/bidinfo/findAllFinanceplan.action
+			</result>
+		</action>
+		<action name="offlineFinance" class="BidinfoAction" method="offlineFinance">
+			<result name="offlineFinance" type="redirect">/bidinfo/findAllFinanceplan.action
+			</result>
+		</action>
+		<action name="changeState" class="BidinfoAction" method="changeState">
+			<result name="success" type="redirect">/bidinfo/findAll.action</result>
+		</action>
+		<action name="addBid" class="BidinfoAction" method="addBid">
+			<result name="addbid">/background_issuing/addBidinfo.jsp
+			</result>
+		</action>
+
+		<action name="addFinanceplan" class="BidinfoAction" method="addFinanceplan">
+			<result name="success">/background_issuing/showAllFinance.jsp
+			</result>
+		</action>
+		<action name="findActBid" class="BidinfoAction" method="findActBid">
+			<result name="success">/background_issuing/addFinanceplan.jsp
+			</result>
+		</action>
+		<action name="findAllFinanceplan" class="BidinfoAction" method="findAllFinanceplan">
+			<result name="success">/background_issuing/showAllFinance.jsp
+			</result>
+		</action>
+		<action name="showOneFinance" class="BidinfoAction" method="showOneFinance">
+			<result name="showone">/bidinfo/showOneFinance.jsp</result>
+		</action>
+		<action name="showAllFinance" class="BidinfoAction" method="showAllFinance">
+			<result name="success">/bidinfo/jxlc.jsp</result>
+		</action>
+		<action name="conFinanceplan" class="BidinfoAction" method="conFinanceplan">
+			<result name="success" type="redirect">/bidinfo/findAllFinanceplan.action
+			</result>
+		</action>
+		<action name="findHxd" class="LoanRequests" method="findHxd">
+			<result name="success">/background_issuing/findHxd.jsp</result>
+		</action>
+		<action name="findFdxx" class="LoanRequests" method="findFdxx">
+			<result name="success">/background_issuing/findFdxx.jsp</result>
+		</action>
+		<action name="creatxieyi" class="BidinfoAction" method="creatxieyi">
+			<result name="success">/bidinfo/agreement.jsp</result>
+			<result name="fanance">/bidinfo/treaty-3.jsp</result>
+
+		</action>
+		<action name="login" class="RootinfoAction" method="login">
+			<interceptor-ref name="rootLoginInterceptor"></interceptor-ref>
+			<result name="error">/user/session_fail.jsp</result>
+		</action>
+	</package>
+
+
+
+	<!-- userinfo -->
+	<package name="Userinfo" extends="struts-default" namespace="/userinfo">
+
+		<interceptors>
+			<interceptor name="loginInterceptor" class="filter.UserInterceptors"></interceptor>
+		</interceptors>
+		<action name="personRecordsAjax" class="UserinfoAction" method="personRecordsAjax"></action>
+		<action name="findAllCouponAjax" class="UserinfoAction" method="findAllCouponAjax"></action>
+		<action name="outCouponAjax" class="UserinfoAction" method="outCouponAjax"></action>
+		<action name="login" class="UserinfoAction" method="login">
+			<result name="success" type="redirect">/home/homepage.action</result>
+			<result name="wrong">/user/login.jsp</result>
+		</action>
+
+
+		<action name="UserRefresh" class="UserinfoAction" method="UserRefresh">
+			<result name="success">/user/myZCB.jsp</result>
+
+		</action>
+
+		<action name="addUserBank" class="UserinfoAction" method="addUserBank">
+			<result name="success" type="redirect">/userinfo/user.action?user=withdraw
+			</result>
+		</action>
+
+		<action name="updataUserBank" class="UserinfoAction" method="updataUserBank">
+			<result name="success" type="redirect">/userinfo/user.action?user=withdraw
+			</result>
+		</action>
+		<action name="deleteUserBank" class="UserinfoAction" method="deleteUserBank">
+			<result name="success" type="redirect">/userinfo/user.action?user=withdraw
+			</result>
+		</action>
+
+		<action name="findAll" class="UserinfoAction" method="findAll">
+			<result name="success">/root/shortMessageall.jsp</result>
+		</action>
+		<action name="register" class="UserinfoAction" method="register">
+			<result name="register">/user/identification.jsp</result>
+			<result name="identification">/user/phone_ide.jsp</result>
+			<result name="tiaoguo" type="redirect">/userinfo/personCenter.action
+			</result>
+		</action>
+		<action name="logout" class="UserinfoAction" method="logout">
+			<result name="logout" type="redirect">/home/homepage.action</result>
+		</action>
+		<action name="modify" class="UserinfoAction" method="modify">
+			<result name="success" type="redirect">/bidinfo/findAll.action</result>
+		</action>
+		<action name="findById" class="UserinfoAction" method="findById">
+			<result name="ok">/background_issuing/perfectUserinfo.jsp
+			</result>
+		</action>
+		<action name="userModify" class="UserinfoAction" method="userModify">
+			<result name="success" type="redirect">/userinfo/personCenter.action
+			</result>
+		</action>
+		<action name="personCenter" class="UserinfoAction" method="personCenter">
+			<result name="success">/user/personCenter.jsp</result>
+		</action>
+
+		<action name="withdrawals" class="UserinfoAction" method="withdrawals">
+			<result name="success" type="redirect">/userinfo/personRecords.action?currentPage=1
+			</result>
+		</action>
+		<action name="recharge" class="UserinfoAction" method="recharge">
+			<result name="success">/user/personCenter.jsp</result>
+		</action>
+		<action name="user" class="UserinfoAction" method="user">
+			<interceptor-ref name="loginInterceptor"></interceptor-ref>
+			<result name="error">/user/session_fail.jsp</result>
+			<result name="register">/user/register.jsp</result>
+			<result name="login">/user/login.jsp</result>
+			<result name="getPwd">/user/getPwd.jsp</result>
+			<result name="myZCB">/user/myZCB.jsp</result>
+			<result name="record">/user/record.jsp</result>
+			<result name="recharge">/user/recharge.jsp</result>
+			<result name="withdraw">/user/withdraw.jsp</result>
+			<result name="myManage">/user/myManage.jsp</result>
+			<result name="myJxlc">/user/myJxlc.jsp</result>
+			<result name="myTzsb">/user/myTzsb.jsp</result>
+			<result name="myBorrow">/user/myBorrow.jsp</result>
+		</action>
+
+		<action name="personRecords" class="UserinfoAction" method="personRecords">
+			<result name="success">/user/assetManagement.jsp</result>
+		</action>
+		<!-- ajax 验证用户名 -->
+		<action name="checkUser" class="UserinfoAction" method="checkUser">
+
+		</action>
+		<!-- LoanRequests借款申请 -->
+		<action name="jbsq" class="LoanRequests" method="jbsq">
+			<result name="success">/loan_requests/success.jsp</result>
+			<result name="login">/user/login.jsp</result>
+		</action>
+		<action name="clxx" class="LoanRequests" method="clxx">
+			<result name="success">/loan_requests/success.jsp</result>
+			<result name="login">/user/login.jsp</result>
+		</action>
+		<action name="fdxx" class="LoanRequests" method="fdxx">
+			<result name="success">/loan_requests/success.jsp</result>
+			<result name="login">/user/login.jsp</result>
+		</action>
+		<action name="hxd" class="LoanRequests" method="hxd">
+			<result name="success">/loan_requests/success.jsp</result>
+			<result name="login">/user/login.jsp</result>
+		</action>
+
+		<action name="loans" class="LoanRequests" method="loans">
+			<interceptor-ref name="loginInterceptor"></interceptor-ref>
+			<result name="hcd">/loans/hcd.jsp</result>
+			<result name="hfd">/loans/hfd.jsp</result>
+			<result name="hxd">/loans/hxd.jsp</result>
+			<result name="error">/loans/unlogin_tips.jsp</result>
+		</action>
+
+
+	</package>
+
+	<!-- Riskinfo -->
+	<package name="Riskinfo" extends="struts-default" namespace="/riskinfo">
+		<!-- <interceptors> <interceptor name="loginInterceptor" class="filter.UserInterceptors"></interceptor> 
+			</interceptors> -->
+		<interceptors>
+			<interceptor name="rootLoginInterceptor" class="filter.RootInterceptors"></interceptor>
+		</interceptors>
+		<action name="login" class="RiskinfoAction" method="login">
+			<interceptor-ref name="rootLoginInterceptor"></interceptor-ref>
+			<result name="error">/user/session_fail.jsp</result>
+			<result name="login" type="redirect">/bidinfo/addBid.action</result>
+			<result name="fail">/root/choiceLogin.jsp</result>
+		</action>
+		<action name="findAll" class="RiskinfoAction" method="findAll">
+			<result name="findAll">/root/riskinfoFindAll.jsp</result>
+		</action>
+		<action name="findById" class="RiskinfoAction" method="findById">
+			<result name="success">/root/updateRiskinfo.jsp</result>
+		</action>
+		<action name="modify" class="RiskinfoAction" method="modify">
+			<result name="success" type="redirect">/riskinfo/findAll.action</result>
+		</action>
+		<action name="deleteRiskinfo" class="RiskinfoAction" method="deleteRiskinfo">
+			<result name="delete" type="redirect">/riskinfo/findAll.action</result>
+		</action>
+		<action name="addRiskinfo" class="RiskinfoAction" method="addRiskinfo">
+			<result name="add" type="redirect">/riskinfo/findAll.action</result>
+		</action>
+		<action name="findJbsq" class="LoanRequests" method="findJbsq">
+			<result name="success">/background_issuing/findJbsq.jsp</result>
+		</action>
+		<action name="findFdxx" class="LoanRequests" method="findFdxx">
+			<result name="success">/background_issuing/findFdxx.jsp</result>
+		</action>
+		<action name="findHxd" class="LoanRequests" method="findHxd">
+			<result name="success">/background_issuing/findHxd.jsp</result>
+		</action>
+		<action name="findClxx" class="LoanRequests" method="findClxx">
+			<result name="success">/background_issuing/findClxx.jsp</result>
+		</action>
+
+		<!-- <action name="login" class="RiskinfoAction" method="login"> <interceptor-ref 
+			name="rootLoginInterceptor"></interceptor-ref> <result name="error">/user/session_fail.jsp</result> 
+			<result name="login" type="redirect">/bidinfo/addBid.action</result> <result 
+			name="login" type="redirect">/bidinfo/addBid.action</result> </action> -->
+
+
+	</package>
+
+	<!-- Finance -->
+	<package name="Finance" extends="struts-default" namespace="/finance">
+		<action name="login" class="FinanceAction" method="login">
+			<result name="login" type="redirect">/financeact/financeAct.action
+			</result>
+			<result name="fail">/root/choiceLogin.jsp</result>
+			<result name="error">/user/session_fail.jsp</result>
+		</action>
+		<action name="findAll" class="FinanceAction" method="findAll">
+			<result name="findAll">/root/financeFindAll.jsp</result>
+		</action>
+		<action name="deleteFinance" class="FinanceAction" method="deleteFinance">
+			<result name="delete" type="redirect">/finance/findAll.action</result>
+		</action>
+		<action name="addFinance" class="FinanceAction" method="addFinance">
+			<result name="add" type="redirect">/finance/findAll.action</result>
+		</action>
+		<action name="findById" class="FinanceAction" method="findById">
+			<result name="success">/root/updateFinance.jsp</result>
+		</action>
+		<action name="modify" class="FinanceAction" method="modify">
+			<result name="success" type="redirect">/finance/findAll.action</result>
+		</action>
+	</package>
+
+	<!-- Cusinfo -->
+	<package name="Cusinfo" extends="struts-default" namespace="/cusinfo">
+		<interceptors>
+			<interceptor name="rootLoginInterceptor" class="filter.RootInterceptors"></interceptor>
+		</interceptors>
+
+		<action name="login" class="CusinfoAction" method="login">
+			<interceptor-ref name="rootLoginInterceptor"></interceptor-ref>
+			<result name="login" type="redirect">/newsinfo/findAllByDong.action
+			</result>
+			<result name="fail">/root/choiceLogin.jsp</result>
+			<result name="error">/user/session_fail.jsp</result>
+		</action>
+		<action name="findAll" class="CusinfoAction" method="findAll">
+			<result name="findAll">/root/cusinfoFindAll.jsp</result>
+		</action>
+		<action name="deleteCusinfo" class="CusinfoAction" method="deleteCusinfo">
+			<result name="delete" type="redirect">/cusinfo/findAll.action</result>
+		</action>
+		<action name="findById" class="CusinfoAction" method="findById">
+			<result name="success">/root/updateCusinfo.jsp</result>
+		</action>
+		<action name="modify" class="CusinfoAction" method="modify">
+			<result name="success" type="redirect">/cusinfo/findAll.action</result>
+		</action>
+		<action name="addCusinfo" class="CusinfoAction" method="addCusinfo">
+			<result name="add" type="redirect">/cusinfo/findAll.action</result>
+		</action>
+		<!-- <action name="login" class="RootinfoAction" method="login"> <interceptor-ref 
+			name="rootLoginInterceptor"></interceptor-ref> <result name="error">/user/session_fail.jsp</result> 
+			<result name="login" type="redirect">/newsinfo/findAllByDong.action</result> 
+			</action> -->
+	</package>
+
+
+	<!-- Newsinfo -->
+	<package name="Newsinfo" extends="struts-default" namespace="/newsinfo">
+		<action name="findAllByDong" class="NewsinfoAction" method="findAllByDong">
+			<result name="findAllByDong">/root/cusinfoLogin.jsp</result>
+		</action>
+		<action name="findAllByGong" class="NewsinfoAction" method="findAllByGong">
+			<result name="gong">/root/cusinfoGong.jsp</result>
+		</action>
+		<action name="findAllByHuan" class="NewsinfoAction" method="findAllByHuan">
+			<result name="huan">/root/cusinfoHuan.jsp</result>
+		</action>
+		<action name="findAllByMei" class="NewsinfoAction" method="findAllByMei">
+			<result name="mei">/root/cusinfoMei.jsp</result>
+		</action>
+		<action name="addNewsinfo" class="NewsinfoAction" method="addNewsinfo">
+			<result name="success" type="redirect">/newsinfo/findAllByDong.action
+			</result>
+		</action>
+		<action name="deleteNewsinfo" class="NewsinfoAction" method="deleteNewsinfo">
+			<result name="delete" type="redirect">/newsinfo/findAllByDong.action
+			</result>
+		</action>
+		<action name="findById" class="NewsinfoAction" method="findById">
+			<result name="success">/root/updateNewsinfo.jsp</result>
+		</action>
+		<action name="modify" class="NewsinfoAction" method="modify">
+			<result name="success" type="redirect">/newsinfo/findAllByDong.action
+			</result>
+		</action>
+		<action name="findoneById" class="NewsinfoAction" method="findoneById">
+			<result name="success">/root/showOneNewsinfo.jsp</result>
+		</action>
+		<action name="findByGong" class="NewsinfoAction" method="findByGong">
+			<result name="findByGong">/about/news.jsp</result>
+		</action>
+		<action name="findByDong" class="NewsinfoAction" method="findByDong">
+			<result name="findByDong">/about/dymatics.jsp</result>
+		</action>
+		<action name="findByHuan" class="NewsinfoAction" method="findByHuan">
+			<result name="findByHuan">/about/loanNews.jsp</result>
+		</action>
+		<action name="findByMei" class="NewsinfoAction" method="findByMei">
+			<result name="findByMei">/about/mediaReport.jsp</result>
+		</action>
+		<action name="findOneById" class="NewsinfoAction" method="findOneById">
+			<result name="success">/about/showOneNewsFront.jsp</result>
+		</action>
+	</package>
+
+
+
+
+	<!-- Rootinfo -->
+	<package name="Rootinfo" extends="struts-default" namespace="/rootinfo">
+		<action name="login" class="RootinfoAction" method="login">
+			<result name="login" type="redirect">/rootact/records.action</result>
+			<result name="fail">/root/choiceLogin.jsp</result>
+		</action>
+		<action name="modify" class="RootinfoAction" method="modify">
+			<result name="modify">/root/choiceLogin.jsp</result>
+		</action>
+	</package>
+
+
+	<!-- Tempdata -->
+	<package name="Tempdata" extends="struts-default" namespace="/tempdata">
+	</package>
+
+
+
+	<!-- LCRAct -->
+	<package name="Lcract" extends="struts-default" namespace="/lcract">
+		<action name="changeLcractState" class="LcractAction" method="changeLcractState">
+			<result name="financeover" type="redirect">/financeact/financeActln.action
+			</result>
+			<result name="financenot" type="redirect">/financeact/financeActln.action
+			</result>
+			<result name="rootover" type="redirect">/rootact/rootAct.action</result>
+			<result name="rootnot" type="redirect">/rootact/rootAct.action</result>
+		</action>
+
+		<action name="findAllLCR" class="LcractAction" method="findAllLCR">
+			<result name="success">/root/shortMessagelcr.jsp</result>
+		</action>
+
+		<action name="findLcr" class="LcractAction" method="findLcr">
+
+		</action>
+	</package>
+
+	<!-- JKRAct -->
+	<package name="Jkract" extends="struts-default" namespace="/jkract">
+		<action name="changeJkractState" class="JkractAction" method="changeJkractState">
+			<result name="financeover" type="redirect">/financeact/financeAct.action
+			</result>
+			<result name="financenot" type="redirect">/financeact/financeAct.action
+			</result>
+			<result name="rootover" type="redirect">/rootact/rootAct.action</result>
+			<result name="rootnot" type="redirect">/rootact/rootAct.action</result>
+		</action>
+
+		<action name="findAllJKR" class="JkractAction" method="findAllJKR">
+			<result name="success">/root/shortMessage.jsp</result>
+		</action>
+
+	</package>
+
+	<!-- RootAct -->
+	<package name="Rootact" extends="struts-default" namespace="/rootact">
+		<action name="personRecordsAjax" class="RootactAction" method="personRecordsAjax"></action>
+		<action name="rootAct" class="RootactAction" method="rootAct">
+			<result name="success">/act/rootAct_fk.jsp</result>
+		</action>
+		<action name="changeJkract" class="RootactAction" method="changeJkract">
+			<result name="finance" type="redirect">/financeact/financeAct.action?currentPage=1
+			</result>
+			<result name="success" type="redirect">/rootact/rootAct.action</result>
+		</action>
+		<action name="changeLcract" class="RootactAction" method="changeLcract">
+			<result name="success" type="redirect">/rootact/rootActla.action</result>
+
+			<result name="finance" type="redirect">/financeact/financeActla.action?currentPage=1
+			</result>
+
+		</action>
+		<action name="records" class="RootactAction" method="records">
+			<result name="success">/root/records.jsp</result>
+		</action>
+		<action name="records_finance" class="RootactAction" method="records_finance">
+			<result name="success">/root/records_finance.jsp</result>
+		</action>
+		<action name="rootActjc" class="RootactAction" method="rootActjc">
+			<result name="success">/act/rootAct_yqr.jsp</result>
+		</action>
+		<action name="rootActjn" class="RootactAction" method="rootActjn">
+			<result name="success">/act/rootAct_wpz.jsp</result>
+		</action>
+		<action name="rootActla" class="RootactAction" method="rootActla">
+			<result name="success">/act/rootAct_fk1.jsp</result>
+		</action>
+		<action name="rootActln" class="RootactAction" method="rootActln">
+			<result name="success">/act/rootAct_wpz1.jsp</result>
+		</action>
+		<action name="rootActlc" class="RootactAction" method="rootActlc">
+			<result name="success">/act/rootAct_yqr1.jsp</result>
+		</action>
+		<action name="selectRecordsXls" class="RootactAction" method="selectRecordsXls">
+			<result name="success">/root/records_finance.jsp</result>
+		</action>
+	</package>
+
+	<!-- FinanceAct -->
+	<package name="Financeact" extends="struts-default" namespace="/financeact">
+		<action name="financeAct" class="FinanceactAction" method="financeAct">
+			<result name="success">/act/financeAct_fk.jsp</result>
+		</action>
+		<action name="financeActjn" class="FinanceactAction" method="financeActjn">
+			<result name="success">/act/financeAct_wpz.jsp</result>
+		</action>
+		<action name="financeActjc" class="FinanceactAction" method="financeActjc">
+			<result name="success">/act/financeAct_yqr.jsp</result>
+		</action>
+		<action name="financeActla" class="FinanceactAction" method="financeActla">
+			<result name="success">/act/financeAct_fk1.jsp</result>
+		</action>
+
+
+		<!-- 测试lcractmerge -->
+		<action name="financeActln" class="FinanceactAction" method="financeActln">
+			<result name="success">/act/financeAct_wpz1.jsp</result>
+		</action>
+
+
+		<action name="financeActlc" class="FinanceactAction" method="financeActlc">
+			<result name="success">/act/financeAct_yqr1.jsp</result>
+		</action>
+	</package>
+
+	<!-- Bidinfouser -->
+	<package name="Bidinfouser" extends="struts-default" namespace="/bidinfouser">
+		<action name="findAllBidinfo" class="BidinfouserAction" method="findAllBidinfo">
+			<result name="findAllBidinfo">/bidinfo/showBidList.jsp</result>
+		</action>
+		<action name="modifyBidList" class="BidinfouserAction" method="modifyBidList">
+			<result name="modifyBidList">/bidinfo/showBidList.jsp</result>
+		</action>
+	</package>
+
+	<!-- Financeplan -->
+	<package name="Financeplan" extends="struts-default" namespace="/financeplan">
+		<action name="findById" class="FinanceplanAction" method="findById">
+			<result name="success">/bidinfo/financePlan.jsp</result>
+		</action>
+
+	</package>
+
+
+	<!-- Mobile -->
+	<package name="Mobile" extends="struts-default" namespace="/mobile">
+		<!--检索散标 -->
+		<action name="findAllBulkbid" class="MobileAction" method="findAllBulkbid"></action>
+		<action name="showOneBulkbid" class="MobileAction" method="showOneBulkbid"></action>
+		<!--检索精选理财计划 -->
+		<action name="findAllFinplan" class="MobileAction" method="findAllFinplan"></action>
+		<action name="showFinplan" class="MobileAction" method="showFinplan"></action>
+		<!--登陆 -->
+		<action name="login" class="MobileAction" method="login"></action>
+		<!--检索银行卡信息 -->
+		<action name="findBankByUserid" class="MobileAction" method="findBankByUserid"></action>
+		<!--修改、增加银行卡信息 -->
+		<action name="addUserbank" class="MobileAction" method="addUserbank"></action>
+		<!--提现  -->
+		<action name="withdrawals" class="MobileAction" method="withdrawals"></action>
+		<!--随机数 -->
+		<action name="randCaptchas" class="MobileAction" method="randCaptchas"></action>
+		<!--注册 -->
+		<action name="register" class="MobileAction" method="register"></action>
+		<!--检查用户注册情况 -->
+		<action name="checkUser" class="MobileAction" method="checkUser"></action>
+		<!--个人账户信息 -->
+		<action name="personRecordsAjax" class="MobileAction" method="personRecordsAjax"></action>
+		<!--买标  -->
+		<action name="userBuyBid" class="MobileAction" method="userBuyBid"></action>
+		<!--修改用户信息 -->
+		<action name="userModify" class="MobileAction" method="userModify"></action>
+		<!--个人理财 -->
+		<action name="personList" class="MobileAction" method="personList"></action>
+		<!--更新 -->
+		<action name="versionUpdate" class="MobileAction" method="versionUpdate"></action>
+		<!--抽奖 -->
+		<action name="lotteryWechat" class="MobileAction" method="lotteryWechat"></action>
+		<action name="doExcel" class="MobileAction" method="doExcel">
+			<result name="success">/test/lottery.jsp</result>
+		</action>
+	</package>
+
+</struts> 

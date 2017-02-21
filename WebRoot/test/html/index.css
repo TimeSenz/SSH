@@ -1,0 +1,66 @@
+/* ::::: http://log.evercare.com.cn/1230/css/style_2.css?14082922 ::::: */
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, figure { padding: 0px; margin: 0px; }
+fieldset, img { border: 0px none; }
+:focus { outline: 0px none; }
+input, button, textarea, select, optgroup, option { font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; }
+body { line-height: 1.5; }
+section, div, img, a {  }
+html, body, .wrapper { position: relative; width: 100%; height: 100%; background: none repeat scroll 0% 0% rgb(18, 18, 18); }
+#slide { overflow: hidden; position: relative; width: 100%; height: 100%; }
+.slidePage { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; background-color: rgb(25, 25, 25); }
+.slideMain { position: absolute; top: 0px; left: 0px; overflow: hidden; width: 100%; height: 100%; margin: auto; }
+.slideQueue .slidePage {  }
+.slideQueue .in {  }
+.slideQueue .in ~ .slidePage {  }
+#aside { position: absolute; z-index: 999; top: 0px; left: 0px; width: 100%; height: 100%; pointer-events: none; }
+#music { position: fixed; right: -30px; top: 10px; width: 90px; height: 45px; pointer-events: auto; border-radius: 38px; }
+#music:before { content: " "; visibility: hidden; opacity: 0; display: block; width: 100%; height: 100%; background: url('music.png') no-repeat scroll 0px 0px / 90px 90px transparent; }
+#music:after { content: " "; opacity: 0.8; position: absolute; top: 0px; left: 0px; width: 50%; height: 100%; background: url('music.png') no-repeat scroll left bottom / 90px 90px transparent; }
+#music.on:after { background-position: right bottom; }
+.layer { position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; background-repeat: no-repeat; background-size: 100% auto; }
+.arrow { background: url('arrow.png') no-repeat scroll center top / 100% auto transparent; top: auto; bottom: 0px; height: 15px; z-index: 999; }
+.slidePage .on .arrow {  }
+#new01 .layer1 { top: 60%; }
+#new01 .layer0 { background: url('p1bg.jpg') no-repeat scroll center top / 100% auto transparent; }
+#new01 .layer4 { background-image: url('p12.png'); top: 0%; }
+#new01 .layer2 { background-image: url('p13.png'); top: 45%; }
+.on .logo { background-image: url('logo.png'); left: 0px; top: 0px; }
+#new01 .layer1 p { padding: 0px 32px; color: rgb(247, 245, 201); font-size: 21px; text-align: center; line-height: 140%; }
+#new01 .layer1 strong { text-decoration: underline; font-size: 20px; }
+.on .logo {  }
+#new01 .on .layer1 {  }
+#new01 .on .layer2 {  }
+#new01 .on .layer4 {  }
+#page01 .layer0 { background: url('bg.jpg') no-repeat scroll center top / 100% auto transparent; }
+#page01 .layer1 { background-image: url('p21.png'); top: 0px; }
+#page01 .layer2 { background-image: url('p22.png'); top: 90%; }
+#page01 .layer3 { top: 65%; width: 100%; text-align: center; }
+#page01 .layer3 img { width: 15%; padding-right: 2%; }
+#page01 .layer3 .laset { padding-right: 0px; }
+#page01 .layer4 { background-image: url('jiangpin.jpg'); top: 0px; display: none; }
+#page01 .layer4 .p1 { color: rgb(148, 14, 25); font-size: 30px; font-weight: bold; padding-top: 52%; text-align: center; width: 100%; }
+#page01 .layer4 .p2 { padding-top: 10px; color: rgb(112, 112, 111); font-size: 24px; font-weight: bold; text-align: center; width: 100%; }
+#page01 .on .layer2 {  }
+#page01 .on .layer1 {  }
+#page01 .on .layer3 {  }
+#page01 .on .layer4 {  }
+#page01 .layer4 .form_box { width: 100%; position: relative; }
+#page01 .layer4 #mobiForm { width: 90%; height: 100px; padding: 13px 0px 0px 13px; position: absolute; top: 0px; right: 10px; background-color: rgba(255, 255, 255, 0.2); border-radius: 5px; }
+#page01 .layer4 input#MobiNumber { width: 120px; padding: 0px 5px; height: 30px; line-height: 30px; border: 0px none; border-radius: 0px; z-index: 10; background: url('input_bg01.png') no-repeat scroll 0px 0px / 166px auto transparent; }
+#page01 .layer4 input#namex { width: 120px; padding: 0px 5px; height: 30px; line-height: 30px; border: 0px none; border-radius: 0px; z-index: 10; background: url('input_bg01.png') no-repeat scroll 0px 0px / 166px auto transparent; }
+#page01 .layer4 input#getMobi_btn { width: 166px; margin: 6px auto 0px; height: 40px; line-height: 40px; border: 0px none; border-radius: 0px; z-index: 10; display: block; background: url('input_bg04.png') no-repeat scroll 0px 0px / 166px auto transparent; }
+#new01 .layer0, #page02 .layer0, #page02_1 .layer0, #page03 .layer0, #page04 .layer0, #page05 .layer0, #new03 .layer0 { background: url('bg_001.jpg') no-repeat scroll center top / 100% auto transparent; }
+#new02 .layer0 { background: url('bg_002.jpg') no-repeat scroll center top / 100% auto transparent; }
+#new02 .layer2 { background-image: url('p31.png'); top: 0px; }
+#new02 .layer3 { background-image: url('p32.png'); top: 45%; }
+#new02 .on .layer2 {  }
+#new02 .on .layer3 {  }
+#new02 .on .layer1 {  }
+#new02 .layer1 { top: 50%; }
+#new02 .layer1 .form_box { width: 100%; position: relative; }
+#new02 .layer1 #inviteForm { width: 300px; height: 190px; padding: 8px 0px 0px; position: absolute; left: 50%; margin: 0px 0px 0px -150px; }
+#new02 .layer1 input#friendName, #new02 .layer1 input#userName, #new02 .layer1 input#MobiNumber { width: 156px; padding: 0px 5px; height: 30px; line-height: 30px; border: 0px none; border-radius: 0px; z-index: 10; display: block; background: url('input_bg01.png') no-repeat scroll 0px 0px / 166px auto transparent; margin: 0px auto; }
+#new02 .layer1 input#userName { margin: 10px auto 0px; }
+#new02 .layer1 input#friendName { margin: 10px auto 0px; }
+#new02 .layer1 input#send_btn { width: 166px; height: 40px; line-height: 40px; border: 0px none; border-radius: 0px; z-index: 10; display: block; margin: 10px auto 0px; background: url('input_bg05.png') no-repeat scroll 0px 0px / 166px auto transparent; }

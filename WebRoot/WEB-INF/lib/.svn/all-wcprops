@@ -1,0 +1,599 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ZCB/!svn/ver/238/ZhongCaiBao/WebRoot/WEB-INF/lib
+END
+aspectjrt.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/aspectjrt.jar
+END
+commons-io-2.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ZCB/!svn/ver/29/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-io-2.4.jar
+END
+jta.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jta.jar
+END
+commons-httpclient.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-httpclient.jar
+END
+spring-tomcat-weaver.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/spring-tomcat-weaver.jar
+END
+mysql-connector-java-5.0.8-bin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/mysql-connector-java-5.0.8-bin.jar
+END
+spring-aspects.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/spring-aspects.jar
+END
+antlr-2.7.6rc1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/antlr-2.7.6rc1.jar
+END
+jxl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jxl.jar
+END
+cglib-nodep-2.1_3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/cglib-nodep-2.1_3.jar
+END
+spring-core.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/spring-core.jar
+END
+commons-codec-1.9.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ZCB/!svn/ver/29/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-codec-1.9.jar
+END
+c3p0-0.9.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/c3p0-0.9.0.jar
+END
+commons-pool.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-pool.jar
+END
+struts.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/struts.jar
+END
+concurrent-1.3.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/concurrent-1.3.2.jar
+END
+c3p0-0.9.1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/c3p0-0.9.1.2.jar
+END
+jboss-system.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jboss-system.jar
+END
+json.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ZCB/!svn/ver/29/ZhongCaiBao/WebRoot/WEB-INF/lib/json.jar
+END
+jstl-1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jstl-1.2.jar
+END
+asm-2.2.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/asm-2.2.3.jar
+END
+commons-fileupload-1.3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ZCB/!svn/ver/29/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-fileupload-1.3.1.jar
+END
+spring-context.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/spring-context.jar
+END
+commons-attributes-compiler.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-attributes-compiler.jar
+END
+commons-codec.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-codec.jar
+END
+jgroups-2.2.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jgroups-2.2.8.jar
+END
+spring-webmvc-portlet.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/spring-webmvc-portlet.jar
+END
+poi-3.0.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/poi-3.0.1.jar
+END
+jaxen-1.1-beta-7.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jaxen-1.1-beta-7.jar
+END
+jackson-all-1.9.11.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ZCB/!svn/ver/238/ZhongCaiBao/WebRoot/WEB-INF/lib/jackson-all-1.9.11.jar
+END
+commons-logging.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-logging.jar
+END
+asm.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/asm.jar
+END
+jotm.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jotm.jar
+END
+freemarker-2.3.13.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/freemarker-2.3.13.jar
+END
+aspectjweaver.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/aspectjweaver.jar
+END
+commons-fileupload.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-fileupload.jar
+END
+spring-beans.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/spring-beans.jar
+END
+jdbc2_0-stdext.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jdbc2_0-stdext.jar
+END
+struts2-spring-plugin-2.1.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/struts2-spring-plugin-2.1.6.jar
+END
+yuicompressor-2.4.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ZCB/!svn/ver/28/ZhongCaiBao/WebRoot/WEB-INF/lib/yuicompressor-2.4.6.jar
+END
+xapool.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/xapool.jar
+END
+jsf-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jsf-api.jar
+END
+ueditor-1.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ZCB/!svn/ver/29/ZhongCaiBao/WebRoot/WEB-INF/lib/ueditor-1.1.1.jar
+END
+jboss-cache.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jboss-cache.jar
+END
+ojdbc14.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/ojdbc14.jar
+END
+jacc-1_0-fr.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jacc-1_0-fr.jar
+END
+FileManager.class
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ZCB/!svn/ver/28/ZhongCaiBao/WebRoot/WEB-INF/lib/FileManager.class
+END
+xml-apis.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/xml-apis.jar
+END
+mysql-connector-java-5.1.22-bin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/mysql-connector-java-5.1.22-bin.jar
+END
+servlet-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/servlet-api.jar
+END
+spring-web.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/spring-web.jar
+END
+jsp-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jsp-api.jar
+END
+commons-collections-2.1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-collections-2.1.1.jar
+END
+jboss-jmx.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jboss-jmx.jar
+END
+persistence.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/persistence.jar
+END
+hibernate3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/hibernate3.jar
+END
+jboss-common.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jboss-common.jar
+END
+ueditor.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ZCB/!svn/ver/28/ZhongCaiBao/WebRoot/WEB-INF/lib/ueditor.jar
+END
+iText-2.1.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/iText-2.1.3.jar
+END
+ehcache-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/ehcache-1.1.jar
+END
+freemarker.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/freemarker.jar
+END
+commons-logging-1.0.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-logging-1.0.4.jar
+END
+dom4j-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/dom4j-1.6.1.jar
+END
+struts2-dojo-plugin-2.1.8.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/struts2-dojo-plugin-2.1.8.1.jar
+END
+commons-attributes-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-attributes-api.jar
+END
+jaas.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jaas.jar
+END
+spring-orm.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/spring-orm.jar
+END
+commons-io.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-io.jar
+END
+ognl-2.6.11.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/ognl-2.6.11.jar
+END
+log4j-1.2.11.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/log4j-1.2.11.jar
+END
+struts2-core-2.1.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/struts2-core-2.1.6.jar
+END
+commons-fileupload-1.2.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/ZCB/!svn/ver/28/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-fileupload-1.2.2.jar
+END
+jsf-impl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jsf-impl.jar
+END
+commons-dbcp.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-dbcp.jar
+END
+log4j-1.2.15.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/log4j-1.2.15.jar
+END
+swarmcache-1.0rc2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/swarmcache-1.0rc2.jar
+END
+velocity-tools-view-1.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/velocity-tools-view-1.4.jar
+END
+aspectjlib.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/aspectjlib.jar
+END
+commons-lang.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/commons-lang.jar
+END
+proxool-0.8.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/proxool-0.8.3.jar
+END
+xwork-2.1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/xwork-2.1.2.jar
+END
+aopalliance.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/aopalliance.jar
+END
+spring-jdbc.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/spring-jdbc.jar
+END
+xerces-2.6.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/xerces-2.6.2.jar
+END
+spring-aop.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/spring-aop.jar
+END
+asm-util-2.2.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/asm-util-2.2.3.jar
+END
+asm-commons-2.2.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/asm-commons-2.2.3.jar
+END
+spring-tx.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/spring-tx.jar
+END
+spring-agent.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/spring-agent.jar
+END
+oscache-2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/oscache-2.1.jar
+END
+spring-webmvc.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/spring-webmvc.jar
+END
+portlet-api.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/portlet-api.jar
+END
+velocity-1.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/velocity-1.5.jar
+END
+js.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ZCB/!svn/ver/28/ZhongCaiBao/WebRoot/WEB-INF/lib/js.jar
+END
+spring-webmvc-struts.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/spring-webmvc-struts.jar
+END
+jasperreports-2.0.5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/jasperreports-2.0.5.jar
+END
+connector.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/connector.jar
+END
+cglib-2.1.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/cglib-2.1.3.jar
+END
+asm-attrs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/WebRoot/WEB-INF/lib/asm-attrs.jar
+END

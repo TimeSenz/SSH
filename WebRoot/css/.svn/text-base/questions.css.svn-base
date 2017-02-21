@@ -1,0 +1,64 @@
+.bodyer-inner {width:1000px;margin:0 auto 20px;min-height:655px;}
+.newbie {width:1000px;padding:0 0 20px;margin-bottom:30px;}
+.newbie-tab-container {float:left;width:161px;border: 1px #e2e2e2 solid;}
+.newbie-tab-container a {width:100%;height:100%;display:block;color:#696969;font-size:16px;line-height: 50px;}
+.sup-item {height: 50px;border-bottom: 1px #e2e2e2 solid;}  
+.sup-item-con li,.sup-item-tit {text-align:center;font: 16px/35px 'Microsoft YaHei';}
+.sup-item-con .selected{ background:#EE9A14; color:#FFF;}
+.sup-item-con .selected a{color:#fff}
+.sup-item-tit {width:161px;height:50px;padding-right:9px;}
+.sup-item div.active {background-position:0 -43px;}
+.sup-item-tit a{font-size:16px;}
+.sup-item-con {padding-left:6px;}
+.sup-item-con li {margin-top:3px;width:149px;height:35px;}
+.sup-item-con li a{font-size:14px;font-weight:bold;}
+.sup-item-con li.active{background-position:0 -81px;}
+/* 右侧 */
+.newbie-bd-container {float:right;width:802px;}
+.newbie-bd-padd {padding-top:15px;}
+.section {padding:0 24px;border:1px solid #dcdcdc;margin-bottom:21px;background:#fff;}
+.section h2 {font:normal 23px/45px "Microsoft YaHei";height:45px;padding:18px 0 0 0;color:#5a5a5a;}
+.section h3 {font:normal 19px/45px "Microsoft YaHei";height:45px;padding-bottom:1px;color:#f29860;background:url(../images/img/newbie-line.png) no-repeat bottom left;}
+.section p {padding:12px 0;font:normal 14px/22px "Microsoft YaHei";color:#5D5D5D;}
+.text-pic { width:612px; height:275px;background:url(../images/img/text-pic.png) no-repeat; margin:30px auto;}
+.text-pic span {color:#f29860;font-size:18px;}
+.text-pic1 {font:normal 14px/22px "Microsoft YaHei";color:#5D5D5D;padding-bottom:30px;overflow:hidden;zoom:1;}
+.text-pic1 span {float:left;width:280px;height:65px;}
+.text-pic1 div {float:right;width:465px;height:134px;background:url(../images/img/text-pic1.png) no-repeat 38px 36px;}
+.section .h-right {text-align:right;background:url(../images/img/newbie-line-right.png) no-repeat bottom right;}
+.text-pic2 {padding:60px 0 90px 320px;background:url(../images/img/text-pic2.png) no-repeat 43px 25px;line-height:22px;}
+.text-pic3 {padding:155px 0 17px 0;background:url(../images/img/text-pic3.png) no-repeat 220px 34px;line-height:22px;}
+.text-pic4 {padding:83px 0 33px 386px;background:url(../images/img/text-pic4.png) no-repeat 144px 28px;line-height:22px;}
+.san ul {padding:33px 0 0 0;overflow:hidden;zoom:1;}
+.san li {width:33%;float:left;}
+.san-pic1,.san-pic2,.san-pic3 {height:86px;}
+.san-pic1 {background:url(../images/img/san-1.png) no-repeat center;}
+.san-pic2 {background:url(../images/img/san-2.png) no-repeat center;}
+.san-pic3 {background:url(../images/img/san-3.png) no-repeat center;}
+.san-text {margin-top:31px;font:normal 14px/30px "Microsoft YaHei";height:30px;text-align:center;}
+.san-text a,.san-text a:hover {color:#F29860;}
+.now-licai {height:27px;}
+.now-licai a{display:block;width:98px;height:27px;background:url(../images/img/now-licai.png) no-repeat;margin:0 auto;font:normal 14px/26px "Microsoft YaHei";color:#fff;text-align:center;}
+.now-licai a:hover {color:#fff;}
+.san-bot-text {height:22px;line-height:22px;padding:30px 0 12px 0;text-align:center;}
+.posi {position:relative;padding-bottom:20px;}
+.posi h2 {margin-bottom:115px;}
+.posi-pic {position:absolute;width:205px;height:132px;background:url(../images/img/posi-pic.png) no-repeat;top:48px;left:298px;}
+
+.newbie-bd-padd .about_icon{ background:#CCCBD2;display: inline;float: left;height: 13px;margin: 14px 19px 14px 9px;width:13px;}
+.newbie-bd-padd .urls{ width:686px; overflow:hidden;}
+.newbie-bd-padd .urls li{height:40px; line-height:40px; border:1px solid #FFF;border-bottom:1px solid #dddddd; overflow:hidden; cursor:pointer;}
+.newbie-bd-padd .urls em{width:8px; height:40px; display:inline-block; float:left;}
+.newbie-bd-padd .urls li:hover{ border:1px solid #f89a4d; background:url(../images/design/compang_partners_bg.png) repeat; border-left:none;}
+
+.newbie-bd-padd .about_text{ width:550px; float:left;}
+.newbie-bd-padd .about_text a:link,.about_text a:visited{ color:#5a5a5a;text-decoration:none}
+.newbie-bd-padd .about_text a:hover{color:#f07614; }
+.newbie-bd-padd .about_timer{ float:left; font-size:12px; font-style:italic;}
+/* 账户页头部公共部分 */
+.header_in .menu-box-bg {left:271px;}
+
+/*安全保障*/
+.section0 .div_p{ overflow:hidden; padding-top:12px; padding-bottom:30px;}
+.div_p p{ padding:0px;}
+.text-pic-blank{ padding-top:18px;}

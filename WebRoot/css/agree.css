@@ -1,0 +1,74 @@
+body{
+            font-family: "Microsoft Yahei", arial, "Hiragino Sans GB", sans-serif;
+        }
+        div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p {
+            padding: 0;
+            margin: 0;
+        }
+        table{
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .iqj-agree{
+            width:1000px;margin:0 auto;
+        }
+        .iqj-agree-title{
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .iqj-agree-title-sub{
+            text-align: center;
+            line-height: 24px;
+        }
+        .iqj-agree-h3{
+            line-height: 32px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .iqj-agree-marginB{
+            margin-bottom: 10px;
+        }
+        .iqj-agree-text-normal{
+            font-size: 14px;
+            line-height: 24px;
+        }
+        .iqj-agree-text{
+            font-size: 14px;
+            line-height: 24px;
+            margin-left: 30px;
+            text-indent: -30px;
+            text-align: left;
+        }
+        .zcb-agree-text{font-size: 14px;line-height: 24px;}
+        .zcb-agree-text-indent{font-size: 14px;
+line-height: 24px;
+text-indent: 28px;}
+.zcb-agree-text span,.zcb-agree-text-indent span{padding-right:5px;}
+        .iqj-agree-text-indent{
+            font-size: 14px;
+            line-height: 24px;
+            margin-left: 30px;
+        }
+        .iqj-agree-text span{
+            padding-right: 5px;
+        }
+        .iqj-agree-table{
+            margin:5px 0;
+            font-size: 14px;
+            line-height: 24px;
+            margin-left: 30px;
+        }
+        .iqj-agree-table td,.iqj-agree-table th{
+            border: 1px solid #3c3c3c;
+            text-align: center;
+            font-size: 14px;
+        }
+        /*@media screen and (max-width:320px){*/
+            .iqj-agree-title-br{
+                display: block;
+            }
+        /*}*/
+        .underline{text-decoration:underline;}

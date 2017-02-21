@@ -1,0 +1,27 @@
+@charset "utf-8";
+/*borrow CSS Document */
+.top_title{padding:20px 0;color:#555;font-size:16px;font-family:"黑体";}
+.top_title span{font-size:18px;}
+.intro_box{overflow:hidden;}
+.intro_box .intro{width:320px;border-top:5px solid #2da7e0;border:1px solid #dcdcdc;}
+.intro_box .house,.intro_box .car{margin-right:17px;}
+.intro .des{padding:5px 20px;}
+.intro .des p{min-height:170px;_height:190px;}
+.intro .des h3{font-size: 24px;font-weight: normal;}
+.intro .req_btn{display:block;color:#fff;background:#2da7e0;float:right;padding:2px 15px;font-size:16px;margin-bottom:10px;}
+.borrow_box{border:1px solid #dcdcdc;position:relative;margin-top:15px;min-height: 300px;}
+.borrow_box p.title{position: absolute;left: -15px;top: 15px;padding-left: 15px;background: url(../images/titile_bg.png) no-repeat;
+color: #fff;width: 297px;height: 50px;font-size: 20px;padding-top: 2px;}
+.next p.title{_left:-65px;}
+/*借款流程*/
+.borrow_box div.step{text-align: center;margin-top:50px;}
+/*借款说明*/
+.next{margin-bottom:100px;padding:80px 0 0 50px;position: relative;}
+.next span{float:left;}
+.next ul{float:left;margin-left:30px;}
+.next ul li{line-height: 25px;}
+.next table{clear:both;padding-bottom:30px;}
+.next table tr{line-height: 25px;}
+.next table th,.next table td{font-size: 14px;text-align: left;}
+.next table th{width:100px;}
+.next img{position: absolute;right:0;_right:2px;top:250px;}

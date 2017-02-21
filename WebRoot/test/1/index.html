@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>众财宝新年贺卡</title>
+    <script>
+        ! function( userAgent ) { 
+            var screen_w = parseInt(window.screen.width),
+                    scale = screen_w / 640;
+            if ( /Android (\d+\.\d+)/.test( userAgent ) ) {
+                var version = parseFloat( RegExp.$1 );
+                document.write( version > 2.3
+                        ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">'
+                        : '<meta name="viewport" content="width=640, target-densitydpi=device-dpi">' );
+            } else {
+                document.write( '<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">' );
+            }
+        }( navigator.userAgent );
+    </script>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div class="uparrw" id="uparrw" style="display:none;">
+    <div class="icon_uparrw" id="icon_uparrw"></div>
+    <div class="cur"></div>
+</div>
+<div style="height:0px;overflow:hidden;">
+  <!-- <audio src="./audio/1.mp3" loop="loop" autoplay></audio> -->
+</div>
+<a href="javascript:playPause();">
+    <div class="icon_audio border_anim">
+        <span class="iconaudio1"><s class="icon_audio_anim"></s></span>
+        <span class="iconaudio2"><s class="icon_audio_anim"></s></span>
+        <span class="iconaudio3"><s class="icon_audio_anim"></s></span>
+    </div>
+</a> 
+<div class="content" >
+    <div class="tabs" id="scene" style="display: block; ">
+         
+            <audio controls="controls" autoplay="autoplay" style="display:none">
+             <source src="The City Of Prague Philharmonic Orchestra - The Magnificent Seven Main Theme - 纯音乐版.mp3" >
+           </audio> 
+             
+        <ul>
+        <!-- <li class="tab1 on" data-api="[object Object]" data-parallax="[object Object]" style=" display: block;transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+              <div class="img-list">
+               
+                  <img class="" src="img/bj.png" alt="">
+                  <img class="fadeInDown  delay0020" src="img/006.png">
+              </div>
+              <div class="tips"></div>
+          </li>
+           <li class="tab2" data-api="[object Object]" data-parallax="[object Object]" style=" display: block;transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+              <div class="img-list">
+               
+                  <img class="" src="img/001.png" alt="">
+                  <img class="fadeInRight  delay0020" src="img/007.png">
+                  <img class="fadeInDown  delay0060" src="img/009.png">
+                   <img class="fadeInUuu   delay0100" src="img/008.png"style="z-index:99">
+                   <img class="" src="img/002.png" style="z-index:100">
+              </div>
+              <div class="tips"></div>
+          </li> 
+        <li class="tab3" data-api="[object Object]" data-parallax="[object Object]" style=" display: block;transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+              <div class="img-list">
+               
+                  <img class="" src="img/001.png" alt="">
+                  <img class="fadeInRight  delay0020" src="img/0010.png">
+                  <img class="fadeInDown  delay0060" src="img/009.png">
+                   <img class="fadeInUuu   delay0100" src="img/0011.png"style="z-index:99">
+                   <img class="" src="img/002.png" style="z-index:100">
+              </div>
+              <div class="tips"></div>
+          </li>
+        
+       <li class="tab4" data-api="[object Object]" data-parallax="[object Object]" style=" display: block;transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+              <div class="img-list">
+               
+                  <img class="" src="img/001.png" alt="">
+                  <img class="fadeInRight  delay0020" src="img/003.png">
+                  <img class="fadeInUuu   delay0040" src="img/005.png" style="z-index:98">
+                  <img class="fadeInDown  delay0060" src="img/009.png">
+                  <img class="fadeInUuu   delay0100" src="img/004.png"style="z-index:99">
+                  <img class="" src="img/002.png" style="z-index:100">
+              </div>
+              <div class="tips"></div>
+          </li> -->
+
+        <li class="tab5 on" data-api="[object Object]" data-parallax="[object Object]" style=" display: block;transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden;">
+               <div class="img-list" style="position: relative;">
+                    <img class="" src="img/0012.png" alt="">
+                 <div  class="fadeInUuu   delay0100  input" style="">
+                      <input type="text" placeholder="请输入您的姓名" id="name">
+                      <input type="text" placeholder="请输入您的手机号" id="phone">
+                      <input type="button" value="生成贺卡" class="button" onclick="onclickPrompts()">
+                 </div>
+                       
+                  
+                
+               </div>
+               <div class="tips"></div>
+           </li>
+        </ul>
+    </div>
+</div>
+<script>
+function onclickPrompts(){
+
+    
+    var name=document.getElementById('name').value;
+    var phone=document.getElementById('phone').value;
+    sendSMS(name,phone) 
+}
+
+function sendSMS(name,phone){
+    
+    alert(name);
+    alert(phone);
+    $.ajax({
+      
+      url: '/ZhongCaiBao/mobile/lotteryWechat.action',
+
+      type: 'POST',
+
+      data:{name:name,phone:phone,},
+
+      dataType: 'text',
+
+      //timeout: 1000,
+
+      error: function(){alert('Error loading document');},
+
+      success: function(result){alert(name,phone)}
+
+      });
+  }
+</script>
+<script src="js/zepto.js"></script>
+<script src="js/newpage.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

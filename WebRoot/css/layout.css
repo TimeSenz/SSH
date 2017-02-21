@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.fr{
+	float:right;}
+
+.agreement{
+	line-height:24px;
+	}
+	
+/*服务条款*/
+.fwtk{
+	width:1000px;
+	margin:0 auto;
+}
+.fwtk h1{
+	height:100px;
+	text-align:center;
+	line-height:100px;
+}
+.fwtk p{
+	font-size:14px;
+	line-height:24px;
+	text-indent:28px;
+}

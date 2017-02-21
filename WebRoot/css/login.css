@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* login css */
+.login-main-container{width:100%;margin:0 auto;text-align:center;height:450px;margin-bottom:100px;}
+.login-main-container .l{background:url(../images/login-banner.png) no-repeat;display:block;width:480px;height:370px;margin:40px 20px;}
+.login-main-container .r{background:#fff;width:400px;height:370px;margin:40px 15px;}
+.login-main-container .r .content{padding:30px 80px;position: relative;}
+.content h2{font-size:30px;font-weight:normal;color:#2da7e0;}
+.login-main-container .login_img{width: 564px;padding-top: 40px;_margin-top:40px;height: 371px;float:left}
+.input_con{margin-bottom:20px;border:1px solid #d4d4d4;}
+input.oInput{height: 42px;line-height:42px;width: 240px;padding-left: 50px;border:1px #ccc solid; border-radius: 3px;margin-bottom:20px;display: block;}
+.alert{height:21px;color:red;width:240px;font-size: 12px;}
+.name{background:#f3f3f3 url(../images/input1.png) no-repeat left bottom;}
+.pwd{background:#f3f3f3 url(../images/input3.png) no-repeat left bottom;}
+.choice{font-size:8px/1.5;height: 24px;line-height: 24px;display: block;width:240px;}
+.choice input{vertical-align: middle;}
+p.choice .rem{position:absolute;top:3px;}
+.oCheckbox{margin-left:18px;font-style:normal;}
+.choice a.get{}
+.login_btn{display:inline-block;width:150px;height:40px;line-height:40px;background:#2da7e0;text-align:center;margin:40px 45px 10px 45px;border:none;border-radius:5px;}
+.reg{text-align:center;font-size:8px/1.5;line-height: 26px;width:240px;}
+.tips{color: red;position: absolute;}

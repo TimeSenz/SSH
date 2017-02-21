@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<!-- ajax <bean id="TestajaxAction" class="action.TestajaxAction" > </bean> -->
+
+	<bean id="RandomAction" class="action.RandomAction">
+
+	</bean>
+
+	<!-- Lcractmerge -->
+	<bean id="LcractmergeAction" class="action.LcractmergeAction">
+		<property name="lcractmergedao" ref="LcractmergeDAO" />
+		<property name="lcractmergeservice" ref="LcractmergeService" />
+		<property name="lcractservice" ref="LcractService"></property>
+		<property name="rootactservice" ref="RootactService"></property>
+		<property name="bidinfoservice" ref="BidinfoService"></property>
+		<property name="userinfoservice" ref="UserinfoService"></property>
+
+	</bean>
+	<bean id="LcractmergeService" class="service.LcractmergeService">
+		<property name="lcractmergedao" ref="LcractmergeDAO" />
+
+	</bean>
+	<!-- SMS -->
+	<bean id="SmstemplateAction" class="action.SmstemplateAction">
+		<property name="smsdao" ref="SmstemplateDAO" />
+		<property name="smsservice" ref="SmstemplateService" />
+	</bean>
+	<bean id="SmstemplateService" class="service.SmstemplateService">
+		<property name="smsdao" ref="SmstemplateDAO" />
+	</bean>
+	<!-- fengfu -->
+	<bean id="FengfupayAction" class="action.FengfupayAction">
+		<property name="userinfodao" ref="UserinfoDAO" />
+		<property name="recordsdao" ref="RecordsDAO" />
+	</bean>
+	<!-- Finance_Act -->
+	<bean id="FinanceactAction" class="action.FinanceactAction">
+		<property name="rootactservice" ref="RootactService" />
+		<property name="lcractdao" ref="LcractDAO" />
+		<property name="jkractdao" ref="JkractDAO" />
+		<property name="lcractmergedao" ref="LcractmergeDAO" />
+
+	</bean>
+	<!-- Bidinfo_Userinfo -->
+	<!-- action -->
+	<bean id="BidinfouserAction" class="action.BidinfouserAction">
+		<property name="bidinfouserservice" ref="BidinfouserService"></property>
+		<property name="bidinfodao" ref="BidinfoDAO"></property>
+	</bean>
+	<!-- service -->
+	<bean id="BidinfouserService" class="service.BidinfouserService">
+		<property name="bidinfodao" ref="BidinfoDAO"></property>
+		<property name="userinfodao" ref="UserinfoDAO"></property>
+	</bean>
+
+	<!-- About Us -->
+	<bean id="AboutAction" class="action.AboutAction">
+
+
+	</bean>
+	<!-- ROOT_ACT -->
+	<bean id="RootactAction" class="action.RootactAction">
+
+		<property name="rootactservice" ref="RootactService"></property>
+		<property name="lcractdao" ref="LcractDAO"></property>
+		<property name="jkractdao" ref="JkractDAO"></property>
+		<property name="recordsdao" ref="RecordsDAO"></property>
+		<property name="lcractmergedao" ref="LcractmergeDAO" />
+	</bean>
+
+	<bean id="RootactService" class="service.RootactService">
+		<property name="bidinfoservice" ref="BidinfoService"></property>
+		<property name="bidinfodao" ref="BidinfoDAO"></property>
+		<property name="jkractdao" ref="JkractDAO"></property>
+		<property name="userinfodao" ref="UserinfoDAO"></property>
+		<property name="lcractdao" ref="LcractDAO"></property>
+		<property name="tempdatadao" ref="TempdataDAO"></property>
+		<property name="recordsdao" ref="RecordsDAO"></property>
+		<property name="cominfodao" ref="CominfoDAO"></property>
+		<property name="userbankdao" ref="UserbankDAO"></property>
+		<property name="lcractmergedao" ref="LcractmergeDAO" />
+	</bean>
+	<!-- Bidinfo标 -->
+	<!-- action -->
+	<bean id="BidinfoAction" class="action.BidinfoAction">
+		<property name="bidinfoservice" ref="BidinfoService"></property>
+		<property name="tempdataservice" ref="TempdataService"></property>
+		<property name="jkractservice" ref="JkractService"></property>
+		<property name="userinfoservice" ref="UserinfoService"></property>
+		<property name="rootactservice" ref="RootactService"></property>
+		<property name="bidinfodao" ref="BidinfoDAO"></property>
+		<property name="newsinfoservice" ref="NewsinfoService"></property>
+		<property name="recordsdao" ref="RecordsDAO"></property>
+		<property name="cominfodao" ref="CominfoDAO"></property>
+		<property name="userinfodao" ref="UserinfoDAO"></property>
+
+	</bean>
+
+
+
+	<!-- service -->
+	<bean id="BidinfoService" class="service.BidinfoService">
+		<property name="bidinfodao" ref="BidinfoDAO"></property>
+		<property name="userinfodao" ref="UserinfoDAO"></property>
+		<property name="recordsdao" ref="RecordsDAO"></property>
+	</bean>
+
+	<!-- Cominfo公司账户 -->
+	<!-- action -->
+	<bean id="CominfoAction" class="action.CominfoAction">
+		<property name="cominfoservice" ref="CominfoService"></property>
+	</bean>
+	<!-- service -->
+	<bean id="CominfoService" class="service.CominfoService">
+		<property name="cominfodao" ref="CominfoDAO"></property>
+	</bean>
+
+	<!-- Finance财务 -->
+	<!-- action -->
+	<bean id="FinanceAction" class="action.FinanceAction">
+		<property name="financeservice" ref="FinanceService"></property>
+		<property name="financedao" ref="FinanceDAO"></property>
+	</bean>
+	<!-- service -->
+	<bean id="FinanceService" class="service.FinanceService">
+		<property name="financedao" ref="FinanceDAO"></property>
+	</bean>
+
+
+	<!-- Cusinfo客服 -->
+	<!-- action -->
+	<bean id="CusinfoAction" class="action.CusinfoAction">
+		<property name="cusinfoservice" ref="CusinfoService"></property>
+		<property name="cusinfodao" ref="CusinfoDAO"></property>
+	</bean>
+	<!-- service -->
+	<bean id="CusinfoService" class="service.CusinfoService">
+		<property name="cusinfodao" ref="CusinfoDAO"></property>
+	</bean>
+
+	<!-- Newsinfo新闻 -->
+	<!-- action -->
+	<bean id="NewsinfoAction" class="action.NewsinfoAction">
+		<property name="newsinfoservice" ref="NewsinfoService"></property>
+		<property name="newsinfodao" ref="NewsinfoDAO"></property>
+	</bean>
+	<!-- service -->
+	<bean id="NewsinfoService" class="service.NewsinfoService">
+		<property name="newsinfodao" ref="NewsinfoDAO"></property>
+	</bean>
+
+
+	<!-- Jkract借款人操作表 -->
+	<!-- action -->
+	<bean id="JkractAction" class="action.JkractAction">
+		<property name="jkractservice" ref="JkractService"></property>
+		<property name="bidinfoserice" ref="BidinfoService"></property>
+		<property name="userinfoservice" ref="UserinfoService"></property>
+		<property name="jkractdao" ref="JkractDAO"></property>
+	</bean>
+	<!-- service -->
+	<bean id="JkractService" class="service.JkractService">
+		<property name="jkractdao" ref="JkractDAO"></property>
+		<property name="lcractdao" ref="LcractDAO"></property>
+		<property name="bidinfodao" ref="BidinfoDAO"></property>
+		<property name="userinfodao" ref="UserinfoDAO"></property>
+	</bean>
+
+	<!-- Lcract理财人操作表 -->
+	<!-- action -->
+	<bean id="LcractAction" class="action.LcractAction">
+		<property name="lcractservice" ref="LcractService"></property>
+		<property name="lcractmergeservice" ref="LcractmergeService" />
+	</bean>
+	<!-- service -->
+	<bean id="LcractService" class="service.LcractService">
+		<property name="lcractdao" ref="LcractDAO"></property>
+		<property name="bidinfodao" ref="BidinfoDAO"></property>
+		<property name="userinfodao" ref="UserinfoDAO"></property>
+		<property name="tempdatadao" ref="TempdataDAO"></property>
+
+	</bean>
+
+	<!-- Records总流水表 -->
+	<!-- action -->
+	<bean id="RecordsAction" class="action.RecordsAction">
+		<property name="recordsservice" ref="RecordsService"></property>
+	</bean>
+	<!-- service -->
+	<bean id="RecordsService" class="service.RecordsService">
+		<property name="recordsdao" ref="RecordsDAO"></property>
+	</bean>
+
+	<!-- Riskinfo风险控制 -->
+	<!-- action -->
+	<bean id="RiskinfoAction" class="action.RiskinfoAction">
+		<property name="riskinfoservice" ref="RiskinfoService"></property>
+		<property name="riskinfodao" ref="RiskinfoDAO"></property>
+	</bean>
+	<!-- service -->
+	<bean id="RiskinfoService" class="service.RiskinfoService">
+		<property name="riskinfodao" ref="RiskinfoDAO"></property>
+	</bean>
+
+	<!-- Rootinfo管理员 -->
+	<!-- action -->
+	<bean id="RootinfoAction" class="action.RootinfoAction">
+		<property name="rootinfoservice" ref="RootinfoService"></property>
+		<property name="rootinfodao" ref="RootinfoDAO"></property>
+	</bean>
+	<!-- service -->
+	<bean id="RootinfoService" class="service.RootinfoService">
+		<property name="rootinfodao" ref="RootinfoDAO"></property>
+	</bean>
+
+	<!-- Tempdata数据中转表 -->
+	<!-- action -->
+	<bean id="TempdataAction" class="action.TempdataAction">
+		<property name="tempdataservice" ref="TempdataService"></property>
+		<property name="bidinfoservice" ref="BidinfoService"></property>
+	</bean>
+	<!-- service -->
+	<bean id="TempdataService" class="service.TempdataService">
+		<property name="tempdatadao" ref="TempdataDAO"></property>
+	</bean>
+
+	<!-- Userinfo用户 -->
+	<!-- action -->
+	<bean id="UserinfoAction" class="action.UserinfoAction">
+		<property name="userinfoservice" ref="UserinfoService"></property>
+		<property name="bidinfoservice" ref="BidinfoService"></property>
+		<property name="lcractdao" ref="LcractDAO"></property>
+		<property name="recordsdao" ref="RecordsDAO"></property>
+		<property name="rootactservice" ref="RootactService"></property>
+		<property name="tempdataservice" ref="TempdataService"></property>
+		<property name="userinfodao" ref="UserinfoDAO"></property>
+		<property name="userbankdao" ref="UserbankDAO"></property>
+		<property name="lcractmergedao" ref="LcractmergeDAO"></property>
+	</bean>
+	<!-- service -->
+	<bean id="UserinfoService" class="service.UserinfoService">
+		<property name="userinfodao" ref="UserinfoDAO"></property>
+		<property name="recordsdao" ref="RecordsDAO"></property>
+		<property name="lcractdao" ref="LcractDAO"></property>
+
+
+	</bean>
+	<!-- 借款申请 -->
+
+	<bean id="LoanRequests" class="action.LoanRequests">
+		<property name="clxxdao" ref="ClxxDAO"></property>
+		<property name="fdxxdao" ref="FdxxDAO"></property>
+		<property name="hxddao" ref="HxdDAO"></property>
+		<property name="jbsqdao" ref="JbsqDAO"></property>
+		<property name="userinfodao" ref="UserinfoDAO"></property>
+
+	</bean>
+	<!-- 精选理财 -->
+	<!-- action -->
+	<bean id="FinanceplanAction" class="action.FinanceplanAction">
+		<property name="financeplanservice" ref="FinanceplanService"></property>
+	</bean>
+	<!-- service -->
+	<bean id="FinanceplanService" class="service.FinanceplanService">
+		<property name="financeplandao" ref="FinanceplanDAO"></property>
+	</bean>
+
+	<!-- 移动端 -->
+	<bean id="MobileAction" class="mobile.MobileAction">
+		<property name="bidinfodao" ref="BidinfoDAO"></property>
+		<property name="userinfodao" ref="UserinfoDAO"></property>
+		<property name="lotterydao" ref="LotteryDAO"></property>
+		<property name="userbankdao" ref="UserbankDAO"></property>
+		<property name="recordsdao" ref="RecordsDAO"></property>
+		<property name="lcractdao" ref="LcractDAO"></property>
+		<property name="lcractmergedao" ref="LcractmergeDAO"></property>
+		<property name="userinfoservice" ref="UserinfoService"></property>
+		<property name="bidinfoservice" ref="BidinfoService"></property>
+		<property name="rootactservice" ref="RootactService"></property>
+		<property name="tempdataservice" ref="TempdataService"></property>
+		<property name="bidinfoaction" ref="BidinfoAction"></property>
+		<property name="cominfodao" ref="CominfoDAO"></property>
+	</bean>
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"> 
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"> </property> 
+		<property name="url" value="jdbc:mysql://localhost:3306/zhongcaibao?characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;transformedBitIsBoolean=true"> 
+		</property> <property name="username" value="root"></property> <property 
+		name="password" value="123"></property> </bean> -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+		<property name="jdbcUrl"
+			value="jdbc:mysql://localhost:3306/zhongcaibao?characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;transformedBitIsBoolean=true"></property>
+		<property name="user" value="root"></property>
+		<property name="password" value="123"></property>
+		<property name="maxPoolSize" value="120"></property>
+		<property name="minPoolSize" value="20"></property>
+		<property name="idleConnectionTestPeriod" value="60"></property>
+		<property name="maxIdleTime" value="120"></property>
+		<property name="maxStatements" value="100">
+		</property>
+	</bean>
+
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.connection.release_mode">after_statement</prop>
+				<!-- <prop key="hibernate.show_sql">true</prop> -->
+			</props>
+		</property>
+
+		<property name="mappingResources">
+			<list>
+				<value>dao/Userinfo.hbm.xml</value>
+				<value>dao/Bidinfo.hbm.xml</value>
+				<value>dao/Finance.hbm.xml</value>
+				<value>dao/Tempdata.hbm.xml</value>
+				<value>dao/Riskinfo.hbm.xml</value>
+				<value>dao/Rootinfo.hbm.xml</value>
+				<value>dao/Cominfo.hbm.xml</value>
+				<value>dao/Lcract.hbm.xml</value>
+				<value>dao/Records.hbm.xml</value>
+				<value>dao/Jkract.hbm.xml</value>
+				<value>dao/Fdxx.hbm.xml</value>
+				<value>dao/Jbsq.hbm.xml</value>
+				<value>dao/Hxd.hbm.xml</value>
+				<value>dao/Clxx.hbm.xml</value>
+				<value>dao/Financeplan.hbm.xml</value>
+				<value>dao/Cusinfo.hbm.xml</value>
+				<value>dao/Newsinfo.hbm.xml</value>
+				<value>dao/Userbank.hbm.xml</value>
+				<value>dao/Smstemplate.hbm.xml</value>
+				<value>dao/Lcractmerge.hbm.xml</value>
+				<value>dao/Lottery.hbm.xml</value>
+			</list>
+
+
+		</property>
+	</bean>
+	<bean id="UserinfoDAO" class="dao.UserinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="BidinfoDAO" class="dao.BidinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="FinanceDAO" class="dao.FinanceDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="TempdataDAO" class="dao.TempdataDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="RiskinfoDAO" class="dao.RiskinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="RootinfoDAO" class="dao.RootinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CominfoDAO" class="dao.CominfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="LcractDAO" class="dao.LcractDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="RecordsDAO" class="dao.RecordsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="JkractDAO" class="dao.JkractDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="FdxxDAO" class="dao.FdxxDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="JbsqDAO" class="dao.JbsqDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="HxdDAO" class="dao.HxdDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ClxxDAO" class="dao.ClxxDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="FinanceplanDAO" class="dao.FinanceplanDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CusinfoDAO" class="dao.CusinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="NewsinfoDAO" class="dao.NewsinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="UserbankDAO" class="dao.UserbankDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="SmstemplateDAO" class="dao.SmstemplateDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="LcractmergeDAO" class="dao.LcractmergeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="LotteryDAO" class="dao.LotteryDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+</beans>

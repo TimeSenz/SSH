@@ -1,0 +1,581 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/ZCB/!svn/ver/606/ZhongCaiBao/src/dao
+END
+FinanceplanDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/FinanceplanDAO.java
+END
+Userinfo.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ZCB/!svn/ver/34/ZhongCaiBao/src/dao/Userinfo.hbm.xml
+END
+AbstractUserbank.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ZCB/!svn/ver/121/ZhongCaiBao/src/dao/AbstractUserbank.java
+END
+Userbank.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ZCB/!svn/ver/121/ZhongCaiBao/src/dao/Userbank.java
+END
+AbstractLottery.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ZCB/!svn/ver/563/ZhongCaiBao/src/dao/AbstractLottery.java
+END
+Riskinfo.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ZCB/!svn/ver/310/ZhongCaiBao/src/dao/Riskinfo.hbm.xml
+END
+Tempdata.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Tempdata.hbm.xml
+END
+Newsinfo.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ZCB/!svn/ver/25/ZhongCaiBao/src/dao/Newsinfo.hbm.xml
+END
+AbstractFinanceplan.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/AbstractFinanceplan.java
+END
+Lcractmerge.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ZCB/!svn/ver/538/ZhongCaiBao/src/dao/Lcractmerge.hbm.xml
+END
+Records.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Records.hbm.xml
+END
+AbstractLcractmerge.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ZCB/!svn/ver/539/ZhongCaiBao/src/dao/AbstractLcractmerge.java
+END
+LcractDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ZCB/!svn/ver/547/ZhongCaiBao/src/dao/LcractDAO.java
+END
+Userbank.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ZCB/!svn/ver/125/ZhongCaiBao/src/dao/Userbank.hbm.xml
+END
+Lottery.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ZCB/!svn/ver/563/ZhongCaiBao/src/dao/Lottery.hbm.xml
+END
+AbstractFinance.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ZCB/!svn/ver/491/ZhongCaiBao/src/dao/AbstractFinance.java
+END
+Hxd.java
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Hxd.java
+END
+Rootinfo.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Rootinfo.hbm.xml
+END
+AbstractRootinfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/AbstractRootinfo.java
+END
+Rootinfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Rootinfo.java
+END
+Smstemplate.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ZCB/!svn/ver/371/ZhongCaiBao/src/dao/Smstemplate.hbm.xml
+END
+Cominfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ZCB/!svn/ver/606/ZhongCaiBao/src/dao/Cominfo.java
+END
+Person_Profit.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ZCB/!svn/ver/35/ZhongCaiBao/src/dao/Person_Profit.java
+END
+Hxd.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Hxd.hbm.xml
+END
+Bidinfo_Userinfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Bidinfo_Userinfo.java
+END
+AbstractCusinfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ZCB/!svn/ver/25/ZhongCaiBao/src/dao/AbstractCusinfo.java
+END
+Jbsq.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Jbsq.hbm.xml
+END
+Bidinfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ZCB/!svn/ver/310/ZhongCaiBao/src/dao/Bidinfo.java
+END
+AbstractClxx.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/AbstractClxx.java
+END
+Clxx.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Clxx.java
+END
+Finance.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ZCB/!svn/ver/491/ZhongCaiBao/src/dao/Finance.hbm.xml
+END
+BidinfoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ZCB/!svn/ver/577/ZhongCaiBao/src/dao/BidinfoDAO.java
+END
+CominfoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ZCB/!svn/ver/606/ZhongCaiBao/src/dao/CominfoDAO.java
+END
+AbstractJkract.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/AbstractJkract.java
+END
+Jkract.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Jkract.hbm.xml
+END
+Jkract.java
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Jkract.java
+END
+AbstractRecords.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/AbstractRecords.java
+END
+AbstractFdxx.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/AbstractFdxx.java
+END
+Fdxx.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Fdxx.java
+END
+repayPlan.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ZCB/!svn/ver/194/ZhongCaiBao/src/dao/repayPlan.java
+END
+jkr_agreement.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ZCB/!svn/ver/425/ZhongCaiBao/src/dao/jkr_agreement.java
+END
+UserinfoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ZCB/!svn/ver/532/ZhongCaiBao/src/dao/UserinfoDAO.java
+END
+AbstractLcract.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ZCB/!svn/ver/179/ZhongCaiBao/src/dao/AbstractLcract.java
+END
+Profit_List.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ZCB/!svn/ver/508/ZhongCaiBao/src/dao/Profit_List.java
+END
+Clxx.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Clxx.hbm.xml
+END
+Lcract.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ZCB/!svn/ver/180/ZhongCaiBao/src/dao/Lcract.java
+END
+RiskinfoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ZCB/!svn/ver/310/ZhongCaiBao/src/dao/RiskinfoDAO.java
+END
+Finplan.java
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Finplan.java
+END
+TempdataDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ZCB/!svn/ver/291/ZhongCaiBao/src/dao/TempdataDAO.java
+END
+Cusinfo.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ZCB/!svn/ver/25/ZhongCaiBao/src/dao/Cusinfo.hbm.xml
+END
+NewsinfoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ZCB/!svn/ver/163/ZhongCaiBao/src/dao/NewsinfoDAO.java
+END
+AbstractSmstemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ZCB/!svn/ver/374/ZhongCaiBao/src/dao/AbstractSmstemplate.java
+END
+LcractmergeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ZCB/!svn/ver/537/ZhongCaiBao/src/dao/LcractmergeDAO.java
+END
+RecordsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ZCB/!svn/ver/560/ZhongCaiBao/src/dao/RecordsDAO.java
+END
+UserbankDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ZCB/!svn/ver/574/ZhongCaiBao/src/dao/UserbankDAO.java
+END
+LotteryDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ZCB/!svn/ver/563/ZhongCaiBao/src/dao/LotteryDAO.java
+END
+Lottery.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ZCB/!svn/ver/563/ZhongCaiBao/src/dao/Lottery.java
+END
+Perrecords.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ZCB/!svn/ver/36/ZhongCaiBao/src/dao/Perrecords.java
+END
+Fdxx.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Fdxx.hbm.xml
+END
+Person_Phone.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ZCB/!svn/ver/292/ZhongCaiBao/src/dao/Person_Phone.java
+END
+AbstractNewsinfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ZCB/!svn/ver/25/ZhongCaiBao/src/dao/AbstractNewsinfo.java
+END
+Financeplan.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Financeplan.java
+END
+RootinfoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/RootinfoDAO.java
+END
+Newsinfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ZCB/!svn/ver/25/ZhongCaiBao/src/dao/Newsinfo.java
+END
+Lcractmerge.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ZCB/!svn/ver/536/ZhongCaiBao/src/dao/Lcractmerge.java
+END
+Records_Nick.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ZCB/!svn/ver/500/ZhongCaiBao/src/dao/Records_Nick.java
+END
+SmstemplateDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ZCB/!svn/ver/409/ZhongCaiBao/src/dao/SmstemplateDAO.java
+END
+Financeplan.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Financeplan.hbm.xml
+END
+AbstractRiskinfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/ZCB/!svn/ver/310/ZhongCaiBao/src/dao/AbstractRiskinfo.java
+END
+HxdDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ZCB/!svn/ver/15/ZhongCaiBao/src/dao/HxdDAO.java
+END
+Riskinfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/ZCB/!svn/ver/525/ZhongCaiBao/src/dao/Riskinfo.java
+END
+JbsqDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/JbsqDAO.java
+END
+AbstractUserinfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ZCB/!svn/ver/34/ZhongCaiBao/src/dao/AbstractUserinfo.java
+END
+Finance.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ZCB/!svn/ver/491/ZhongCaiBao/src/dao/Finance.java
+END
+Userinfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/ZCB/!svn/ver/34/ZhongCaiBao/src/dao/Userinfo.java
+END
+AbstractJbsq.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/AbstractJbsq.java
+END
+FinanceDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ZCB/!svn/ver/491/ZhongCaiBao/src/dao/FinanceDAO.java
+END
+Jbsq.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Jbsq.java
+END
+AbstractHxd.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/AbstractHxd.java
+END
+JkractDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ZCB/!svn/ver/302/ZhongCaiBao/src/dao/JkractDAO.java
+END
+Cusinfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ZCB/!svn/ver/25/ZhongCaiBao/src/dao/Cusinfo.java
+END
+AbstractCominfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ZCB/!svn/ver/606/ZhongCaiBao/src/dao/AbstractCominfo.java
+END
+Lcract.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ZCB/!svn/ver/563/ZhongCaiBao/src/dao/Lcract.hbm.xml
+END
+AbstractBidinfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ZCB/!svn/ver/310/ZhongCaiBao/src/dao/AbstractBidinfo.java
+END
+ClxxDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/ClxxDAO.java
+END
+CusinfoDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ZCB/!svn/ver/25/ZhongCaiBao/src/dao/CusinfoDAO.java
+END
+Records.java
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Records.java
+END
+AbstractTempdata.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/AbstractTempdata.java
+END
+Tempdata.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Tempdata.java
+END
+Root_Jkract.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/ZCB/!svn/ver/2/ZhongCaiBao/src/dao/Root_Jkract.java
+END
+Fenye.java
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ZCB/!svn/ver/268/ZhongCaiBao/src/dao/Fenye.java
+END
+Bidinfo.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ZCB/!svn/ver/310/ZhongCaiBao/src/dao/Bidinfo.hbm.xml
+END
+FdxxDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/ZCB/!svn/ver/15/ZhongCaiBao/src/dao/FdxxDAO.java
+END
+Root_Lcract.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ZCB/!svn/ver/548/ZhongCaiBao/src/dao/Root_Lcract.java
+END
+Cominfo.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ZCB/!svn/ver/606/ZhongCaiBao/src/dao/Cominfo.hbm.xml
+END
+Smstemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/ZCB/!svn/ver/373/ZhongCaiBao/src/dao/Smstemplate.java
+END

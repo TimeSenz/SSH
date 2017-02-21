@@ -1,0 +1,92 @@
+/*whole*/
+input, label, select, option, textarea, button, fieldset, legend {
+font: 12px/1.5 tahoma,arial,\5b8b\4f53,SimSun,STSong,sans-serif;
+}
+body,h1,h2,h3,h4,p,ul,ol{margin:0;}
+ul,ol{padding-left:0;list-style-type:none;}
+/*image with no-border*/
+a img,img{border:none;}
+/*float*/
+.l{float:left;}.r{float:right;}
+/*clear float*/
+.clearfix{*zoom:1;}.clearfix:after{content:"\200B"; display:block; height:0; clear:both;overflow:hidden; visibility:hidden; }
+
+/*header*/
+.carbg{
+	background-color:#c7f1fe;}
+.housebg{
+	background-color:#fff0d5;}
+.creditbg{
+	background-color:#31cf7a;}
+.bannercontainer{
+	position:relative;
+	width:100%;
+	height:300px;}
+
+/*con*/
+.con{width:1000px;margin:0 auto;padding:10px 0;border:1px solid #d0d0d0;margin-bottom: 15px;}
+.con1 h3{width: 324px;height:69px;background: url(../images/anbg1.png) no-repeat;position: absolute;left:-40px;line-height: 50px;padding-left: 60px;font-size: 20px;color: #fff;text-align: left;}
+.con1{position: relative;}
+.left {
+float: left;
+}
+/*caseReturn*/
+a.caseReturn,a:visited.caseReturn{background:url("../images/newsCaseReturn.png") no-repeat left 50%;padding-left: 17px;color:#414141;text-decoration: none;}
+
+/*form*/
+.row{*zoom:1;}.row:after{content:"\200B"; display:block; height:0; clear:both;overflow:hidden; visibility:hidden; }
+.rowL{float:left;width:90px;display:block;text-align:right;color:#696969;margin-right: 10px;height:26px;line-height:26px;}
+.unit{float:left;margin-left:5px;display:block;color:#696969;height:26px;line-height:26px;font-size:12px/1.5;}
+.rowL i{color:#ff2424;vertical-align:middle;margin-right:5px;}
+.rowText{float:left;color:#696969;width:190px;height:25px;line-height:25px;border:1px solid #adacb1;padding-left: 4px;}
+.rowTextArea{width:190px;padding-left:4px;border:1px solid #adacb1;height: 45px;padding-top: 4px;padding-bottom: 4px;float:left;}
+a.foBtn,a:visited.foBtn,input.foBtn{width:180px;text-align:center;height:42px;line-height:42px;color:#fff;text-decoration:none;border:0;background:#2da7e0;font-family:\5FAE\8F6F\96C5\9ED1,'Microsoft YaHei',STHeiti,sans-serif;font-size:22px;display:block;margin:0 auto;cursor:pointer;}
+a:hover.foBtn,input:hover.foBtn{background-color:#1c75bc;}
+.rowError{text-align:left;color:#f00;margin-left: 100px;height:24px;line-height:24px;}
+.rowInfo{color:#414141;margin-right: 5px;height:26px;line-height:26px;}
+
+
+/*formR*/
+.formR{float:right;border:1px solid #d3d3d3;margin-top: 15px;margin-bottom: 30px;margin-right: 15px;*margin-right: 7px;width:310px;padding: 20px;padding-top: 0;_padding-bottom:0;}
+.formR .applyT{margin-left: 0;}
+.formR .row label{color:#414141;}
+.formR input.foBtn{background-color:#205299;}
+.formR input:hover.foBtn{background-color:#0e4593;}
+
+/*sel*/
+.sel{width:76px;border:1px solid #adacb1;margin-right: 5px;position:relative;z-index:100;}
+.selInput{width:68%;border:0;float:left;height:26px;line-height:24px;padding-left: 5px;color:#696969;}
+.selIcon{border-left:1px solid #adacb1;display:block;width:22%;float:left;text-align:center;height:26px;line-height:26px;}
+a.selIcon,a:visited.selIcon{color:#adacb1;text-decoration:none;font-size:12px;_font-size:10px;}
+.sellist{position:absolute;background-color:#fff;border:1px solid #adacb1;width:76px;text-indent:10px;left:-1px;padding-top: 5px;padding-bottom: 5px;height:180px;overflow-y: auto; }
+.sellist li.on{background-color:#ccc;}
+.sellist li.on a,.sellist li.on a:visited{color:#fff;}
+.sellist li a,.sellist li a:visited{color:#696969;text-decoration:none;width:100%;}
+
+/*cityPlug*/
+.cityDialog{z-index:90;position:absolute;width:240px;border:1px solid #ccc;background:#fff;padding:10px;right:0;top:42px;font-size:12px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;}
+.cT{padding-top: 5px;padding-bottom: 20px;}
+.cT strong{float:left;color:#696969;}
+.cT a,.cT a:visited{float:right;color:#696969;text-decoration:none;margin-right: 5px}
+.cHot{border-bottom:1px solid #ccc;margin-bottom: 5px;padding-bottom: 5px;}
+.cOther{margin-bottom: 10px;padding-bottom:5px;}
+.cL{float:left;width:16%;color:#696969;}
+.cR{float:right;width:80%;}
+.cR ul li{float:left;margin-bottom: 5px;}
+.cR ul li a,.cR ul li a:visited{text-decoration:none;display:block;color:#696969;margin-right: 10px;width:3em;}
+.c-input-name{width:40px;border:1px solid #ccc;margin-right: 5px;margin-left: 5px;}
+.c-input{color:#696969;}
+.cityPoint{display:block;position:absolute;top:-13px;right:100px;width:26px;height:14px;z-index:110;background:url("../images/ycd-city.gif") no-repeat;}
+.btnOther{border:1px solid #666;background-color:#eee;margin-left: 5px;color:#666;cursor:pointer;}
+a:hover.btnOther,input:hover.btnOther,button:hover.btnOther{background-color:#ddd;}
+/*dialog*/
+/*#floatBoxBg{display:none;width:100%;height:100%;background:#000;position:absolute;top:0;left:0;}*/
+.floatBox .title{height:40px;padding-left:15px;background:#efefef;color:#000;}
+.floatBox .title h4{float:left;padding:0;margin:0;font-size:16px;line-height:40px;font-weight:normal;color:#205299;font-family:\5FAE\8F6F\96C5\9ED1,'Microsoft YaHei',STHeiti,sans-serif;}
+.floatBox .content{background:#fff;}
+.floatBox .content .dInfo2{background-color:#fff;}
+.floatBox .content .btnArea{margin-bottom:20px;}
+

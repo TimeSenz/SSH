@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* CSS Document */
+body, h1, h2, h3, h4, h5, h6, ul, li, ol, p, span, b, i, dl, dt, dd, a, table, tr, td, img, input {
+  margin:0;
+  padding:0;
+}
+a{
+	text-decoration: none;
+	}
+ul, li, ol{
+	list-style-type: none;	
+	}
+body {
+	background-color: #fff;
+	color: #333;
+	font-size: 12px;
+	line-height: 1.5em;
+	font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","微软雅黑",Arial, Helvetica, sans-serif;
+}
+.blue{ color:#2da7e0;}
+img{border:none;}
+.box960{ width:960px; margin:0 auto;}
+.logo{
+	width: 430px;
+	padding-top: 10px;
+	padding-bottom:10px;
+}
+.top{
+	background-color: #333;
+	line-height: 40px;
+	height: 40px;
+	color:#999;
+}
+.logo img{float:left}
+
+.logo span{
+	padding-top:35px;
+	padding-left:20px;
+}
+.top a{
+	color: #fff;
+	text-decoration: none;
+}
+.header{ background-color:#fff;box-shadow: 0 1px 5px rgba(0,0,0,0.5);z-index: 20;position: relative;}
+.left{ float:left}
+.right{ float:right}
+.ui-header-nav{
+	width:370px;
+	height:63px;
+	display:inline;
+	padding-top:10px;
+	padding-bottom:10px;
+	}
+.ui-nav{
+	margin-top:35px;}
+.ui-nav-item{
+	float:left;
+	font-size:18px;}
+a.rrd-dimgray,a.rrd-dimgray:link{
+	color:#555;}
+a.rrd-dimgray:hover{
+	color:#00a8e8;}
+.ui-header-nav .ui-nav-item-link{
+	display:block;
+	margin-left:20px;}
+.clear{ clear:both}
+.conOut {
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.conOut .con {
+border: 1px solid #edeced;
+}
+.con {
+width: 960px;
+margin: 0 auto;
+margin-bottom:50px;
+}
+.clearfix{*zoom:1;}.clearfix:after{content:"\200B"; display:block; height:0; clear:both;overflow:hidden; visibility:hidden; }
+.applyCL {
+width:359px;
+float: left;
+padding:30px 40px;
+border-right: 1px solid #d0d0d0;
+}
+.applyCLT {
+border-bottom: 1px solid #2da7e0;
+margin: 20px auto;
+}
+.applyCLT a:hover, .applyCLT a.curr, .applyCLT a.curr:visited {
+background-color: #2da7e0;
+color: #fff;
+}
+.applyCLT a, .applyCLT a:visited {
+display: inline-block;
+width: 105px;
+height: 35px;
+color: #fff;
+font-family: \5FAE\8F6F\96C5\9ED1,'Microsoft YaHei',STHeiti,sans-serif;
+text-align: center;
+text-decoration: none;
+background-color: #f0f0f0;
+margin-right: 7px;
+line-height: 35px;
+-webkit-border-radius: 5px 5px 0px 0px;
+-moz-border-radius: 5px 5px 0px 0px;
+-o-border-radius: 5px 5px 0px 0px;
+-ms-border-radius: 5px 5px 0px 0px;
+border-radius: 5px 5px 0px 0px;
+}
+
+user agent stylesheeta:-webkit-any-link {
+color: -webkit-link;
+text-decoration: underline;
+cursor: auto;
+}
+
+
+
+
+.footer{background-color:#333; text-align:center; height:45px; line-height:45px; color:#666}
+

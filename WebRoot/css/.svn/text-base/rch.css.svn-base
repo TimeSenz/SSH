@@ -1,0 +1,43 @@
+@charset "utf-8";
+/*banner*/
+.roll-news .form-con{background:url(../images/form-con.png) no-repeat;margin:40px 20px;padding:20px;position:absolute;right:0;top:0;}
+.form-pos{height:356px;}
+.input_con{margin:20px 0;}
+.form-pos input.oInput{width:245px;height:35px;line-height:35px;border:0;text-indent:5px;}
+.form-con span{display:block;width:25px;height:25px;padding:5px;}
+.form-con .name{background:#c9c9c9 url(../images/name.png) no-repeat 50% 50%;}
+.form-con .pwd{background:#c9c9c9 url(../images/pwd.png) no-repeat 50% 50%;}
+.choice{font-size:8px;}
+.oCheckbox{margin-left:5px;}
+.choice a.reg{margin-left:70px;}
+.choice a.get{margin-left:20px;}
+.login_btn{display:block;width:240px;background:#2da7e0;text-align:center;padding-top:10px;padding-bottom:10px;margin:20px;}
+/* 秒杀 */
+.rch-limit{height:300px;margin-top:20px;}
+/*投资列表*/
+.deal-list-con{border-top:3px solid #2da7e0;color:#000;}
+.deal-list-con .list-con{border:1px solid #2da7e0;padding:20px 10px;height:160px;margin-bottom:10px;}
+.deal-list-con .middle{margin:0 20px;}
+.deal-list-con  .middle span{font-size:24px;}
+.orange{color:#e14f00;}
+.loading{padding:15px 0;}
+.deal-list-con  .middle .loading-data{font-size:20px;padding-left:20px;}
+.deal-list-con  .middle span.des{font-size:14px;margin:0 5px;}
+.deal-list-con  .middle .s{padding:3px 0;}
+.deal-list-con .right span{font-size:28px;}
+.deal-list-con .right .t{margin-bottom:45px;}
+.deal-list-con .right .l{margin-bottom:5px;}
+.bid{display:block;width:120px;background:#2da7e0;color:#fff;text-align:center;padding:8px 0;margin-left:40px;margin-top:30px;}
+/*dymatics&news*/
+.box{border-bottom: 1px solid #e5e4e2;
+	box-shadow: 0 3px 2px -2px #e5e4e2;
+	margin-bottom:30px;
+	padding-bottom:30px;}
+.dynamics1{width:489px;margin:0 auto;border-right:1px solid #e5e4e2;padding-right:10px;}
+.news1{width:490px;margin:0 auto;padding-left:10px;}
+.ui-list-item p.text1{
+	overflow:hidden;
+	width:330px;
+	font-size:14px;}
+.ui-list-item p.text2{text-align:right;}
+.news-more{text-align:right;}
