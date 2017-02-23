@@ -98,5 +98,6 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/asm-2.2.3.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/asm.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/c3p0-0.9.0.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/java-json.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

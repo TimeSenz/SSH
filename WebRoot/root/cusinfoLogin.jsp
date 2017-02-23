@@ -232,69 +232,6 @@ Integer currentPage=(Integer)request.getAttribute("currentPage");
   </div>
 
 </div>
-<!-- 
-
-   <s:form>
-   <table>
-     <tr>
-      <td><input type="button" value="新增" onclick="add()" /></td>
-     </tr>
-   </table>
-   </s:form>
-  
-  
-  <s:form name="f1">
-   <table border="2">
-   <tr>新闻动态</tr>
-   <tr>
-   <td>编号</td>
-   <td>标题</td>
-   <td>时间</td>
-   <td>录入人</td>
-   <td>预览</td>
-   <td>修改</td>
-   <td>删除</td>
-   </tr>
-   <s:iterator value="donglist" var="vo">
-   <tr>
-   <td><s:property value="#vo.id"/></td>  
-   <td><s:property value="#vo.title"/></td> 
-      <td><s:date name="#vo.time" format="yyyy-MM-dd" /></td> 
-   <td><s:property value="#vo.cusinfo"/></td> 
-   <td><s:a href="newsinfo/findoneById.action?id=%{#vo.id}" cssClass="title2">预览</s:a></td>
-   <td><s:a href="newsinfo/findById.action?id=%{#vo.id}" cssClass="title2">修改</s:a></td>
-   <td><s:a href="newsinfo/deleteNewsinfo.action?id=%{#vo.id}" onClick="{if(confirm('确实要删除吗？')){return true;}return false;}" cssClass="title4">删除</s:a></td>
-   </tr>
-   </s:iterator>
-   </table>
-  </s:form>
-
-
- <s:form name="f2">
-   <table border="2">              
-   <tr>新闻公告</tr>
-   <tr>
-   <td>编号</td>
-   <td>标题</td>
-   <td>时间</td>
-   <td>录入人</td>
-   <td>预览</td>
-   <td>修改</td>
-   <td>删除</td>
-   </tr>
-   <s:iterator value="gonglist" var="vo">
-   <tr>
-   <td><s:property value="#vo.id"/></td>  
-   <td><s:property value="#vo.title"/></td> 
-   <td><s:date name="#vo.time" format="yyyy-MM-dd" /></td>
-   <td><s:property value="#vo.cusinfo"/></td> 
-   <td><s:a href="newsinfo/findoneById.action?id=%{#vo.id}" cssClass="title2">预览</s:a></td>
-   <td><s:a href="newsinfo/findById.action?id=%{#vo.id}" cssClass="title2">修改</s:a></td>
-   <td><s:a href="newsinfo/deleteNewsinfo.action?id=%{#vo.id}" onClick="{if(confirm('确实要删除吗？')){return true;}return false;}" cssClass="title4">删除</s:a></td>
-   </tr>
-   </s:iterator>
-   </table>
- </s:form> -->
  <script src="js/houtai.js"></script>
 </body>
 </html>

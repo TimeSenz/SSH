@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+   <servlet>
+		<servlet-name>StartCaptchaServlet</servlet-name>
+		<servlet-class>sms_api.StartCaptchaServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>VerifyLoginServlet</servlet-name>
+		<servlet-class>sms_api.VerifyLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VerifyLoginServlet</servlet-name>
+		<url-pattern>/VerifyLoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>StartCaptchaServlet</servlet-name>
+		<url-pattern>/StartCaptchaServlet</url-pattern>
+	</servlet-mapping>
   <filter>
     <filter-name>UserActionFilter</filter-name>
     <filter-class>filter.UserActionFilter</filter-class>
   </filter>
+  <filter-mapping>
+    <filter-name>UserActionFilter</filter-name>
+    <url-pattern>/user/*</url-pattern>
+  </filter-mapping>
   <filter>
     <filter-name>struts2</filter-name>
-    <filter-class>  
-                  filter.MyStrutsFilter  
-              </filter-class>
+    <filter-class>filter.MyStrutsFilter</filter-class>
   </filter>
   <filter>
     <filter-name>encodingFilter</filter-name>
@@ -36,15 +54,11 @@
   </filter>
   <filter-mapping>
     <filter-name>encodingFilter</filter-name>
-    <url-pattern>/* </url-pattern>
-  </filter-mapping>
-  <filter-mapping>
-    <filter-name>UserActionFilter</filter-name>
-    <url-pattern>/user/*</url-pattern>
+    <url-pattern>/*</url-pattern>
   </filter-mapping>
   <filter-mapping>
     <filter-name>struts2</filter-name>
-    <url-pattern>/*</url-pattern>
+    <url-pattern>*.action</url-pattern>
   </filter-mapping>
   <filter>
     <filter-name>strutsFilterDispatcher</filter-name>

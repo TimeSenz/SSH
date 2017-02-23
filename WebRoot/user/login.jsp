@@ -15,13 +15,6 @@ String loginflag=(String)session.getAttribute("loginflag");
 <link type="text/css" rel="stylesheet" href="css/common.css">
 <link type="text/css" rel="stylesheet" href="css/login.css">
 <script src="js/jquery-1.6.4.min.js"></script>
-
-<!--[if IE 6]>
-<script src="js/png.js" type="text/javascript"></script>
-<script type="text/javascript">
-   EvPNG.fix('img,.top-container-left a,.icons a,.ui-nav-dropdown span,.l,.ui-footer-verification a'); 
-</script>
-<![endif]-->
 <script type="text/javascript" src="js/cookie.js"></script>
 
 <script type="text/javascript">
@@ -140,11 +133,70 @@ var cookieName_username = "LOGIN_USER_NAME_WXM";//用户名
                         
                         </p>
                                   
-                        <input type="submit" class="login_btn fwhite" id="c_login_btn" value="立即登录" />
+                        <input type="submit" class="login_btn fwhite" id="popup-submit" value="立即登录" />
+                        <div id="popup-captcha"></div>
                         <p class="reg">还没有账号？<a href="/ZhongCaiBao/userinfo/user.action?user=register">马上注册</a></p>
                     </s:form>
  
                 </div>
+                <!-- 为使用方便，直接使用jquery.js库 -->
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<!-- 引入封装了failback的接口--initGeetest -->
+<script src="http://static.geetest.com/static/tools/gt.js"></script>
+
+<script>
+
+    var handlerPopup = function (captchaObj) {
+        $("#popup-submit").click(function () {
+            var validate = captchaObj.getValidate();
+            if (!validate) {
+                alert('请先完成验证！');
+                return;
+            }
+            $.ajax({
+                url: "VerifyLoginServlet", // 进行二次验证
+                type: "post",
+                dataType: "json",
+                data: {
+                    // 二次验证所需的三个值
+                    geetest_challenge: validate.geetest_challenge,
+                    geetest_validate: validate.geetest_validate,
+                    geetest_seccode: validate.geetest_seccode
+                },
+                success: function (data) {
+                   	console.log("11111");
+                }
+            });
+        });
+        // 弹出式需要绑定触发验证码弹出按钮
+        captchaObj.bindOn("#popup-submit");
+
+        // 将验证码加到id为captcha的元素里
+        captchaObj.appendTo("#popup-captcha");
+
+        // 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html
+    };
+
+    $.ajax({
+        // 获取id，challenge，success（是否启用failback）
+        url: "StartCaptchaServlet",
+        type: "get",
+        dataType: "json",
+        success: function (data) {
+
+            // 使用initGeetest接口
+            // 参数1：配置参数
+            // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它做appendTo之类的事件
+            initGeetest({
+                gt: data.gt,
+                challenge: data.challenge,
+                product: "popup", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+                offline: !data.success // 表示用户后台检测极验服务器是否宕机，一般不需要关注
+            }, handlerPopup);
+        }
+    });
+
+</script>
             </div>
         </div>
     </div>

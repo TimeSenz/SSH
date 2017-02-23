@@ -14,33 +14,24 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet Filter implementation class UserActionFilter
+ * class UserActionFilter
  */
 @WebFilter("/UserActionFilter")
 public class UserActionFilter implements Filter {
 
-    /**
-     * Default constructor. 
-     */
+    
 	private static String LOGIN_PAGE = "/user/login.jsp";  
     public UserActionFilter() {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see Filter#destroy()
-	 */
+	
 	public void destroy() {
 		// TODO Auto-generated method stub
 	}
 
-	/**
-	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
-	 */
+	
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		// place your code here
-
 		HttpServletRequest req = (HttpServletRequest) request;  
 		  
         HttpServletResponse res = (HttpServletResponse) response;  
@@ -75,25 +66,12 @@ public class UserActionFilter implements Filter {
         	 chain.doFilter(request, response);
         	
         }
-        
-        //如果角色不是admin或者user，则验证失败，用户重新登录。
-//		if(!session.getAttribute("role").equals("admin") 
-//				&& !session.getAttribute("role").equals("user"))
-//		{
-//			session.removeAttribute("name");
-//			session.removeAttribute("role");
-//			res.sendRedirect(req.getContextPath() + LOGIN_PAGE);
-//			return;
-//		}
-		// pass the request along the filter chain
-		
+      
 	}
 
-	/**
-	 * @see Filter#init(FilterConfig)
-	 */
+	
 	public void init(FilterConfig fConfig) throws ServletException {
-		// TODO Auto-generated method stub
+		
 	}
 
 }

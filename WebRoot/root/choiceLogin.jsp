@@ -90,20 +90,6 @@ String loginflag=(String)session.getAttribute("loginflag");
                          </li>
                          
                      </ul>
-                    <!--  <table>
-                                     <tr>登录名<input type="text" name="login"></tr> 
-                                     <tr>密码<input type="text" name="password"></tr> 
-                                     <tr> 
-                                     <td><input type="radio" name="root" value="root">root</td> 
-                                     <td><input type="radio" name="root" value="riskinfo" >风控</td> 
-                                     <td><input type="radio" name="root" value="finance" >财务</td> 
-                                     </tr> 
-                                     <tr>
-                                     <td><input name="submit1" type="submit" value="确认"/></td>
-                                     </tr>  
-                                     
-                               
-                                     </table> -->
                 </s:form>
             </div>
          </div>
