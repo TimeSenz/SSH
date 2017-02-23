@@ -109,13 +109,12 @@ var cookieName_username = "LOGIN_USER_NAME_WXM";//用户名
 <!--main开始-->
     <div class="login-main-container">
         <div class="w1000" >
-        <img src="images/login_bg.jpg" class="login_img">
+        <img src="images/login_bg.jpg" class="login_img"/>
             <div class="r fright">
                 <div class="content">
                     <h2>登录众财宝</h2>
                     
                     <s:form method="post" action="/userinfo/login.action" autocomplete="off" name="myform">
-                    
                         <input type="text" name="userinfo.email" class="oInput name" id="email" placeholder="请输入手机号或邮箱" /></div>
                         <input type="password" name="userinfo.password" class="oInput pwd" id="password" placeholder="请输入密码" /></div>
                         <div class="alert" id="tips">
@@ -129,7 +128,7 @@ var cookieName_username = "LOGIN_USER_NAME_WXM";//用户名
                         <p class="choice">
                         <a href="javascript:void(0);" onclick="alert('请联系众财宝客服团队~')" title="请联系众财宝客服团队"  class="get fright">忘记密码</a>
                        <input id="cbRememberId" type="checkbox" name="cbRememberId" />
-    <label for="cbRememberId">记住用户名</label>
+    					<label for="cbRememberId">记住用户名</label>
                         
                         </p>
                                   
