@@ -46,7 +46,8 @@ request.setCharacterEncoding("utf-8");
           <li><strong>密码：</strong><s:textfield  name="finance.password"></s:textfield></li>
           <li><strong>姓名：</strong><s:textfield  name="finance.name"></s:textfield></li>
           <li><strong>电话：</strong><s:textfield  name="finance.phone"></s:textfield></li>
-           <li><strong>备注：</strong><input type="text" name="finance.remark"></span></li>
+          <li><strong>备注：</strong><s:textfield  name="finance.remark"></s:textfield></li>
+           <%-- <li><strong>备注：</strong><input type="text" name="finance.remark" /></li> --%>
            <li><strong>类别：</strong>
                               <select name="finance.authority" id="">
                                  <option value="<s:property value="finance.authority"/>">
