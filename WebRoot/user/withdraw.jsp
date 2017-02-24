@@ -18,18 +18,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link type="text/css" rel="stylesheet" href="../css/fund.css" /> 
   <link type="text/css" rel="stylesheet" href="../css/common.css" /> 
   <link rel="Shortcut Icon" href="../images/zcb-icon.ico">
+  <!-- 按钮样式start -->
+  <link type="text/css" rel="stylesheet" href="../css/button_style.css" />
+  <!-- 按钮样式end -->
   <script src="../js/jquery-1.6.4.min.js"></script> 
   <script src="../js/fund.js"></script>
   <script type="text/javascript" language="javascript" src="../js/png.js"></script>
   <script type="text/javascript" language="javascript" src="../js/abouts.js"></script>
   <script type="text/javascript" language="javascript" src="../js/embed.js"></script>
+<script type="text/javascript" src="js/cookie.js"></script>
   <style>
-            .account{width: 155px;display:inline-block;position: absolute;left: 0;top: 0;height:42px;}
-            .manage{width:250px;display:inline-block;position: absolute;left: 0;bottom: 2px;height:30px;line-height: 30px;border-top:1px solid #e2e2e2 }
-            .manage a{width: 125px;float: left;text-align: center;display: inline-block;}
-            .mark{width: 45px;display:inline-block;position: absolute;right: 0;top: 8px;height:32px;line-height: 32px;}
-            .mark input{border:none;width:40px;}
-         </style>
+         .account{width: 155px;display:inline-block;position: absolute;left: 0;top: 0;height:42px;}
+         .manage{width:250px;display:inline-block;position: absolute;left: 0;bottom: 2px;height:30px;line-height: 30px;border-top:1px solid #e2e2e2 }
+         .manage a{width: 125px;float: left;text-align: center;display: inline-block;}
+         .mark{width: 45px;display:inline-block;position: absolute;right: 0;top: 8px;height:32px;line-height: 32px;}
+         .mark input{border:none;width:40px;}
+         .cl{
+		    	clear: both;
+			}
+		.h6{
+			height: 6px;
+		 }
+  </style>
 <!--[if IE 6]>
 <script src="js/png.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -275,9 +285,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                <li><strong>平台手续费 ：</strong><span><i id="baifen"></i>元</span> <a>提现费用将从您的众财宝账户余额中扣除</a></li> 
                <li><strong>实际扣除金额：</strong><span><input type="text" id="jisuan"  value="" style="outline: none;" readonly="readonly" > 元</span></li> 
                <li><strong>预计到账日期：</strong><span id="DZdeta"></span> 之内到账  （双休日和法定节假日除外）</li>
-                
                <li><strong>提现密码：</strong><input type="password" name="key"/  id="txmm"> <a href="">忘记密码</a><span id="txtfp" style="margin-left: 15px;"></span></li> 
-<span id="addyhk"></span>
+				<span id="addyhk"></span>
 			   <input type="hidden" name="yhkid" id="yhkid" value="">
 				   <input type="hidden" name="userid" value="<s:property value="#session.userinfo.userid"/>" > 
 				<input type="hidden" name="yuantxmm" id="yuantxmm" value="<s:property value="#session.userinfo.moneykey"/>"/>
@@ -285,10 +294,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <input type="hidden" name="name" id="name" value="<s:property value="#session.userinfo.name"/>"/>
                	<input type="hidden" name="email" id="email" value="<s:property value="userinfo.email"/>"/>
                	<input type="hidden" name="phone" id="phone" value="<s:property value="userinfo.phone"/>"/>
-                
+               <br />
+               	<input type="submit" class="button green" style="margin-left:100px;" value="确认提现" />
            </form>
           </ol> 
          </div> 
+         <div class="cl h6"></div><!-- 清除div浮动样式 -->
          <div class="right_2_text"> 
           <h4>温馨提示</h4> 
           <ol> 
