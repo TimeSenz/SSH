@@ -46,7 +46,6 @@ Integer totalPage=(Integer)request.getAttribute("totalPage");
                <!--左侧Tab-->
                 <div class="tab_btn_con fleft">
                     <a href="/ZhongCaiBao/about/about.action?flag=com" class="rrd-dimgray btn">公司简介</a>
-                    <a href="/ZhongCaiBao/about/about.action?flag=bossWord" class="rrd-dimgray btn">董事长寄语</a>
                     <a href="/ZhongCaiBao/newsinfo/findByHuan.action?currentPage=1" class="rrd-dimgray btn">还款公告</a>
                     <a href="/ZhongCaiBao/newsinfo/findByGong.action?currentPage=1" class="rrd-dimgray btn">新闻公告</a>
                     <a href="/ZhongCaiBao/newsinfo/findByDong.action?currentPage=1" class="rrd-dimgray btn cur">最新动态</a>

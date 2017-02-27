@@ -27,7 +27,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                <!--左侧Tab-->
                 <div class="tab_btn_con fleft">
                     <a href="/ZhongCaiBao/about/about.action?flag=com" class="rrd-dimgray btn">公司简介</a>
-                    <a href="/ZhongCaiBao/about/bossWord.jsp" class="rrd-dimgray btn">董事长寄语</a>
                     <s:if test="newsinfo.type.equals(\"公\")">
                     <a href="/ZhongCaiBao/newsinfo/findByGong.action?currentPage=1" class="btn cur">新闻公告</a>   
                     <a href="/ZhongCaiBao/newsinfo/findByDong.action?currentPage=1" class="btn">最新动态</a>  
