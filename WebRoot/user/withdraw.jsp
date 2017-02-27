@@ -295,7 +295,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                	<input type="hidden" name="email" id="email" value="<s:property value="userinfo.email"/>"/>
                	<input type="hidden" name="phone" id="phone" value="<s:property value="userinfo.phone"/>"/>
                <br />
-               	<input type="submit" class="button green" style="margin-left:100px;" value="确认提现" />
+               	<input type="submit" class="button blue" style="margin-left:100px;" value="确认提现" />
            </form>
           </ol> 
          </div> 
