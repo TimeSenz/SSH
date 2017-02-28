@@ -50,7 +50,6 @@
                             <ul class="ui-nav-dropdown ui-nav-dropdown-invest" style="display:none;">
                                 <li class="ui-nav-dropdown-angle"><span> </span></li>
                                 <li class="ui-nav-dropdown-item"><a href="/ZhongCaiBao/about/about.action?flag=com" class="rrd-dimgray">公司简介</a></li>
-                                <li class="ui-nav-dropdown-item"><a href="/ZhongCaiBao/about/about.action?flag=bossWord" class="rrd-dimgray">董事长寄语</a></li>
                                 <li class="ui-nav-dropdown-item"><a href="/ZhongCaiBao/newsinfo/findByHuan.action?currentPage=1" class="rrd-dimgray">还款公告</a></li>
                                 <li class="ui-nav-dropdown-item"><a href="/ZhongCaiBao/newsinfo/findByGong.action?currentPage=1" class="rrd-dimgray">新闻公告</a></li>
                                 <li class="ui-nav-dropdown-item"><a href="/ZhongCaiBao/newsinfo/findByDong.action?currentPage=1" class="rrd-dimgray">最新动态</a></li>

@@ -101,7 +101,6 @@
 			<result name="news">/about/news.jsp</result>
 			<result name="success">/about/group.jsp</result>
 
-			<result name="bossWord">/about/bossWord.jsp</result>
 			<result name="cooperate">/about/cooperate.jsp</result>
 			<result name="recruit">/about/recruit.jsp</result>
 		</action>

@@ -158,11 +158,6 @@ String loginflag=(String)session.getAttribute("loginflag");
                     <div class="right_nr" style="display:none;">
                     	<span>组织结构图</span><p class="line"></p>                        
                         <div class="img a1"><img src="images/about02.jpg" alt="组织结构图" /></div>
-                        <span>董事长寄语</span><p class="line"></p> 
-                        <div class="boss_words_con">
-                        <img src="images/boss.jpg" alt="董事长" />
-                        <p class="boss_words fright">十二年的风雨兼程，十二年的深耕细作，衷心感谢关注中投集团的每一个朋友。回顾往昔，我们充满了感恩，是广大新老客户多年的支持和厚爱，成就了中投集团辉煌的十二年。 我们始终坚持基金持有人的利益高于一切，所以我们把风险控制放在业务发展的首位。经过十二年的磨练，中投集团已建立起较为完善的公司治理结构，形成了科学、合理、系统的投、融、管、退四大运营体系，培养和造就了一支具有强悍战斗力的高素质金融服务队伍，并在资本运营、资产管理、理财规划等方面奠定了中投集团长期稳健发展的基石。 我们深刻体会到，作为“受人之托，忠人之事”的金融服务行业，“诚信、规范、专业”应是公司永恒的核心价值观。我们将一如既往地坚持“诚信务实、锐意进取、开拓创新、追求卓越”的经营理念，秉承“追求价值投资，提供增值服务”的投资理念，披荆斩棘、一路前行。 我们期待着您的关心、支持和帮助，“携手中投、互惠双赢”中投集团不仅是您首选的合作伙伴，更是您永远可信赖的朋友！</p>
-                        </div>
                         <div class="clear"></div>
                         <span>主营业务</span><p class="line"></p>
                         <div class="business_title">P2P理财</div>
