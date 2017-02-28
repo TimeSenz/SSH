@@ -47,11 +47,11 @@ public class AboutAction {
 			
 			return "contact";
 		}
-		/* //董事长寄语
+		 //董事长寄语
         if(flag.equals("bossWord")){
 			
 			return "bossWord";
-		}*/
+		}
 		//合作伙伴
        if(flag.equals("cooperate")){
 			
