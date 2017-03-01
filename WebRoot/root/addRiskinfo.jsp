@@ -51,17 +51,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                 <option value="1">总公司</option>
                                 <option value="0">分公司</option>
                               </select>
-
-
              </li>
           <li><p style="margin-left:30px;"><input type="submit" name="submit" class="btn" value="确认" id="reg-btn"></p></li>
         </ul>
-
          </s:form>
          </div>
         </div>
      </div>
    </div>
-
   </body>
 </html>

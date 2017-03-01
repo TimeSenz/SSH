@@ -153,20 +153,21 @@
 						<div class="mod_table_main">
 							<s:form name="f2">
 								<div class="select_zjls" style="height:80px;">
-
 									<p class="select_zjls_p1">
 										编号 :  <input id="userinfo_uid_coupon" type="text" name="userinfo_uid_coupon"      value="<%=uid%>">
 										昵称 :  <input id="userinfo_nickname_coupon" type="text" name="userinfo_nickname_coupon" value="<%=nickname%>">
 										手机号: <input id="userinfo_phone_coupon" type="text" name="userinfo_phone_coupon"   value="<%=phone%>">
 										真实姓名 : <input id="userinfo_name_coupon" type="text" name="userinfo_name_coupon"   value="<%=name%>">
+										<br /><br />
 										身份证号 : <input id="userinfo_idcard_coupon" type="text" name="userinfo_idcard_coupon" value="<%=idcard%>">
 									</p>
 									<p class="select_zjls_p2" style="display: block;margin: 0 auto;float: initial;padding-top: 38px;">
+										<br />
 										<input type="button" value="查  询" onclick="rootKfCouponSelect();">
 										<input type="button" value="重  置" onclick="chongzhi();">
 									</p>
 								</div>
-								
+								<br /><br />
 								<table>
 									<tr>
 										<th style="width:10%;">编号</th>
@@ -195,14 +196,9 @@
 										   <a href="javascript:;" onclick="rootKfCouponUpPage()">上一页</a>
 										   <a href="javascript:;" onclick="rootKfCouponDownPage()">下一页</a>
 							   		 </div>
-							   		 
-							   		 
-	
 							   		 <!--<s:if test="records_list.size!=0">-->
 							    <!--</s:if>-->
 							</s:form>
-
-
 						</div>
 					</div>
 				</div>
@@ -220,11 +216,6 @@
 	   document.getElementById('userinfo_idcard_coupon').value="";
 	   document.getElementById('userinfo_zye_coupon').value="";
    }
-   
-   
-	 
-	      
- 
 	   </script>
 </body>
 </html>
