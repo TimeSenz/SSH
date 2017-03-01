@@ -48,7 +48,6 @@ Integer currentPage=(Integer)request.getAttribute("currentPage");
       </div>
       <div class="aside_main">
          <ul>
-          
           <li><strong class="icon11"><span><a href="/ZhongCaiBao/newsinfo/findAllByDong.action?currentPage=1">新闻动态</a></span></strong></li>
           <li class="cur"><strong class="icon11"><span><a href="/ZhongCaiBao/newsinfo/findAllByGong.action?currentPage=1">新闻公告</a></span></strong></li>
           <li><strong class="icon11"><span><a href="/ZhongCaiBao/newsinfo/findAllByHuan.action?currentPage=1">还款公告</a></span></strong></li>
@@ -61,7 +60,6 @@ Integer currentPage=(Integer)request.getAttribute("currentPage");
                 <li><span><a href="/ZhongCaiBao/lcract/findAllLCR.action?currentPage=1">理财人</a></span></li>
                 <li ><span><a href="/ZhongCaiBao/jkract/findAllJKR.action?currentPage=1">借款人</a></span></li>
               </ol>
-          
         </ul>
       </div>
     </div>
@@ -208,11 +206,6 @@ Integer currentPage=(Integer)request.getAttribute("currentPage");
         
       </script>
    </s:form>
-                          
-                          
-  
-   
-                
                 </div>
             </div>
         </div>
