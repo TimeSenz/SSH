@@ -61,7 +61,7 @@
                 	$(".jine1").text("0.00");
                 	 
                 }*/
-            //æŠ¹å»å°æ•°ç‚¹ å››èˆäº”å…¥
+            //Ä¨È¥Ğ¡Êıµã ËÄÉáÎåÈë
                 var my_val1=document.getElementsByTagName("b");
                 //alert(my_val1)
       		  for(var i=0;i<my_val1.length;i++){			  
@@ -73,7 +73,7 @@
       			mark.innerHTML=RoundValueRound
       		}
       	   
-      	   //å››èˆäº”å…¥ä¿ç•™å°æ•°ç‚¹åä¸¤ä½
+      	   //ËÄÉáÎåÈë±£ÁôĞ¡ÊıµãºóÁ½Î»
       	 
       	var my_val2=document.getElementsByTagName("big");
       	
@@ -94,7 +94,7 @@
       
              
     
-//è´¦æˆ·ä¿¡æ¯æ˜¾ç¤ºæ ¼å¼é™å®š
+//ÕË»§ĞÅÏ¢ÏÔÊ¾¸ñÊ½ÏŞ¶¨
 function show_style(obj,start,num,star){
                             var str=document.getElementById(obj);
                             var str1=str.innerHTML;
@@ -105,7 +105,7 @@ function show_style(obj,start,num,star){
                                 str.innerHTML=str2.replace(/,/g,"")
                             }
                           }
-//ä¿¡æ¯è®¤è¯çŠ¶æ€é™åˆ¶   
+//ĞÅÏ¢ÈÏÖ¤×´Ì¬ÏŞÖÆ   
       function status(sta,auth,noauth){
           var obj=document.getElementById(sta);
           var obj_value=obj.innerHTML;
@@ -120,7 +120,7 @@ function show_style(obj,start,num,star){
  
         }
       
-  //ç»‘å®šé‚®ç®±    
+  //°ó¶¨ÓÊÏä    
       function email(){
     	  var email=document.getElementById("email");
     	  email_value=email.innerHTML;
@@ -134,7 +134,7 @@ function show_style(obj,start,num,star){
                 setEmail.style.display="block";
             }
       }
-//æç°å¯†ç çŠ¶æ€é™åˆ¶
+//ÌáÏÖÃÜÂë×´Ì¬ÏŞÖÆ
 function status1(sta,auth,noauth){
             var obj=document.getElementById(sta);
             var obj_value=obj.innerHTML;
@@ -146,7 +146,7 @@ function status1(sta,auth,noauth){
               auth.style.display="block"
             }            
           }
-//å››èˆäº”å…¥(æ•°æ®åŠ è½½)
+//ËÄÉáÎåÈë(Êı¾İ¼ÓÔØ)
 function FixedNumberStr(FixedValue){
     b=parseFloat(FixedValue);
     
@@ -158,7 +158,7 @@ function FixedNumberStr(FixedValue){
   }  
 
 
-//äº¤æ˜“è®°å½•json
+//½»Ò×¼ÇÂ¼json
 var xhr;
 function createXHR(){
   if(window.ActiveXObject){
@@ -195,7 +195,7 @@ function doResponse(){
      //alert(json);
      // alert("json:"+json);
     
-  //string è½¬æ¢æˆjsonæ•°ç»„
+  //string ×ª»»³ÉjsonÊı×é
   var Lists = JSON.parse(json);
  
   document.getElementById("listJson").innerHTML="";
@@ -210,8 +210,8 @@ function doResponse(){
  for(var j=0; j<user.length; j++) {
 	 //alert("fuck===="+user[j].remark);
 	 var jieyu = ""
-	 if(user[j].remark!="å·²æ”¾æ¬¾"&&user[j].type=="æç°"){
-		 jieyu = "<td style='width:100px;color:red;'>å†»ç»“ä¸­</td>"
+	 if(user[j].remark!="ÒÑ·Å¿î"&&user[j].type=="ÌáÏÖ"){
+		 jieyu = "<td style='width:100px;color:red;'>¶³½áÖĞ</td>"
 		}else{
 		 jieyu = "<td style='width:100px;'><span class='width100white'>"+FixedNumberStr(user[j].intoacc)+"</span></td>" 
 		}
@@ -244,11 +244,11 @@ function down(){
   dqy=currentPage.toString();
   // currentPage=currentPage+1;
   // document.getElementById("currentPage").value=currentPage;
-    var listlength=Math.ceil(max/10);//é¡µé¢ä¸ªæ•°
+    var listlength=Math.ceil(max/10);//Ò³Ãæ¸öÊı
     //alert(dqy); 
     
     if(dqy==listlength || dqy>listlength){
-        alert("æœ€åä¸€é¡µ");
+        alert("×îºóÒ»Ò³");
       }
     else{currentPage++;
     document.getElementById("currentPage").value=currentPage;
@@ -265,11 +265,11 @@ function down(){
 	
 	return time;
 }*/
-//æ—¶é—´æ ¼å¼åŒ–
+//Ê±¼ä¸ñÊ½»¯
 function add0(m){return m<10?'0'+m:m }
 function format(shijianchuo)
 {
-//shijianchuoæ˜¯æ•´æ•°ï¼Œå¦åˆ™è¦parseIntè½¬æ¢
+//shijianchuoÊÇÕûÊı£¬·ñÔòÒªparseInt×ª»»
 var time = new Date(shijianchuo);	
 var y = time.getFullYear();
 var m = time.getMonth()+1;
@@ -294,7 +294,7 @@ function up(){
   //currentPage=currentPage-1;
   if(currentPage <1){
     
-    alert("ç¬¬ä¸€é¡µ");
+    alert("µÚÒ»Ò³");
   }else{
     ajaxPost(currentPage);
   }
@@ -307,7 +307,7 @@ window.onload= function(){
 	   
 			}
 
-//å……å€¼åˆ¤æ–­
+//³äÖµÅĞ¶Ï
 function chongzhi(){
 		  var CZmoney=document.getElementById("CZmoney").value;
 		  var icoudID=document.getElementById("icoudID").value;
@@ -315,10 +315,10 @@ function chongzhi(){
 		  var email=document.getElementById("email").value;
 		  var phone=document.getElementById("phone").value;
 		  if(icoudID=="" || name=="" || email=="" || phone==""){
-			document.getElementById("span1").innerHTML='<a href="/ZhongCaiBao/userinfo/personCenter.action" style="color:red;padding-left:0">è¯·å®Œå–„ä¸ªäººè´¦æˆ·ä¿¡æ¯</a>';
+			document.getElementById("span1").innerHTML='<a href="/ZhongCaiBao/userinfo/personCenter.action" style="color:red;padding-left:0">ÇëÍêÉÆ¸öÈËÕË»§ĞÅÏ¢</a>';
 			return false;
 		}else if(CZmoney==""){
-			document.getElementById("span1").innerHTML='<font color="red">è¯·è¾“å…¥å……å€¼é‡‘é¢</font>';
+			document.getElementById("span1").innerHTML='<font color="red">ÇëÊäÈë³äÖµ½ğ¶î</font>';
 			return false;
 	  };
 	

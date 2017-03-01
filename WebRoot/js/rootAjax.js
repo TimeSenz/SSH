@@ -50,7 +50,6 @@ function createXHR() {
 	}
 	//查询方法
 	function rootZjlsSelect() {
-		//alert("进来");
 		document.getElementById("listJson").innerHTML = "";
 		document.getElementById("currentPage").value = 1;
 		//初始化页面为第一页
@@ -59,19 +58,11 @@ function createXHR() {
 		var jsPeople= document.getElementById("xgr").value;
 		var startTime= document.getElementById("Timer1").value;
 		var endTime= document.getElementById("Timer2").value;
-//		alert(jsType);
-//		alert(jsPeople);
-//		alert(startTime);
-//		alert(endTime);
-		
-		//alert("1");
 		rootZjlsAjaxPost(currentPage,jsType,jsPeople,startTime,endTime);
 	}
 	// 分页--下一页
 	function rootZjlsDownPage() {
-		//document.getElementById("listJson").innerHTML = "";
 		var currentPage = parseInt(document.getElementById("currentPage").value);
-		//alert(currentPage);
 		var max = document.getElementById("maxPage").value;
 		var dqy = document.getElementById("currentPage").value;
 		var leng = document.getElementById("userLength").value;
@@ -81,11 +72,7 @@ function createXHR() {
 		var startTime= document.getElementById("Timer1").value;
 		var endTime= document.getElementById("Timer2").value;
 		dqy = currentPage.toString();
-		// currentPage=currentPage+1;
-		// document.getElementById("currentPage").value=currentPage;
 		var listlength = Math.ceil(max / 10);// 页面个数
-		// alert(dqy);
-		//alert(dqy);
 		if (dqy == listlength || dqy > listlength) {
 			alert("最后一页");
 		} else {
@@ -96,7 +83,6 @@ function createXHR() {
 	}
 	// 分页--上一页
 	function rootZjlsUpPage() {
-		//document.getElementById("listJson").innerHTML ="";
 		var currentPage = parseInt(document.getElementById("currentPage").value);
 		var jsType = document.getElementById("lx").value;
 		var jsPeople= document.getElementById("xgr").value;
@@ -104,91 +90,63 @@ function createXHR() {
 		var endTime= document.getElementById("Timer2").value;
 		
 		if (currentPage > 1) {
-			// currentPage--;
 			currentPage = currentPage - 1;
 			document.getElementById("currentPage").value = currentPage.toString();
 		}
-		// alert(currentPage);
-		// currentPage=currentPage-1;
 		if (currentPage < 1) {
 			alert("第一页");
 		} else {
 			rootZjlsAjaxPost(currentPage,jsType,jsPeople,startTime,endTime);
 		}
-	
 	}
 	
 	function rootZjlsAjaxPost(currentPageAjax,jsType,jsPeople,startTime,endTime) {
-		//alert("ajaxPost()");
 		var currentPage = document.getElementById("currentPage").value;
 		var pageSize = document.getElementById("pageSize").value;
-		//alert("currentPageAjax:" + currentPageAjax);
 	
 		createXHR();
 		var action = "/ZhongCaiBao/rootact/personRecordsAjax.action"
 		xhr.open("post", action, true);
 		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		//alert(currentPageAjax);
 		xhr.send("currentPageAjax=" + currentPageAjax + "&pageSizeAjax=" + 10 
 					+ "&zjlsLx=" + jsType
 					+ "&zjlsXgr=" + jsPeople
 					+ "&zjlsQsrq=" + startTime
 					+ "&zjlsJsrq=" + endTime
 				);
-		//alert("ajaxAction:" + action);
 		xhr.onreadystatechange = rootZjlsDoResponse;
-	
 	}
 	function rootZjlsDoResponse() {
-		// alert("doResponse()");
 		if (xhr.readyState == 4 && xhr.status == 200) {
 			var json = xhr.responseText;
-			// alert(json);
-			 //alert("json:"+json);
-	
 			// string 转换成json数组
 			var Lists = JSON.parse(json);
-	
 			document.getElementById("listJson").innerHTML = "";
 			var user = Lists[0];
 			var size = Lists[1].size;
-			//alert(size);
 			var length = user.length;
-			//alert(length);
 			document.getElementById("maxPage").value = size;
 			document.getElementById("userLength").value = size;
-			// var size=lists[1].size;
-			// alert(size);
-//			alert(user[0].re.type);
-//			alert(user[1].re.type);
 			for (var j = 0; j < user.length; j++) {
-				
-				// var jieyu = ""
-				// if (user[j].remark != "已放款" && user[j].type == "提现") {
-				// jieyu = "<td style='width:100px;color:red;'>冻结中</td>"
-				// } else {
-				// jieyu = "<td style='width:100px;'>" + user[j].intoacc + "</td>"
-				// }
-				//alert("fuck====" + user[j].re.recid);
-				var insertText = "<tr>" + "<td style='width:45px;'>"
+				var insertText = "<tr>" + "<td style='width:80px;'>"
 						+ user[j].re.recid
 						+ "</td>"
 						+ "<td style='width:100px'><span class='span' style='width:100px'>"
 						+ user[j].re.people
 						+ "</span></td>"
-						+ "<td style='width:200px'><span class='span' style='width:200px'>"
+						+ "<td style='width:150px'><span class='span' style='width:100px'>"
 						+ user[j].re.intoinfo
 						+ "</td>"
-						+ "<td style='width:200px'><span class='span' style='width:200px'>"
+						+ "<td style='width:150px'><span class='span' style='width:130px'>"
 						+ user[j].re.outtoinfo
 						+ "</td>"
-						+ "<td style='width:130px'><span class='span' style='width:130px'>"
+						+ "<td style='width:130px'><span class='span' style='width:180px'>"
 						+ user[j].re.type
 						+ "</td>"
-						+ "<td style='width:130px'><span class='span' style='width:130px'>"
+						+ "<td style='width:130px'><span class='span' style='width:100px'>"
 						+ user[j].re.money
 						+ "</td>"
-						+ "<td style='width:130px'><span class='span' style='width:130px'>"
+						+ "<td style='width:130px'><span class='span' style='width:100px'>"
 						+ user[j].re.paytype
 						+ "</td>"
 						+ "<td style='width:180px'><span class='span' style='width:180px'>"
@@ -199,10 +157,7 @@ function createXHR() {
 						+ user[j].re.remark
 						+ "</td>"
 						+ "</tr>";
-				//alert(insertText);
 				document.getElementById("listJson").innerHTML = document.getElementById("listJson").innerHTML + insertText;
-				// alert(formats)
-	
 			}
 		}
 	

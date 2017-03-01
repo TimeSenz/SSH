@@ -160,9 +160,9 @@ Integer totalPage=(Integer)request.getAttribute("totalPage");
 			<tr>
 				<th style="width:45px;">ID</th> 
 				<th style="width: 100px;"> 相关人</th>
-				<th style="width: 200px;">转入账户</th>
-				<th style="width: 200px;"> 转出账户</th> 
-				<th style="width: 130px;">类型</th> 
+				<th style="width: 150px;">转入账户</th>
+				<th style="width: 150px;"> 转出账户</th> 
+				<th style="width: 180px;">类型</th> 
 				<th style="width: 130px;">金额</th> 
 				<th style="width: 130px;">支付方式</th> 
 				<th style="width: 180px;">时间</th>
@@ -200,6 +200,7 @@ Integer totalPage=(Integer)request.getAttribute("totalPage");
   </div>
 </div>
 <script src="js/houtai.js"></script>
+<script src="js/rootAjax.js"></script>
 	<script>
    function chongzhi(){
 	   document.getElementById('lx').value="全部";

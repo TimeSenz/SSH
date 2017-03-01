@@ -192,8 +192,6 @@ function doResponse(){
    //alert("doResponse()");
    if(xhr.readyState==4&&xhr.status==200){
      var json=xhr.responseText;
-     //alert(json);
-     // alert("json:"+json);
     
   //string 转换成json数组
   var Lists = JSON.parse(json);
@@ -204,11 +202,8 @@ function doResponse(){
   var length = user.length;
   document.getElementById("maxPage").value = size;
   document.getElementById("userLength").value = size;
-  //var size=lists[1].size;
-  //alert(size);
   
  for(var j=0; j<user.length; j++) {
-	 //alert("fuck===="+user[j].remark);
 	 var jieyu = ""
 	 if(user[j].remark!="已放款"&&user[j].type=="提现"){
 		 jieyu = "<td style='width:100px;color:red;'>冻结中</td>"
@@ -224,9 +219,6 @@ function doResponse(){
    						"<td style='width:100px;'><span class='width100white'title='"+user[j].remark+"'>"+user[j].remark+"</span></td>" +
    					"</tr>";
    document.getElementById("listJson").innerHTML = document.getElementById("listJson").innerHTML+insertText;
-   //alert(formats)
-
-
  }
  
       

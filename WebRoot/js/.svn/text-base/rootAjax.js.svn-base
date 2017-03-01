@@ -1,11 +1,11 @@
 /********************************************************************************************************
-************************************å…¬å…±æ–¹æ³•****************************************************************
+************************************¹«¹²·½·¨****************************************************************
 ********************************************************************************************************/
-//æ—¶é—´æ ¼å¼åŒ–
+//Ê±¼ä¸ñÊ½»¯
 function add0(m){return m<10?'0'+m:m }
 function format(shijianchuo)
 {
-//shijianchuoæ˜¯æ•´æ•°ï¼Œå¦åˆ™è¦parseIntè½¬æ¢
+//shijianchuoÊÇÕûÊı£¬·ñÔòÒªparseInt×ª»»
 var time = new Date(shijianchuo);	
 var y = time.getFullYear();
 var m = time.getMonth()+1;
@@ -15,7 +15,7 @@ var mm = time.getMinutes();
 var s = time.getSeconds();
 return y+'-'+add0(m)+'-'+add0(d)+' '+add0(h)+':'+add0(mm)+':'+add0(s);
 }
-//åˆ›å»ºå‡½æ•°
+//´´½¨º¯Êı
 var xhr;
 function createXHR() {
 	if (window.ActiveXObject) {
@@ -28,32 +28,32 @@ function createXHR() {
 }
 
 /**************************************************************************************************
-********************************************************è´¾å‡¡**************************************** 
-*********************************************åå°--è´¢åŠ¡--èµ„é‡‘æµæ°´--åˆ†é¡µ--Ajax***************************
+********************************************************¼Ö·²**************************************** 
+*********************************************ºóÌ¨--²ÆÎñ--×Ê½ğÁ÷Ë®--·ÖÒ³--Ajax***************************
 ***************************************************************************************************/
-	//åˆå§‹åŒ–æ–¹æ³•
+	//³õÊ¼»¯·½·¨
 	function rootZjlsInit() {
-		//alert("è¿›æ¥");
+		//alert("½øÀ´");
 		document.getElementById("listJson").innerHTML = "";
 		document.getElementById("currentPage").value = 1;
-		//åˆå§‹åŒ–é¡µé¢ä¸ºç¬¬ä¸€é¡µ
+		//³õÊ¼»¯Ò³ÃæÎªµÚÒ»Ò³
 		var currentPage = 1;
-		//åˆå§‹åŒ–é¡µé¢æ¡ä»¶æŸ¥è¯¢--ç±»å‹
-		var jsType = "å…¨éƒ¨";
-		//åˆå§‹åŒ–é¡µé¢æ¡ä»¶æŸ¥è¯¢--ç›¸å…³äºº
+		//³õÊ¼»¯Ò³ÃæÌõ¼ş²éÑ¯--ÀàĞÍ
+		var jsType = "È«²¿";
+		//³õÊ¼»¯Ò³ÃæÌõ¼ş²éÑ¯--Ïà¹ØÈË
 		var jsPeople = "";
-		//åˆå§‹åŒ–é¡µé¢æ¡ä»¶æŸ¥è¯¢--èµ·å§‹æ—¥æœŸ
+		//³õÊ¼»¯Ò³ÃæÌõ¼ş²éÑ¯--ÆğÊ¼ÈÕÆÚ
 		var startTime = "";
-		//åˆå§‹åŒ–é¡µé¢æ¡ä»¶æŸ¥è¯¢--ç»“æŸæ—¥æœŸ
+		//³õÊ¼»¯Ò³ÃæÌõ¼ş²éÑ¯--½áÊøÈÕÆÚ
 		var endTime = "";
 		rootZjlsAjaxPost(currentPage,jsType,jsPeople,startTime,endTime);
 	}
-	//æŸ¥è¯¢æ–¹æ³•
+	//²éÑ¯·½·¨
 	function rootZjlsSelect() {
-		//alert("è¿›æ¥");
+		//alert("½øÀ´");
 		document.getElementById("listJson").innerHTML = "";
 		document.getElementById("currentPage").value = 1;
-		//åˆå§‹åŒ–é¡µé¢ä¸ºç¬¬ä¸€é¡µ
+		//³õÊ¼»¯Ò³ÃæÎªµÚÒ»Ò³
 		var currentPage = 1;
 		var jsType = document.getElementById("lx").value;
 		var jsPeople= document.getElementById("xgr").value;
@@ -67,7 +67,7 @@ function createXHR() {
 		//alert("1");
 		rootZjlsAjaxPost(currentPage,jsType,jsPeople,startTime,endTime);
 	}
-	// åˆ†é¡µ--ä¸‹ä¸€é¡µ
+	// ·ÖÒ³--ÏÂÒ»Ò³
 	function rootZjlsDownPage() {
 		//document.getElementById("listJson").innerHTML = "";
 		var currentPage = parseInt(document.getElementById("currentPage").value);
@@ -83,18 +83,18 @@ function createXHR() {
 		dqy = currentPage.toString();
 		// currentPage=currentPage+1;
 		// document.getElementById("currentPage").value=currentPage;
-		var listlength = Math.ceil(max / 10);// é¡µé¢ä¸ªæ•°
+		var listlength = Math.ceil(max / 10);// Ò³Ãæ¸öÊı
 		// alert(dqy);
 		//alert(dqy);
 		if (dqy == listlength || dqy > listlength) {
-			alert("æœ€åä¸€é¡µ");
+			alert("×îºóÒ»Ò³");
 		} else {
 			currentPage++;
 			document.getElementById("currentPage").value = currentPage;
 			rootZjlsAjaxPost(currentPage,jsType,jsPeople,startTime,endTime);
 		}
 	}
-	// åˆ†é¡µ--ä¸Šä¸€é¡µ
+	// ·ÖÒ³--ÉÏÒ»Ò³
 	function rootZjlsUpPage() {
 		//document.getElementById("listJson").innerHTML ="";
 		var currentPage = parseInt(document.getElementById("currentPage").value);
@@ -111,7 +111,7 @@ function createXHR() {
 		// alert(currentPage);
 		// currentPage=currentPage-1;
 		if (currentPage < 1) {
-			alert("ç¬¬ä¸€é¡µ");
+			alert("µÚÒ»Ò³");
 		} else {
 			rootZjlsAjaxPost(currentPage,jsType,jsPeople,startTime,endTime);
 		}
@@ -146,7 +146,7 @@ function createXHR() {
 			// alert(json);
 			 //alert("json:"+json);
 	
-			// string è½¬æ¢æˆjsonæ•°ç»„
+			// string ×ª»»³ÉjsonÊı×é
 			var Lists = JSON.parse(json);
 	
 			document.getElementById("listJson").innerHTML = "";
@@ -164,8 +164,8 @@ function createXHR() {
 			for (var j = 0; j < user.length; j++) {
 				
 				// var jieyu = ""
-				// if (user[j].remark != "å·²æ”¾æ¬¾" && user[j].type == "æç°") {
-				// jieyu = "<td style='width:100px;color:red;'>å†»ç»“ä¸­</td>"
+				// if (user[j].remark != "ÒÑ·Å¿î" && user[j].type == "ÌáÏÖ") {
+				// jieyu = "<td style='width:100px;color:red;'>¶³½áÖĞ</td>"
 				// } else {
 				// jieyu = "<td style='width:100px;'>" + user[j].intoacc + "</td>"
 				// }
@@ -176,10 +176,10 @@ function createXHR() {
 						+ "<td style='width:100px'><span class='span' style='width:100px'>"
 						+ user[j].re.people
 						+ "</span></td>"
-						+ "<td style='width:200px'><span class='span' style='width:200px'>"
+						+ "<td style='width:150px'><span class='span' style='width:150px'>"
 						+ user[j].re.intoinfo
 						+ "</td>"
-						+ "<td style='width:200px'><span class='span' style='width:200px'>"
+						+ "<td style='width:150px'><span class='span' style='width:150px'>"
 						+ user[j].re.outtoinfo
 						+ "</td>"
 						+ "<td style='width:130px'><span class='span' style='width:130px'>"
@@ -208,9 +208,9 @@ function createXHR() {
 	
 	}
 /********************************************************************************************************
-****************************************å¯¼å‡ºExcel*********************************************************
+****************************************µ¼³öExcel*********************************************************
 ********************************************************************************************************/
-	//å¯¼å‡º
+	//µ¼³ö
 	function rootZjlsExl() {
 		document.getElementById("listJson").innerHTML = "";
 		document.getElementById("currentPage").value = 1;
@@ -219,7 +219,7 @@ function createXHR() {
 		var jsPeople= document.getElementById("xgr").value;
 		var startTime= document.getElementById("Timer1").value;
 		var endTime= document.getElementById("Timer2").value;
-		//2çŠ¶æ€ä¸ºä¸‹è½½	å…¶ä»–çŠ¶æ€éƒ½ä¸ºæŸ¥è¯¢æ´»ç€åŠ è½½
+		//2×´Ì¬ÎªÏÂÔØ	ÆäËû×´Ì¬¶¼Îª²éÑ¯»î×Å¼ÓÔØ
 		var status = 2;
 		rootZjlsExlPost(currentPage,jsType,jsPeople,startTime,endTime,status);
 	}
@@ -245,26 +245,26 @@ function createXHR() {
 		xhr.onreadystatechange = rootZjlsDoResponse;
 	}
 /**************************************************************************************************
-********************************************************è´¾å‡¡**************************************** 
-*********************************************åå°--å®¢æœ--ä¼˜æƒ åˆ¸--åˆ†é¡µ--Ajax*****************************
+********************************************************¼Ö·²**************************************** 
+*********************************************ºóÌ¨--¿Í·ş--ÓÅ»İÈ¯--·ÖÒ³--Ajax*****************************
 ***************************************************************************************************/
-	//åˆå§‹åŒ–æ–¹æ³•
+	//³õÊ¼»¯·½·¨
 	function rootKfCouponInit() {
 		document.getElementById("kfCouponListJson").innerHTML = "";
 		document.getElementById("kfCouponCurrentPage").value = 1;
-		//åˆå§‹åŒ–é¡µé¢ä¸ºç¬¬ä¸€é¡µ
+		//³õÊ¼»¯Ò³ÃæÎªµÚÒ»Ò³
 		var kfCouponCurrentPage = 1;
-		//åˆå§‹åŒ–é¡µé¢æ¡ä»¶æŸ¥è¯¢--ç¼–å·
+		//³õÊ¼»¯Ò³ÃæÌõ¼ş²éÑ¯--±àºÅ
 		var userinfo_uid_coupon = "";
-		//åˆå§‹åŒ–é¡µé¢æ¡ä»¶æŸ¥è¯¢--æ˜µç§°
+		//³õÊ¼»¯Ò³ÃæÌõ¼ş²éÑ¯--êÇ³Æ
 		var userinfo_nickname_coupon = "";
-		//åˆå§‹åŒ–é¡µé¢æ¡ä»¶æŸ¥è¯¢--æ‰‹æœºå·
+		//³õÊ¼»¯Ò³ÃæÌõ¼ş²éÑ¯--ÊÖ»úºÅ
 		var userinfo_phone_coupon = "";
-		//åˆå§‹åŒ–é¡µé¢æ¡ä»¶æŸ¥è¯¢--çœŸå®å§“å
+		//³õÊ¼»¯Ò³ÃæÌõ¼ş²éÑ¯--ÕæÊµĞÕÃû
 		var userinfo_name_coupon = "";
-		//åˆå§‹åŒ–é¡µé¢æ¡ä»¶æŸ¥è¯¢--èº«ä»½è¯å·
+		//³õÊ¼»¯Ò³ÃæÌõ¼ş²éÑ¯--Éí·İÖ¤ºÅ
 		var userinfo_idcard_coupon = "";
-		//åˆå§‹åŒ–é¡µé¢æ¡ä»¶æŸ¥è¯¢--æ€»èµ„äº§
+		//³õÊ¼»¯Ò³ÃæÌõ¼ş²éÑ¯--×Ü×Ê²ú
 		var userinfo_zye_coupon = "";
 		rootKfCouponAjaxPost(kfCouponCurrentPage,
 				userinfo_uid_coupon,
@@ -310,7 +310,7 @@ function createXHR() {
 			var json = xhr.responseText;
 			// alert(json);
 			 //alert("json:"+json);
-			// string è½¬æ¢æˆjsonæ•°ç»„
+			// string ×ª»»³ÉjsonÊı×é
 			var Lists = JSON.parse(json);
 			document.getElementById("kfCouponListJson").innerHTML = "";
 			var user = Lists[0];
@@ -330,7 +330,7 @@ function createXHR() {
 						+ "<td style='width:15%'><span class='span' style='width:130px'>"
 						+ user[j].nickname
 						+ "</span></td>"
-						+ "<td style='width:15%'><span class='span' style='width:200px'>"
+						+ "<td style='width:15%'><span class='span' style='width:150px'>"
 						+ user[j].phone
 						+ "</td>"
 						+ "<td style='width:15%'><span class='span' style='width:130px'>"
@@ -349,12 +349,12 @@ function createXHR() {
 		}
 	}
 	
-	//æŸ¥è¯¢æ–¹æ³•
+	//²éÑ¯·½·¨
 	function rootKfCouponSelect() {
 		//alert()
 		document.getElementById("kfCouponListJson").innerHTML = "";
 		document.getElementById("kfCouponCurrentPage").value = 1;
-		//åˆå§‹åŒ–é¡µé¢ä¸ºç¬¬ä¸€é¡µ
+		//³õÊ¼»¯Ò³ÃæÎªµÚÒ»Ò³
 		var kfCouponCurrentPage = 1;
 		var userinfo_uid_coupon      = document.getElementById("userinfo_uid_coupon").value;
 		var userinfo_nickname_coupon = document.getElementById("userinfo_nickname_coupon").value;
@@ -371,7 +371,7 @@ function createXHR() {
 				userinfo_idcard_coupon,
 				userinfo_zye_coupon);
 	}
-	// åˆ†é¡µ--ä¸‹ä¸€é¡µ
+	// ·ÖÒ³--ÏÂÒ»Ò³
 	function rootKfCouponDownPage() {
 		//document.getElementById("listJson").innerHTML = "";
 		var currentPage = parseInt(document.getElementById("kfCouponCurrentPage").value);
@@ -389,11 +389,11 @@ function createXHR() {
 		dqy = currentPage.toString();
 		// currentPage=currentPage+1;
 		// document.getElementById("currentPage").value=currentPage;
-		var listlength = Math.ceil(max / 10);// é¡µé¢ä¸ªæ•°
+		var listlength = Math.ceil(max / 10);// Ò³Ãæ¸öÊı
 		// alert(dqy);
 		//alert(dqy);
 		if (dqy == listlength || dqy > listlength) {
-			alert("æœ€åä¸€é¡µ");
+			alert("×îºóÒ»Ò³");
 		} else {
 			currentPage++;
 			document.getElementById("kfCouponCurrentPage").value = currentPage;
@@ -406,7 +406,7 @@ function createXHR() {
 					userinfo_zye_coupon);
 		}
 	}
-	// åˆ†é¡µ--ä¸Šä¸€é¡µ
+	// ·ÖÒ³--ÉÏÒ»Ò³
 	function rootKfCouponUpPage() {
 		//document.getElementById("listJson").innerHTML ="";
 		var currentPage = parseInt(document.getElementById("kfCouponCurrentPage").value);
@@ -426,7 +426,7 @@ function createXHR() {
 		// alert(currentPage);
 		// currentPage=currentPage-1;
 		if (currentPage < 1) {
-			alert("ç¬¬ä¸€é¡µ");
+			alert("µÚÒ»Ò³");
 		} else {
 			rootKfCouponAjaxPost(kfCouponCurrentPage,
 					userinfo_uid_coupon,
@@ -439,12 +439,12 @@ function createXHR() {
 	
 	}
 /****************************************begin***********************************************************
-***************************************å‘é€ä¼˜æƒ åˆ¸***********************************************************
+***************************************·¢ËÍÓÅ»İÈ¯***********************************************************
 ********************************************************************************************************/
-	//å¼¹çª—-å¤šé€‰äº‹ä»¶
+	//µ¯´°-¶àÑ¡ÊÂ¼ş
     function couponOnclick(){
 	  	if($("#checkboxID:checked").size()==0){
-	  		alert("è¯·é€‰æ‹©å‘é€ç”¨æˆ·")
+	  		alert("ÇëÑ¡Ôñ·¢ËÍÓÃ»§")
 	  	}else{
 	  		var userids="";
 		    var userid=document.getElementById("userID").innerHTML;
@@ -470,32 +470,32 @@ function createXHR() {
   	   var lx = document.getElementById('yhqlx').value;
   	   var je = document.getElementById('je').value;
   	   var khs=/^[0-9]*$/;
-  	   if(lx=="è¯·é€‰æ‹©ç±»å‹"){
-  		   alert("è¯·é€‰æ‹©ç±»å‹");
+  	   if(lx=="ÇëÑ¡ÔñÀàĞÍ"){
+  		   alert("ÇëÑ¡ÔñÀàĞÍ");
   		   return false;
   	   }else if(je==""){
-  		  alert("è¾“å…¥èµ é€é‡‘é¢");
+  		  alert("ÊäÈëÔùËÍ½ğ¶î");
   		  return false;
   	   }else if(!khs.exec(je)){
-  		  alert("è¯·è¾“å…¥æ­£ç¡®çš„æ•°å­—");
+  		  alert("ÇëÊäÈëÕıÈ·µÄÊı×Ö");
   		  return false;
   	   }else if(!je % 10){
-  		  alert("è¯·è¾“å…¥10çš„å€æ•°");
+  		  alert("ÇëÊäÈë10µÄ±¶Êı");
   		  return false;
   	   }else if(je==0){
-  		 alert("èµ é€é‡‘é¢å¿…é¡»å¤§äº0");
+  		 alert("ÔùËÍ½ğ¶î±ØĞë´óÓÚ0");
   		 return false;
   	   }else{
   		  rootOutCouponPost();
   	   }
      }
-    //å‘é€ä¼˜æƒ åˆ¸
+    //·¢ËÍÓÅ»İÈ¯
     function rootOutCouponPost() {
-    	//ç”¨æˆ·ç¼–å·---uid,uid,uid,uid,
+    	//ÓÃ»§±àºÅ---uid,uid,uid,uid,
     	var uid = document.getElementById("usid").value;
-    	//ä¼˜æƒ åˆ¸ç±»å‹
+    	//ÓÅ»İÈ¯ÀàĞÍ
     	var ytype = document.getElementById("yhqlx").value;
-    	//ä¼˜æƒ åˆ¸é‡‘é¢
+    	//ÓÅ»İÈ¯½ğ¶î
     	var yje = document.getElementById("je").value;
     	//alert("uid=="+uid+"ytype=="+ytype+"yje=="+yje);
 		createXHR();
@@ -513,7 +513,7 @@ function createXHR() {
     function rootOutCouponDoResponse() {
 		 //alert("doResponse()");
 		if (xhr.readyState == 4 && xhr.status == 200) {
-			alert("ä¼˜æƒ åˆ¸èµ é€æˆåŠŸ");
+			alert("ÓÅ»İÈ¯ÔùËÍ³É¹¦");
 			var model=document.getElementById('model');
 		    var opict=document.getElementById('opict');
 		    model.style.display='none';
@@ -521,7 +521,7 @@ function createXHR() {
 		}
 	}
 /****************************************end*************************************************************
-***************************************å‘é€ä¼˜æƒ åˆ¸***********************************************************
+***************************************·¢ËÍÓÅ»İÈ¯***********************************************************
 ********************************************************************************************************/
 			     
 			      
