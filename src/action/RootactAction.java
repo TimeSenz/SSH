@@ -4,15 +4,11 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.sql.Date;
 import java.sql.Timestamp;
 import java.text.*;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 
 import javax.servlet.http.HttpServletResponse;
@@ -22,21 +18,12 @@ import jxl.write.biff.RowsExceededException;
 
 
 import org.apache.struts2.ServletActionContext;
-
-
-
-
-import com.opensymphony.xwork2.ActionContext;
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException;
-
 import dao.Fenye;
 import dao.Jkract;
 import dao.JkractDAO;
 import dao.LcractDAO;
 import dao.LcractmergeDAO;
 import dao.RecordsDAO;
-import dao.Userinfo;
-import service.JkractService;
 import service.RootactService;
 import util.DownXls;
 import util.JsonUtil;
