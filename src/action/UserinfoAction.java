@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import jxl.write.WriteException;
 import jxl.write.biff.RowsExceededException;
 
+import org.apache.poi.util.SystemOutLogger;
 import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -641,16 +642,10 @@ public class UserinfoAction {
 		}
 		userbank.setUserid(user.getUserid());
 		HttpServletRequest request = ServletActionContext.getRequest();
-		// System.out.println(request.getParameter("banktype"));
-		// System.out.println(userbank.getUserid());
 		userbankdao.save(userbank);
+		System.out.println("跳转判定:"+userbank.getBankname());
 		List<Userbank> u = userbankdao.findByUserid(userbank.getUserid());
 		ac.getSession().put("userbank", u);
-		// List<Userbank> acd = (List<Userbank>)ac.getSession().get("userbank");
-		// System.out.println("取到");
-		// for (int i = 0; i < acd.size(); i++) {
-		// System.out.println(acd.get(i).getBankname());
-		// }
 		return "success";
 	}
 

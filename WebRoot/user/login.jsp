@@ -88,19 +88,9 @@ var cookieName_username = "LOGIN_USER_NAME_WXM";//用户名
 <script>
 $('form').submit(function(){ 
     
-    
-    
     var mobile=$('#email').val();
     var password = $("#password").attr("value");
     var p=/^1[3-8]\d{9}$/;
-
-    if(mobile.length==0)
-    {
-      $("#tips").html("请输入正确的E-Mail地址/手机号！");
-       //document.form1.mobile.focus();
-       return false;
-    }    
-    
     if(isNaN(mobile)){
       if(!/.+@.+\.[a-zA-Z]{2,4}$/.test(mobile)){
           $("#tips").html("请输入正确的E-Mail地址/手机号！");
@@ -112,34 +102,29 @@ $('form').submit(function(){
       if(!p.test(mobile))
       {
         $("#tips").html("请输入正确的E-Mail地址/手机号！");
-        //document.form1.mobile.focus();
         return false;
       }
     }
-    
-         
-        if( $("#password").val().length < 6){
-            $("#tips").html("密码长度需6位以上");
-            return false;
-        }else{
-             $("#tips").html(" ");
-            
-        }
-
-
-        if (mobile == '' || password == '') {
-    alert("请误填写空值测试！");//为了更好的看到效果，做一个非空限制
-  } else {
-    delCookie(cookieName_username);//删除用户名Cookie
-    delCookie(cookieName_password);//删除密码Cookie
-    var tsaveuser = GetObj('cbRememberId');
-    if (tsaveuser.checked) {
-      //根据个人需求选择性保存
-      SetCookie(cookieName_username, mobile.trim(), 7);//保存用户名到Cookie中  保存7天
-    }
-   
-  } 
-  })
+    if( $("#password").val().length < 6){
+        $("#tips").html("密码长度需6位以上");
+        return false;
+    }else{
+         $("#tips").html(" ");
+        
+	 }
+	if (mobile == '' || password == '') {
+	  alert("请误填写空值测试！");//为了更好的看到效果，做一个非空限制
+	} else {
+	  delCookie(cookieName_username);//删除用户名Cookie
+	  delCookie(cookieName_password);//删除密码Cookie
+	  var tsaveuser = GetObj('cbRememberId');
+	  if (tsaveuser.checked) {
+	    //根据个人需求选择性保存
+	    SetCookie(cookieName_username, mobile.trim(), 7);//保存用户名到Cookie中  保存7天
+	  }
+	 
+	} 
+})
     var handlerPopup = function (captchaObj) {
         $("#popup-submit").click(function () {
         	
