@@ -1,7 +1,7 @@
 <%@ page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@page import="dao.Userbank"%>
 <%@page import="com.opensymphony.xwork2.ActionContext"%>
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <%@ page import="dao.Userinfo" %>
 
@@ -12,14 +12,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!doctype html>
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html" charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>提现</title>
-    <link type="text/css" rel="stylesheet" href="../css/fund.css" /> 
+  <title>提现</title>
+  <link type="text/css" rel="stylesheet" href="../css/fund.css" /> 
   <link type="text/css" rel="stylesheet" href="../css/common.css" /> 
   <link rel="Shortcut Icon" href="../images/zcb-icon.ico">
   <!-- 按钮样式start -->
   <link type="text/css" rel="stylesheet" href="../css/button_style.css" />
+  <link href="../css/bs.css" rel="stylesheet">
+  <link href="../css/index1.css" rel="stylesheet">
   <!-- 按钮样式end -->
   <script src="../js/jquery-1.6.4.min.js"></script> 
   <script src="../js/fund.js"></script>
@@ -40,12 +42,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			height: 6px;
 		 }
   </style>
-<!--[if IE 6]>
-<script src="js/png.js" type="text/javascript"></script>
-<script type="text/javascript">
-   EvPNG.fix('img,.top-container-left a,.icons a,.ui-nav-dropdown span'); 
-</script>
-<![endif]-->
   </head>
   
   <body  onload="bankStr();">
@@ -54,40 +50,111 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <a class="close">          
         </a>
     <h3>添加银行卡</h3>
-    <form action="/ZhongCaiBao/userinfo/addUserBank.action"  onSubmit="return AddUserBank();">
+    <form action="/ZhongCaiBao/userinfo/addUserBank.action" method="post"  onSubmit="return AddUserBank();">
 		<input type="hidden" name="banktype" id="banktype" value=""/>
-      <div class="inputs">
-      <div class="ui-form-item">
+        <div class="ui-form-item">
         <label class="ui-label"><span class="ui-form-required">*</span>选择银行</label>
-        <select id="userbank.bankname" style="width:197px;" name="userbank.bankname">
-          <option value="请选择">请选择</option>
-          <option value="中国工商银行">中国工商银行</option>
-          <option value="中国农业银行">中国农业银行</option>
-          <option value="招商银行">招商银行</option>
-          <option value="中国银行">中国银行</option>
-          <option value="中国建设银行">中国建设银行</option>
-          <option value="广发银行">广发银行</option>
-          <option value="上海银行">上海银行</option>
-          <option value="交通银行">交通银行</option>
-          <option value="中国邮政储蓄银行">中国邮政储蓄银行</option>
-          <option value="浦发银行">浦发银行</option>
-          <option value="中国民生银行">中国民生银行</option>
-          <option value="中国广大银行">中国广大银行</option>
-          <option value="中信银行">中信银行</option>
-          <option value="深圳平安银行">深圳平安银行</option>
-          <option value="华夏银行">华夏银行</option>
-          <option value="北京银行">北京银行</option>
-       </select>
+        <div class="position-rel" style="width: 185px">
+			<div class="position-rel">
+				<input type="text" id="chose_input" name="userbank.bankname"   class="form-control" placeholder="--储蓄卡--"/>
+				<div class="bank_xljt"><img class="jt_xz" width="20" src="../images/jtx.png" alt=""/></div>
+				<div id="chose_bank" class="bank_xljt1"></div>
+			</div>
+			<div class="bank_xl" style="display: none">
+				<ul>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中国工商银行">
+							<img src="../images/img4.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中国农业银行">
+							<img src="../images/img5.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="招商银行">
+							<img src="../images/img6.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中国银行">
+							<img src="../images/img7.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中国建设银行">
+							<img src="../images/img8.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="广发银行">
+							<img src="../images/img9.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="上海银行">
+							<img src="../images/img10.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="交通银行">
+							<img src="../images/img11.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中国邮政储蓄银行">
+							<img src="../images/img12.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="浦发银行">
+							<img src="../images/img13.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中国民生银行">
+							<img src="../images/img14.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中国广大银行">
+							<img src="../images/img15.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中信银行">
+							<img src="../images/img16.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="深圳平安银行">
+							<img src="../images/img17.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="华夏银行">
+							<img src="../images/img22.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="北京银行">
+							<img src="../images/img25.jpg" width="150" alt=""/>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
        <sapn id="bankOption"></sapn>
       </div>
       <div class="ui-form-item">
         <label class="ui-label"><span class="ui-form-required">*</span>银行卡号</label>
-        <input class="ui-input" type="text" name="userbank.banknumbr" id="userbank.banknumbr" data-is="isBankCard"  onkeyup="formatBankNo(this)" style="margin-right:0;">
+        <input class="form-control" style="width: 185px;" type="text" name="userbank.banknumbr" id="userbank.banknumbr" data-is="isBankCard"  onkeyup="formatBankNo(this)" style="margin-right:0;">
         <sapn id="banknumbr"></sapn>
       </div>
       <div class="ui-form-item">
         <label class="ui-label"><span class="ui-form-required">*</span>确认卡号</label>
-        <input class="ui-input" type="text" name="banknumbrtoo" id="banknumbrtoo" data-is="isBankCard" onpaste="return false"  onkeyup="formatBankNo(this)" style="margin-right:0;">
+        <input class="form-control" style="width: 185px;" type="text" name="banknumbrtoo" id="banknumbrtoo" data-is="isBankCard" onpaste="return false"  onkeyup="formatBankNo(this)" style="margin-right:0;">
         <sapn id="Newbanknumbr"></sapn>
       </div>  
       <div class="bts"><input type="submit" class="ui-button ui-button-mid ui-button-green" onclick="asd('添加')" value="新 增"><input type="reset" id="close" class="ui-button ui-button-mid ui-button-gray" value="取 消"></div> 
@@ -113,36 +180,108 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <h3>修改银行卡</h3>
     <form action="/ZhongCaiBao/userinfo/updataUserBank.action" onSubmit="return selUserBank();">
 		<input type="hidden" name="banktype" id="" value=""/>
-      <div class="inputs">
       <div class="ui-form-item">
         <label class="ui-label"><span class="ui-form-required">*</span>选择银行</label>
-        <select id="kname" style="width:197px;" name="kname"  >
-          <option value="请选择">请选择</option>
-          <option value="中国工商银行">中国工商银行</option>
-          <option value="中国农业银行">中国农业银行</option>
-          <option value="招商银行">招商银行</option>
-          <option value="中国银行">中国银行</option>
-          <option value="中国建设银行">中国建设银行</option>
-          <option value="广发银行">广发银行</option>
-          <option value="上海银行">上海银行</option>
-          <option value="交通银行">交通银行</option>
-          <option value="中国邮政储蓄银行">中国邮政储蓄银行</option>
-          <option value="浦发银行">浦发银行</option>
-          <option value="中国民生银行">中国民生银行</option>
-          <option value="中国广大银行">中国广大银行</option>
-          <option value="中信银行">中信银行</option>
-          <option value="深圳平安银行">深圳平安银行</option>
-          <option value="华夏银行">华夏银行</option>
-          <option value="北京银行">北京银行</option>
-       </select>
+        <div class="position-rel" style="width: 185px">
+			<div class="position-rel">
+				<input type="text" id="chose_input" name="userbank.bankname"   class="form-control" placeholder="--储蓄卡--"/>
+				<div class="bank_xljt"><img class="jt_xz" width="20" src="../images/jtx.png" alt=""/></div>
+				<div id="chose_bank" class="bank_xljt1"></div>
+			</div>
+			<div class="bank_xl" style="display: none">
+				<ul>
+
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中国工商银行">
+							<img src="../images/img4.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中国农业银行">
+							<img src="../images/img5.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="招商银行">
+							<img src="../images/img6.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中国银行">
+							<img src="../images/img7.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中国建设银行">
+							<img src="../images/img8.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="广发银行">
+							<img src="../images/img9.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="上海银行">
+							<img src="../images/img10.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="交通银行">
+							<img src="../images/img11.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中国邮政储蓄银行">
+							<img src="../images/img12.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="浦发银行">
+							<img src="../images/img13.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中国民生银行">
+							<img src="../images/img14.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中国广大银行">
+							<img src="../images/img15.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="中信银行">
+							<img src="../images/img16.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="深圳平安银行">
+							<img src="../images/img17.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="华夏银行">
+							<img src="../images/img22.jpg" width="150" alt=""/>
+						</a>
+					</li>
+					<li class="hotBank-list">
+						<a href="javascript:" class="hotBank-list-ico "  title="北京银行">
+							<img src="../images/img25.jpg" width="150" alt=""/>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
        <span id="khOption"></span>
       </div>
       <div class="ui-form-item">
         <label class="ui-label"><span class="ui-form-required">*</span>银行卡号</label>
-        <input  class="ui-input" type="text" name="kh" id="kh" data-is="isBankCard"  onkeyup="formatBankNo(this)">
+        <input  class="form-control" style="width: 185px;" type="text" name="kh" id="kh" data-is="isBankCard"  onkeyup="formatBankNo(this)">
         <span id="khID"></span>
-        <input readonly class="ui-input" type="hidden" name="kid" id="kid" data-is="isBankCard" value="">
-           <input type="hidden" name="userid" value="<s:property value="#session.userinfo.userid"/>" > 
+        <input readonly class="form-control" style="width: 185px;" type="hidden" name="kid" id="kid" data-is="isBankCard" value="">
+        <input type="hidden" name="userid" value="<s:property value="#session.userinfo.userid"/>" > 
       </div>
       <div class="bts"><input type="submit" class="ui-button ui-button-mid ui-button-green" onclick="add('添加')" value="修 改"><input type="reset" id="close" class="ui-button ui-button-mid ui-button-gray" value="取 消"></div> 
       <div class="notice">
@@ -207,9 +346,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          	 <s:if test="%{#vo.bankname!=null}">
 	           <li id="pppp" class="border" onclick="clickbankid('<s:property value="#vo.userbankid" />')">
 	           <img src="../images/img23.jpg" alt="" />
-	          
-	           	 
-	             <span class="account"> 
+	             <span class="account">
 	             <s:if test="%{#vo.bankname=='中国工商银行'}"> 
 	           		<img src="../images/img4.jpg" alt="" />
 	             </s:if>
@@ -318,6 +455,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <!--footer start-->
     <%@include file="../pub/pub_footer.jsp" %> 
 <!--footer end-->
+	<script>
+	$(function(){
+	
+	//        下拉银行卡
+	
+		$(".hotBank-list-ico").bind('click',function(){
+		   $('#chose_input').val($(this).attr('title'));
+			$('.bank_xl').hide();
+			$("#chose_bank").parent('div').find('img').addClass('jt_xz');
+		});
+		$("#chose_bank").click(function(){
+			$('.bank_xl').show();
+			$("#chose_bank").parent('div').find('img').removeClass('jt_xz');
+		});
+	//        下拉银行卡
+	
+	})
+	</script>
+	<script>
+	if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		var msViewportStyle = document.createElement('style')
+		msViewportStyle.appendChild(
+				document.createTextNode(
+						'@-ms-viewport{width:auto!important}'
+				)
+		)
+		document.querySelector('head').appendChild(msViewportStyle)
+	}
+	
+	</script>
     <script type="text/javascript">
     //预计到账日期
     var now = new Date();
