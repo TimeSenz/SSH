@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50712
 File Encoding         : 65001
 
-Date: 2017-03-03 09:37:07
+Date: 2017-03-03 14:51:48
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -54,11 +54,11 @@ INSERT INTO `bidinfo` VALUES ('14', '4127', '扩大经营', '200000', '9', '已�
 INSERT INTO `bidinfo` VALUES ('15', '4128', '资金周转', '200000', '12', '已整合', '2014-12-31 12:43:21', '13', '200000', null, null, '无', '到期还本付息', '信', '_DSC1047.JPG,_DSC1057_stitch.jpg,_DSC1125.JPG', '已加入到   精选理财计划-12-201501  精选理财计划中', '0', '食品销售囤货，资金周转', null, '蜂巢金融', '2000', null);
 INSERT INTO `bidinfo` VALUES ('16', '4129', '资金周转', '60000', '1', '还款中', '2014-12-31 12:52:41', '7', '0', '2015-01-06 12:02:05', '2015-02-06 12:02:05', '无', '到期还本付息', '信', '_DSC1047.JPG,_DSC1057_stitch.jpg,_DSC1125.JPG', '', '100', '经营鸡舍，资金周转', null, '宏图', '2000', null);
 INSERT INTO `bidinfo` VALUES ('17', '4134', '精选理财计划', '200000', '3', '未满标', '2014-12-31 13:18:24', '9', '200000', null, null, '无', '到期还本付息', '精', null, '12#', '0', null, null, null, null, null);
-INSERT INTO `bidinfo` VALUES ('18', '4135', '精选理财计划', '200000', '6', '未满标', '2014-12-31 13:19:29', '11', '200000', null, null, '无', '到期还本付息', '精', null, '13#', '0', null, null, null, null, null);
+INSERT INTO `bidinfo` VALUES ('18', '4135', '精选理财计划', '200000', '6', '还款中', '2014-12-31 13:19:29', '11', '200000', null, null, '无', '到期还本付息', '精', null, '13#', '0', null, null, null, null, null);
 INSERT INTO `bidinfo` VALUES ('19', '4136', '精选理财计划', '200000', '9', '未满标', '2014-12-31 13:20:15', '12', '200000', null, null, '无', '到期还本付息', '精', null, '14#', '0', null, null, null, null, null);
 INSERT INTO `bidinfo` VALUES ('20', '4137', '精选理财计划', '200000', '12', '未满标', '2014-12-31 13:26:34', '13', '200000', null, null, '无', '到期还本付息', '精', null, '15#', '0', null, null, null, null, null);
 INSERT INTO `bidinfo` VALUES ('21', '4141', '资金周转', '500000', '24', '未上标', '2014-12-31 13:36:46', '18', '500000', null, null, '无', '到期还本付息', '抵', '照片1.jpg,照片2.jpg,照片3.jpg', '13#', '0', '购买生产线零件，资金周转', null, '普金资本', '2000', null);
-INSERT INTO `bidinfo` VALUES ('23', '4141', '本地测试', '200000', '10', '未满标', '2015-02-09 15:22:32', '12', '200000', null, null, '无', '月返息', '租', 'car1.jpg,car1.jpg', '', '0', '', null, '蜂巢金融', '2000', null);
+INSERT INTO `bidinfo` VALUES ('23', '4141', '本地测试', '200000', '10', '还款中', '2015-02-09 15:22:32', '12', '200000', null, null, '无', '月返息', '租', 'car1.jpg,car1.jpg', '', '0', '', null, '蜂巢金融', '2000', null);
 
 -- ----------------------------
 -- Table structure for clxx
@@ -90,6 +90,9 @@ CREATE TABLE `cominfo` (
   `tgzh` double DEFAULT NULL COMMENT '托管账户',
   `fxjzh` double DEFAULT NULL COMMENT '风险金账户',
   `gszh` double DEFAULT NULL COMMENT '公司账户',
+  `versionname` varchar(255) DEFAULT NULL COMMENT '版本名s',
+  `info` varchar(255) DEFAULT NULL COMMENT '更新信息',
+  `versioncode` int(255) DEFAULT NULL COMMENT '版本号',
   `id` int(11) NOT NULL COMMENT 'id',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -97,7 +100,7 @@ CREATE TABLE `cominfo` (
 -- ----------------------------
 -- Records of cominfo
 -- ----------------------------
-INSERT INTO `cominfo` VALUES ('5030934', '5000000', '5000000', '1');
+INSERT INTO `cominfo` VALUES ('4630934', '5000000', '5000000', 'one', '最新版本', '123', '0');
 
 -- ----------------------------
 -- Table structure for cusinfo
@@ -288,10 +291,10 @@ INSERT INTO `jkract` VALUES ('9', '12', '未批准', '2017-03-02 10:23:44', '234
 INSERT INTO `jkract` VALUES ('10', '15', '未批准', '2017-03-02 10:24:46', '12312', '当前未批准');
 INSERT INTO `jkract` VALUES ('11', '18', '已确认', '2017-03-02 10:25:37', '1321', '当前已批准');
 INSERT INTO `jkract` VALUES ('12', '23', '已确认', '2017-03-02 10:25:46', '3234', '当前已批准');
-INSERT INTO `jkract` VALUES ('13', '21', '已确认', '2017-03-02 10:25:58', '232', '未批准');
-INSERT INTO `jkract` VALUES ('14', '12', '已确认', '2017-03-02 10:38:09', '23', '已批准');
+INSERT INTO `jkract` VALUES ('13', '21', '已批准', '2017-03-02 10:25:58', '232', '未批准');
+INSERT INTO `jkract` VALUES ('14', '12', '已批准', '2017-03-02 10:38:09', '23', '已批准');
 INSERT INTO `jkract` VALUES ('15', '15', '已批准', '2017-03-02 10:39:28', '23', '已批准');
-INSERT INTO `jkract` VALUES ('16', '19', '已确认', '2017-03-02 10:39:42', '234', '已批准');
+INSERT INTO `jkract` VALUES ('16', '19', '已批准', '2017-03-02 10:39:42', '234', '已批准');
 
 -- ----------------------------
 -- Table structure for lcract
@@ -352,7 +355,7 @@ CREATE TABLE `lcractmerge` (
   `stakes` char(200) CHARACTER SET utf8 DEFAULT NULL COMMENT '注',
   `value` char(200) CHARACTER SET utf8 DEFAULT NULL COMMENT '值',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=709 DEFAULT CHARSET=gbk;
+) ENGINE=InnoDB AUTO_INCREMENT=720 DEFAULT CHARSET=gbk;
 
 -- ----------------------------
 -- Records of lcractmerge
@@ -366,6 +369,17 @@ INSERT INTO `lcractmerge` VALUES ('705', '4140', null, '10', '未批准', '2015-
 INSERT INTO `lcractmerge` VALUES ('706', '4140', null, '30', '未批准', '2015-01-14 11:46:39', null, '提现', '5', '652', null, null, null);
 INSERT INTO `lcractmerge` VALUES ('707', '4253', null, '12345', '未批准', '2017-02-28 08:32:58', null, '提现', '6', '653', null, null, null);
 INSERT INTO `lcractmerge` VALUES ('708', '4125', null, '100', '未批准', '2017-02-28 09:27:07', null, '提现', '7', '654', null, null, null);
+INSERT INTO `lcractmerge` VALUES ('709', null, '18', '211000', '未批准', '2017-09-03 14:48:18', null, '息加本#200000.0#11000.0', null, null, null, null, null);
+INSERT INTO `lcractmerge` VALUES ('710', null, '23', '2000', '未批准', '2017-03-03 14:48:24', null, null, null, null, null, null, null);
+INSERT INTO `lcractmerge` VALUES ('711', null, '23', '2000', '未批准', '2017-04-03 14:48:24', null, null, null, null, null, null, null);
+INSERT INTO `lcractmerge` VALUES ('712', null, '23', '2000', '未批准', '2017-05-03 14:48:24', null, null, null, null, null, null, null);
+INSERT INTO `lcractmerge` VALUES ('713', null, '23', '2000', '未批准', '2017-06-03 14:48:24', null, null, null, null, null, null, null);
+INSERT INTO `lcractmerge` VALUES ('714', null, '23', '2000', '未批准', '2017-07-03 14:48:24', null, null, null, null, null, null, null);
+INSERT INTO `lcractmerge` VALUES ('715', null, '23', '2000', '未批准', '2017-08-03 14:48:24', null, null, null, null, null, null, null);
+INSERT INTO `lcractmerge` VALUES ('716', null, '23', '2000', '未批准', '2017-09-03 14:48:24', null, null, null, null, null, null, null);
+INSERT INTO `lcractmerge` VALUES ('717', null, '23', '2000', '未批准', '2017-10-03 14:48:24', null, null, null, null, null, null, null);
+INSERT INTO `lcractmerge` VALUES ('718', null, '23', '2000', '未批准', '2017-11-03 14:48:24', null, null, null, null, null, null, null);
+INSERT INTO `lcractmerge` VALUES ('719', null, '23', '202000', '未批准', '2017-12-03 14:48:24', null, null, null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for newsinfo
@@ -415,7 +429,7 @@ CREATE TABLE `records` (
   `intoacc` double DEFAULT NULL COMMENT '转入账户信息',
   `outacc` double DEFAULT NULL COMMENT '转出账户信息',
   PRIMARY KEY (`recid`)
-) ENGINE=InnoDB AUTO_INCREMENT=156 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=158 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of records
@@ -450,6 +464,8 @@ INSERT INTO `records` VALUES ('152', '初次优选计划送优惠券', '公司�
 INSERT INTO `records` VALUES ('153', '初次优选计划送优惠券', '公司托管账户', '公司托管账户', '5000', 'Fengpay', '2017-02-21 15:09:42', '陈美好', '123', null, null, '4390', '5000', '6299');
 INSERT INTO `records` VALUES ('154', '为账户充值', '李小龙', '', '1232', 'Fengpay', '2017-02-21 15:17:45', '李小龙', '123', null, null, '4390', '7531', '0');
 INSERT INTO `records` VALUES ('155', '为账户充值', '陈美好', '', '1234', 'Fengpay', '2017-02-28 09:26:33', '陈美好', '123', null, null, '4125', '1234.1', '0');
+INSERT INTO `records` VALUES ('156', '放款到借款人账户', '精选理财计划-6-201501', '公司托管账户', '200000', 'Fengpay', '2017-03-03 14:48:18', '精选理财计划-6-201501', '当前已批准', '', '18', '4135', null, '4830934');
+INSERT INTO `records` VALUES ('157', '放款到借款人账户', '周玉海', '公司托管账户', '200000', 'Fengpay', '2017-03-03 14:48:24', '周玉海', '当前已批准', '', '23', '4141', null, '4630934');
 
 -- ----------------------------
 -- Table structure for riskinfo
