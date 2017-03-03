@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost_3306
+Source Server         : root
 Source Server Version : 50712
 Source Host           : localhost:3306
 Source Database       : zhongcaibao
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50712
 File Encoding         : 65001
 
-Date: 2017-03-01 10:01:23
+Date: 2017-03-03 09:37:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -52,12 +52,12 @@ INSERT INTO `bidinfo` VALUES ('12', '4125', '扩大经营', '200000', '3', '已�
 INSERT INTO `bidinfo` VALUES ('13', '4126', '资金周转', '200000', '6', '已整合', '2014-12-31 12:19:43', '11', '200000', null, null, '无', '到期还本付息', '信', '_DSC0743.JPG,_DSC0754.JPG,_DSC0770.JPG,_DSC0825.JPG', '已加入到   精选理财计划-6-201501  精选理财计划中', '0', '经营超市，资金周转', null, '蜂巢金融', '2000', null);
 INSERT INTO `bidinfo` VALUES ('14', '4127', '扩大经营', '200000', '9', '已整合', '2014-12-31 12:32:02', '12', '200000', null, null, '无', '到期还本付息', '信', 'DSC00461.JPG,DSC00462.JPG,DSC00463.JPG,DSC00481.JPG,DSC00484.JPG,QQ图片20140220140842.jpg', '已加入到   精选理财计划-9-201501  精选理财计划中', '0', '经营医院，扩大经营', null, '蜂巢金融', '2000', null);
 INSERT INTO `bidinfo` VALUES ('15', '4128', '资金周转', '200000', '12', '已整合', '2014-12-31 12:43:21', '13', '200000', null, null, '无', '到期还本付息', '信', '_DSC1047.JPG,_DSC1057_stitch.jpg,_DSC1125.JPG', '已加入到   精选理财计划-12-201501  精选理财计划中', '0', '食品销售囤货，资金周转', null, '蜂巢金融', '2000', null);
-INSERT INTO `bidinfo` VALUES ('16', '4129', '资金周转', '60000', '1', '还款中', '2014-12-31 12:52:41', '7', '0', '2015-01-06 12:02:05', '2015-02-06 12:02:05', '无', '到期还本付息', '信', '_DSC1047.JPG,_DSC1057_stitch.jpg,_DSC1125.JPG', '', '100', '经营鸡舍，资金周转', null, '蜂巢金融', '2000', null);
+INSERT INTO `bidinfo` VALUES ('16', '4129', '资金周转', '60000', '1', '还款中', '2014-12-31 12:52:41', '7', '0', '2015-01-06 12:02:05', '2015-02-06 12:02:05', '无', '到期还本付息', '信', '_DSC1047.JPG,_DSC1057_stitch.jpg,_DSC1125.JPG', '', '100', '经营鸡舍，资金周转', null, '宏图', '2000', null);
 INSERT INTO `bidinfo` VALUES ('17', '4134', '精选理财计划', '200000', '3', '未满标', '2014-12-31 13:18:24', '9', '200000', null, null, '无', '到期还本付息', '精', null, '12#', '0', null, null, null, null, null);
 INSERT INTO `bidinfo` VALUES ('18', '4135', '精选理财计划', '200000', '6', '未满标', '2014-12-31 13:19:29', '11', '200000', null, null, '无', '到期还本付息', '精', null, '13#', '0', null, null, null, null, null);
 INSERT INTO `bidinfo` VALUES ('19', '4136', '精选理财计划', '200000', '9', '未满标', '2014-12-31 13:20:15', '12', '200000', null, null, '无', '到期还本付息', '精', null, '14#', '0', null, null, null, null, null);
 INSERT INTO `bidinfo` VALUES ('20', '4137', '精选理财计划', '200000', '12', '未满标', '2014-12-31 13:26:34', '13', '200000', null, null, '无', '到期还本付息', '精', null, '15#', '0', null, null, null, null, null);
-INSERT INTO `bidinfo` VALUES ('21', '4141', '资金周转', '500000', '24', '未上标', '2014-12-31 13:36:46', '18', '500000', null, null, '无', '到期还本付息', '抵', '照片1.jpg,照片2.jpg,照片3.jpg', '13#', '0', '购买生产线零件，资金周转', null, '蜂巢金融', '2000', null);
+INSERT INTO `bidinfo` VALUES ('21', '4141', '资金周转', '500000', '24', '未上标', '2014-12-31 13:36:46', '18', '500000', null, null, '无', '到期还本付息', '抵', '照片1.jpg,照片2.jpg,照片3.jpg', '13#', '0', '购买生产线零件，资金周转', null, '普金资本', '2000', null);
 INSERT INTO `bidinfo` VALUES ('23', '4141', '本地测试', '200000', '10', '未满标', '2015-02-09 15:22:32', '12', '200000', null, null, '无', '月返息', '租', 'car1.jpg,car1.jpg', '', '0', '', null, '蜂巢金融', '2000', null);
 
 -- ----------------------------
@@ -97,7 +97,7 @@ CREATE TABLE `cominfo` (
 -- ----------------------------
 -- Records of cominfo
 -- ----------------------------
-INSERT INTO `cominfo` VALUES ('5030934', '5000000', '5000000', '0');
+INSERT INTO `cominfo` VALUES ('5030934', '5000000', '5000000', '1');
 
 -- ----------------------------
 -- Table structure for cusinfo
@@ -110,13 +110,14 @@ CREATE TABLE `cusinfo` (
   `name` char(200) DEFAULT NULL,
   `phone` char(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10002 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10003 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cusinfo
 -- ----------------------------
 INSERT INTO `cusinfo` VALUES ('10000', 'cusone', '123', '圆圆', '13454547896');
 INSERT INTO `cusinfo` VALUES ('10001', 'jf', 'jf', 'jf', 'jf');
+INSERT INTO `cusinfo` VALUES ('10002', 'su', 'su', 'su', '123455666');
 
 -- ----------------------------
 -- Table structure for fdxx
@@ -156,7 +157,7 @@ CREATE TABLE `finance` (
   `remark` char(50) DEFAULT NULL COMMENT '备注',
   `authority` char(50) DEFAULT NULL COMMENT '权限',
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3003 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3004 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of finance
@@ -164,6 +165,7 @@ CREATE TABLE `finance` (
 INSERT INTO `finance` VALUES ('3000', 'finance', '123', '财务', '13400000000', '财务', '0');
 INSERT INTO `finance` VALUES ('3001', 'chuna', '123', '出纳', '13500000000', '出纳', '1');
 INSERT INTO `finance` VALUES ('3002', 'jf', 'jf', '财务', '13600000000', '财务', '0');
+INSERT INTO `finance` VALUES ('3003', 'su', 'su', '客服', '12345678912', '客服', '1');
 
 -- ----------------------------
 -- Table structure for financeplan
@@ -275,13 +277,21 @@ CREATE TABLE `jkract` (
   `zcrje` double DEFAULT NULL COMMENT '转出入金额',
   `remark` char(200) DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jkract
 -- ----------------------------
 INSERT INTO `jkract` VALUES ('7', '16', '已确认', '2015-01-06 12:01:30', '60000', null);
 INSERT INTO `jkract` VALUES ('8', '21', '已确认', '2015-01-08 15:10:47', '10000', null);
+INSERT INTO `jkract` VALUES ('9', '12', '未批准', '2017-03-02 10:23:44', '23423', '当前已批准');
+INSERT INTO `jkract` VALUES ('10', '15', '未批准', '2017-03-02 10:24:46', '12312', '当前未批准');
+INSERT INTO `jkract` VALUES ('11', '18', '已确认', '2017-03-02 10:25:37', '1321', '当前已批准');
+INSERT INTO `jkract` VALUES ('12', '23', '已确认', '2017-03-02 10:25:46', '3234', '当前已批准');
+INSERT INTO `jkract` VALUES ('13', '21', '已确认', '2017-03-02 10:25:58', '232', '未批准');
+INSERT INTO `jkract` VALUES ('14', '12', '已确认', '2017-03-02 10:38:09', '23', '已批准');
+INSERT INTO `jkract` VALUES ('15', '15', '已批准', '2017-03-02 10:39:28', '23', '已批准');
+INSERT INTO `jkract` VALUES ('16', '19', '已确认', '2017-03-02 10:39:42', '234', '已批准');
 
 -- ----------------------------
 -- Table structure for lcract
@@ -298,7 +308,7 @@ CREATE TABLE `lcract` (
   `remark` char(200) DEFAULT '' COMMENT '备注',
   `userbankid` int(200) DEFAULT NULL COMMENT '银行卡ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=653 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=655 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lcract
@@ -315,11 +325,13 @@ INSERT INTO `lcract` VALUES ('642', '4140', '22', '9067.5', '已批准', '2015-0
 INSERT INTO `lcract` VALUES ('643', '4195', '22', '1007.5', '已批准', '2015-01-08 15:11:13', null, '息加本#1000.0#7.5', null);
 INSERT INTO `lcract` VALUES ('646', '4140', null, '10', '未批准', '2015-01-13 16:03:47', null, '提现', '5');
 INSERT INTO `lcract` VALUES ('647', '4140', null, '10', '未批准', '2015-01-13 16:17:35', null, '提现', '5');
-INSERT INTO `lcract` VALUES ('648', '4140', null, '20', '未批准', '2015-01-13 16:25:45', null, '提现', '5');
-INSERT INTO `lcract` VALUES ('649', '4140', null, '20', '未批准', '2015-01-13 16:27:19', null, '提现', '5');
-INSERT INTO `lcract` VALUES ('650', '4140', null, '10', '未批准', '2015-01-13 16:55:46', null, '提现', '5');
+INSERT INTO `lcract` VALUES ('648', '4140', null, '20', '已批准', '2015-01-13 16:25:45', null, '提现', '5');
+INSERT INTO `lcract` VALUES ('649', '4140', null, '20', '已批准', '2015-01-13 16:27:19', null, '提现', '5');
+INSERT INTO `lcract` VALUES ('650', '4140', null, '10', '已批准', '2015-01-13 16:55:46', null, '提现', '5');
 INSERT INTO `lcract` VALUES ('651', '4140', null, '10', '未批准', '2015-01-13 17:01:14', null, '提现', '5');
 INSERT INTO `lcract` VALUES ('652', '4140', null, '30', '未批准', '2015-01-14 11:46:39', null, '提现', '5');
+INSERT INTO `lcract` VALUES ('653', '4253', null, '12345', '未批准', '2017-02-28 08:32:58', null, '提现', null);
+INSERT INTO `lcract` VALUES ('654', '4125', null, '100', '未批准', '2017-02-28 09:27:07', null, '提现', null);
 
 -- ----------------------------
 -- Table structure for lcractmerge
@@ -340,18 +352,20 @@ CREATE TABLE `lcractmerge` (
   `stakes` char(200) CHARACTER SET utf8 DEFAULT NULL COMMENT '注',
   `value` char(200) CHARACTER SET utf8 DEFAULT NULL COMMENT '值',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=707 DEFAULT CHARSET=gbk;
+) ENGINE=InnoDB AUTO_INCREMENT=709 DEFAULT CHARSET=gbk;
 
 -- ----------------------------
 -- Records of lcractmerge
 -- ----------------------------
 INSERT INTO `lcractmerge` VALUES ('700', null, '16', '60350', '未批准', '2015-02-06 12:02:05', null, '', null, null, null, null, null);
 INSERT INTO `lcractmerge` VALUES ('701', null, '21', '10075', '已批准', '2015-01-08 15:11:13', null, null, null, null, null, null, null);
-INSERT INTO `lcractmerge` VALUES ('702', '4140', null, '20', '未批准', '2015-01-13 16:25:45', null, '提现', '5', '648', null, null, null);
-INSERT INTO `lcractmerge` VALUES ('703', '4140', null, '20', '未批准', '2015-01-13 16:27:19', null, '提现', '5', '649', null, null, null);
-INSERT INTO `lcractmerge` VALUES ('704', '4140', null, '10', '未批准', '2015-01-13 16:55:46', null, '提现', '5', '650', null, null, null);
+INSERT INTO `lcractmerge` VALUES ('702', '4140', null, '20', '已批准', '2015-01-13 16:25:45', null, '提现', '5', '648', null, null, null);
+INSERT INTO `lcractmerge` VALUES ('703', '4140', null, '20', '已批准', '2015-01-13 16:27:19', null, '提现', '5', '649', null, null, null);
+INSERT INTO `lcractmerge` VALUES ('704', '4140', null, '10', '已批准', '2015-01-13 16:55:46', null, '提现', '5', '650', null, null, null);
 INSERT INTO `lcractmerge` VALUES ('705', '4140', null, '10', '未批准', '2015-01-13 17:01:14', null, '提现', '5', '651', null, null, null);
 INSERT INTO `lcractmerge` VALUES ('706', '4140', null, '30', '未批准', '2015-01-14 11:46:39', null, '提现', '5', '652', null, null, null);
+INSERT INTO `lcractmerge` VALUES ('707', '4253', null, '12345', '未批准', '2017-02-28 08:32:58', null, '提现', '6', '653', null, null, null);
+INSERT INTO `lcractmerge` VALUES ('708', '4125', null, '100', '未批准', '2017-02-28 09:27:07', null, '提现', '7', '654', null, null, null);
 
 -- ----------------------------
 -- Table structure for newsinfo
@@ -401,37 +415,41 @@ CREATE TABLE `records` (
   `intoacc` double DEFAULT NULL COMMENT '转入账户信息',
   `outacc` double DEFAULT NULL COMMENT '转出账户信息',
   PRIMARY KEY (`recid`)
-) ENGINE=InnoDB AUTO_INCREMENT=152 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=156 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of records
 -- ----------------------------
-INSERT INTO `records` VALUES ('121', '为账户充值', '陈美好', null, '0.1', 'Fengpay', '2014-12-31 13:22:43', '陈美好', '4125-recharge-0.1', null, null, '4125', '0.1', null);
-INSERT INTO `records` VALUES ('122', '为账户充值', 'l刘全志', null, '300', 'Fengpay', '2014-12-31 16:28:35', 'l刘全志', '4149-recharge-300', null, null, '4149', '300', null);
-INSERT INTO `records` VALUES ('123', '为账户充值', '霍中兴', null, '200', 'Fengpay', '2014-12-31 16:53:16', '霍中兴', '4151-recharge-200', null, null, '4151', '200', null);
-INSERT INTO `records` VALUES ('124', '为账户充值', '刘献伟', null, '200', 'Fengpay', '2014-12-31 17:07:23', '刘献伟', '4152-recharge-200', null, null, '4152', '200', null);
-INSERT INTO `records` VALUES ('125', '为账户充值', '孟双春', null, '50', 'Fengpay', '2014-12-31 17:46:24', '孟双春', '4158-recharge-50', null, null, '4158', '50', null);
-INSERT INTO `records` VALUES ('126', '为账户充值', '朱玲', null, '200', 'Fengpay', '2015-01-01 16:03:49', '朱玲', '4160-recharge-200', null, null, '4160', '200', null);
+INSERT INTO `records` VALUES ('121', '为账户充值', '陈美好', '霍中兴', '0.1', 'Fengpay', '2014-12-31 13:22:43', '陈美好', '4125-recharge-0.1', null, null, '4125', '0.1', '0');
+INSERT INTO `records` VALUES ('122', '为账户充值', 'l刘全志', '霍中兴', '300', 'Fengpay', '2014-12-31 16:28:35', 'l刘全志', '4149-recharge-300', null, null, '4149', '300', '0');
+INSERT INTO `records` VALUES ('123', '为账户充值', '霍中兴', '霍中兴', '200', 'Fengpay', '2014-12-31 16:53:16', '霍中兴', '4151-recharge-200', null, null, '4151', '200', '0');
+INSERT INTO `records` VALUES ('124', '为账户充值', '刘献伟', '霍中兴', '200', 'Fengpay', '2014-12-31 17:07:23', '刘献伟', '4152-recharge-200', null, null, '4152', '200', '0');
+INSERT INTO `records` VALUES ('125', '为账户充值', '孟双春', '霍中兴', '50', 'Fengpay', '2014-12-31 17:46:24', '孟双春', '4158-recharge-50', null, null, '4158', '50', '0');
+INSERT INTO `records` VALUES ('126', '为账户充值', '朱玲', '霍中兴', '200', 'Fengpay', '2015-01-01 16:03:49', '朱玲', '4160-recharge-200', null, null, '4160', '200', '0');
 INSERT INTO `records` VALUES ('127', '买标', '公司托管账户', '朱玲', '200', 'Fengpay', '2015-01-01 16:13:45', '齐禹', '', '', '16', '4160', '4999379', '0');
-INSERT INTO `records` VALUES ('128', '为账户充值', '田静', null, '50', 'Fengpay', '2015-01-04 09:57:16', '田静', '4159-recharge-50', null, null, '4159', '50', null);
+INSERT INTO `records` VALUES ('128', '为账户充值', '田静', '公司托管账户', '50', 'Fengpay', '2015-01-04 09:57:16', '田静', '4159-recharge-50', null, null, '4159', '50', '0');
 INSERT INTO `records` VALUES ('131', '买标', '公司托管账户', 'l刘全志', '300', 'Fengpay', '2015-01-04 17:24:14', '齐禹', '', '', '16', '4149', '4999679', '0');
-INSERT INTO `records` VALUES ('132', '为账户充值', '肖龙', null, '100', 'Fengpay', '2015-01-04 20:41:04', '肖龙', '4187-recharge-100', null, null, '4187', '100', null);
+INSERT INTO `records` VALUES ('132', '为账户充值', '肖龙', '公司托管账户', '100', 'Fengpay', '2015-01-04 20:41:04', '肖龙', '4187-recharge-100', null, null, '4187', '100', '0');
 INSERT INTO `records` VALUES ('133', '买标', '公司托管账户', '肖龙', '100', 'Fengpay', '2015-01-04 20:50:21', '齐禹', '', '', '16', '4187', '4999779', '0');
 INSERT INTO `records` VALUES ('136', '买标', '公司托管账户', '田静', '50', 'Fengpay', '2015-01-05 14:33:51', '齐禹', '', '', '16', '4159', '4999879', '0');
-INSERT INTO `records` VALUES ('137', '为账户充值', '霍中兴', null, '56000', 'Fengpay', '2015-01-05 15:28:33', '霍中兴', '4151-recharge-56000', null, null, '4151', '56200', null);
+INSERT INTO `records` VALUES ('137', '为账户充值', '霍中兴', '公司托管账户', '56000', 'Fengpay', '2015-01-05 15:28:33', '霍中兴', '4151-recharge-56000', null, null, '4151', '56200', '0');
 INSERT INTO `records` VALUES ('138', '买标', '公司托管账户', '刘献伟', '200', 'Fengpay', '2015-01-05 15:30:38', '齐禹', '', '', '16', '4152', '5000079', '0');
 INSERT INTO `records` VALUES ('139', '买标', '公司托管账户', '霍中兴', '56200', 'Fengpay', '2015-01-05 15:36:48', '齐禹', '', '', '16', '4151', '5056279', '0');
-INSERT INTO `records` VALUES ('141', '为账户充值', '王荣秀', '', '20000', 'Fengpay', '2015-01-06 12:00:26', '王荣秀', null, null, null, '4140', '20000', null);
+INSERT INTO `records` VALUES ('141', '为账户充值', '王荣秀', '', '20000', 'Fengpay', '2015-01-06 12:00:26', '王荣秀', '23432', null, null, '4140', '20000', '0');
 INSERT INTO `records` VALUES ('142', '买标', '公司托管账户', '王荣秀', '2950', 'Fengpay', '2015-01-06 12:01:30', '齐禹', '', '', '16', '4140', '5059229', '17050');
-INSERT INTO `records` VALUES ('143', '放款到借款人账户', '齐禹', '公司托管账户', '60000', 'Fengpay', '2015-01-06 12:02:05', '齐禹', null, '', '16', '4129', null, '5059229');
+INSERT INTO `records` VALUES ('143', '放款到借款人账户', '齐禹', '公司托管账户', '60000', 'Fengpay', '2015-01-06 12:02:05', '齐禹', '234', '', '16', '4129', null, '5059229');
 INSERT INTO `records` VALUES ('144', '买标', '公司托管账户', '王荣秀', '9000', 'Fengpay', '2015-01-08 15:09:19', '董林浩', '', '', '22', '4140', '5068229', '7047');
-INSERT INTO `records` VALUES ('145', '为账户充值', '廖鸿博', '', '10000', 'Fengpay', '2015-01-08 15:10:28', '廖鸿博', null, null, null, '4195', '10000', null);
+INSERT INTO `records` VALUES ('145', '为账户充值', '廖鸿博', '', '10000', 'Fengpay', '2015-01-08 15:10:28', '廖鸿博', '23523', null, null, '4195', '10000', '0');
 INSERT INTO `records` VALUES ('146', '买标', '公司托管账户', '廖鸿博', '1000', 'Fengpay', '2015-01-08 15:10:47', '董林浩', '', '', '22', '4195', '5069229', '9000');
-INSERT INTO `records` VALUES ('147', '放款到借款人账户', '董林浩', '公司托管账户', '10000', 'Fengpay', '2015-01-08 15:11:13', '董林浩', null, '', '22', '4126', null, '5069229');
-INSERT INTO `records` VALUES ('148', '提现', '6222020505003232321', '公司托管账户', '10', 'Fengpay', '2015-01-14 13:47:58', '王荣秀', null, '6864.0', null, '4140', '6864', '5069219');
-INSERT INTO `records` VALUES ('149', '提现手续费', '公司账户', '公司托管账户', '3', 'Fengpay', '2015-01-14 13:47:58', '王荣秀', null, null, null, '4140', '5000003', '5069226');
-INSERT INTO `records` VALUES ('150', '为账户充值', '刘雅慧', '', '10000', 'Fengpay', '2015-02-09 11:55:06', '刘雅慧', null, null, null, '4383', '10000', null);
-INSERT INTO `records` VALUES ('151', '为账户充值', '刘雅慧', '', '10000', 'Fengpay', '2015-02-09 15:01:55', '刘雅慧', null, null, null, '4383', '20000', null);
+INSERT INTO `records` VALUES ('147', '放款到借款人账户', '董林浩', '公司托管账户', '10000', 'Fengpay', '2015-01-08 15:11:13', '董林浩', '3453423', '', '22', '4126', null, '5069229');
+INSERT INTO `records` VALUES ('148', '提现', '62221', '公司托管账户', '10', 'Fengpay', '2015-01-14 13:47:58', '王荣秀', '23432', '6864.0', null, '4140', '6864', '5069219');
+INSERT INTO `records` VALUES ('149', '提现手续费', '公司账户', '公司托管账户', '3', 'Fengpay', '2015-01-14 13:47:58', '王荣秀', '24323', null, null, '4140', '5000003', '5069226');
+INSERT INTO `records` VALUES ('150', '为账户充值', '刘雅慧', '', '10000', 'Fengpay', '2015-02-09 11:55:06', '刘雅慧', '34345', null, null, '4383', '10000', '0');
+INSERT INTO `records` VALUES ('151', '为账户充值', '刘雅慧', '', '10000', 'Fengpay', '2015-02-09 15:01:55', '刘雅慧', '12432', null, null, '4383', '20000', '0');
+INSERT INTO `records` VALUES ('152', '初次优选计划送优惠券', '公司托管账户', '公司托管账户', '1299', 'Fengpay', '2017-02-21 15:09:19', '董林浩', '12412', null, null, '4390', '1299', '1299');
+INSERT INTO `records` VALUES ('153', '初次优选计划送优惠券', '公司托管账户', '公司托管账户', '5000', 'Fengpay', '2017-02-21 15:09:42', '陈美好', '123', null, null, '4390', '5000', '6299');
+INSERT INTO `records` VALUES ('154', '为账户充值', '李小龙', '', '1232', 'Fengpay', '2017-02-21 15:17:45', '李小龙', '123', null, null, '4390', '7531', '0');
+INSERT INTO `records` VALUES ('155', '为账户充值', '陈美好', '', '1234', 'Fengpay', '2017-02-28 09:26:33', '陈美好', '123', null, null, '4125', '1234.1', '0');
 
 -- ----------------------------
 -- Table structure for riskinfo
@@ -468,13 +486,14 @@ CREATE TABLE `rootinfo` (
   `name` char(50) DEFAULT NULL COMMENT '姓名',
   `phone` char(50) DEFAULT NULL COMMENT '电话',
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of rootinfo
 -- ----------------------------
 INSERT INTO `rootinfo` VALUES ('1', 'root', 'root', '窦强', '18515163461');
-INSERT INTO `rootinfo` VALUES ('2', 'jf', 'jf', 'jf', 'jf');
+INSERT INTO `rootinfo` VALUES ('2', 'jf', 'jf', 'jf', '12345678912');
+INSERT INTO `rootinfo` VALUES ('3', 'su', 'su', 'su', '12312131321');
 
 -- ----------------------------
 -- Table structure for smstemplate
@@ -542,7 +561,7 @@ CREATE TABLE `userbank` (
   `remark` char(200) CHARACTER SET utf8 DEFAULT NULL COMMENT '备注',
   `remain` char(200) CHARACTER SET utf8 DEFAULT NULL COMMENT '保留字段',
   PRIMARY KEY (`userbankid`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=gbk;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=gbk;
 
 -- ----------------------------
 -- Records of userbank
@@ -552,6 +571,8 @@ INSERT INTO `userbank` VALUES ('2', '4116', '中国建设银行', '6217000010003
 INSERT INTO `userbank` VALUES ('3', '4274', '华夏银行', '6220881260000756270', null, null);
 INSERT INTO `userbank` VALUES ('4', '4297', '中国农业银行', '123456789123456789', null, null);
 INSERT INTO `userbank` VALUES ('5', '4140', '中国农业银行', '6222020505003232321', null, null);
+INSERT INTO `userbank` VALUES ('6', '4253', 'ä¸­å½åä¸é¶è¡', '1234567891234567891', null, null);
+INSERT INTO `userbank` VALUES ('7', '4125', 'æåé¶è¡', '1234567891234567891', null, null);
 
 -- ----------------------------
 -- Table structure for userid
@@ -623,12 +644,12 @@ CREATE TABLE `userinfo` (
   `choice_ave` double DEFAULT NULL COMMENT '精选平均收益',
   `choice_promoney` double DEFAULT NULL COMMENT '精选收益金额',
   PRIMARY KEY (`userid`)
-) ENGINE=InnoDB AUTO_INCREMENT=4390 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4391 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of userinfo
 -- ----------------------------
-INSERT INTO `userinfo` VALUES ('4125', '陈女士', '13011111111', null, '陈美好', '510821197409107629', null, '本科', '四川大学', '已婚', '北京', '媒体广告', '20-66人', '法人', '100000', null, '1995', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0.1', '0', '0', '0.1', null, null, null, 'AA', 'cipe8888', null, '123456', '0', '0', '39', null, '1', null, '0', null, '0');
+INSERT INTO `userinfo` VALUES ('4125', '陈女士', '13125383725', null, '陈美好', '510821197409107629', 'wmf_bubuyuan@qq.com', '本科', '四川大学', '已婚', '北京', '媒体广告', '20-66人', '法人', '100000', null, '1995', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1131.1', '0', '0', '1131.1', null, null, null, 'AA', '123456', null, '123456,,,', '0', '0', '39', null, '1', null, '0', null, '0');
 INSERT INTO `userinfo` VALUES ('4126', '董先生', '13022222222', null, '董林浩', '410105197102011698', null, '本科', '河北大学', '已婚', '北京', '零售', '20-66人', '总经理', '30000', null, '1990', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '0', null, null, null, 'AA', 'cipe8888', null, '123456', '0', '0', '43', null, '1', null, '0', null, '0');
 INSERT INTO `userinfo` VALUES ('4127', '高先生', '13033333333', null, '高璞', '370402196906261035', null, '本科', '辽宁大学', '已婚', '北京', '医疗', '20-66人', '负责人', '50000', null, '1985', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '0', null, null, null, 'AA', 'cipe8888', null, '123456', '0', '0', '45', null, '1', null, '0', null, '0');
 INSERT INTO `userinfo` VALUES ('4128', '历先生', '13044444444', null, '历昌祥', '22062219740612151x', null, '本科', '河北大学', '已婚', '北京', '批发', '20-66人', '总经理', '100000', null, '1998', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '0', null, null, null, 'AA', 'cipe8888', null, '123456', '0', '0', '40', null, '1', null, '0', null, '0');
@@ -831,3 +852,4 @@ INSERT INTO `userinfo` VALUES ('4386', '狼女', '15001063938', null, '', '', ''
 INSERT INTO `userinfo` VALUES ('4387', '张玲', '15110212289', null, '', '', '', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, '0', '0', '0', '0', null, null, null, '', 'nzl19890914', null, '123456', '0', '0', null, null, '0', null, '0', null, '0');
 INSERT INTO `userinfo` VALUES ('4388', 'wjp', '15110297515', null, null, null, '', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, '0', '0', '0', '0', null, null, null, '', 'pengye416614', null, '123456', '0', '0', null, null, '0', null, '0', null, '0');
 INSERT INTO `userinfo` VALUES ('4389', '贾凡测试', '13055555551', null, '贾凡', '110103199308080336', '', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, '0', '0', '0', '0', null, null, null, '', '123123', null, '123456', '0', '0', null, null, '0', null, '0', null, '0');
+INSERT INTO `userinfo` VALUES ('4390', 'bruse', '15770720341', null, '李小龙', '360730199702010617', '123@qq.com', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, '7531', '0', '0', '7531', null, null, null, '', '123123', null, '123123', '0', '0', null, null, '1', null, '0', null, '0');
