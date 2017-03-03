@@ -1,3 +1,4 @@
+#Wed Jul 15 13:28:36 CST 2015
 eclipse.preferences.version=1
 encoding//WebRoot/css/new_guidelines.css=UTF-8
 encoding//WebRoot/root/cusinfoFindAll.jsp=UTF-8
@@ -30,4 +31,4 @@ encoding//src/util/Paging.java=GBK
 encoding//src/util/PayUtil.java=GBK
 encoding//src/util/RandomNumUtil.java=GBK
 encoding//src/util/SignatureUtil.java=GBK
-encoding/<project>=UTF-8
+encoding/<project>=GBK

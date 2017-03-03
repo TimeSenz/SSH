@@ -20,8 +20,9 @@ public class EncodingFilter implements Filter {
     public void destroy() {
         this.encoding = null;
         this.filterconfig = null;
+        // TODO Auto-generated method stub
     }
-   
+
     public void doFilter(ServletRequest request, ServletResponse response,
             FilterChain chain) throws IOException, ServletException {
         if (ignore || (request.getCharacterEncoding() == null)) {
@@ -33,6 +34,7 @@ public class EncodingFilter implements Filter {
         response.setContentType("text ml;charset=" + encoding);
         chain.doFilter(request, response);
     }
+
     private String getEncoding() {
         return this.encoding;
     }

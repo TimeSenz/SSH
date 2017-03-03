@@ -1,9 +1,16 @@
 package action;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.commons.httpclient.HttpException;
 import org.apache.struts2.ServletActionContext;
+
+import util.PayUtil;
+
 public class AboutAction {
 	
 	public String jump() throws HttpException, IOException{
