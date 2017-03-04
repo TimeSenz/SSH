@@ -151,7 +151,7 @@ Integer currentPage=(Integer)request.getAttribute("currentPage");
        
                          
 
-                           <tr><td> <input type="button" value="发送" name="aa" onclick="checkvalue();findAllSms();" class="title4"></td></tr>
+                           <tr><td colspan="6" align="center"> <input type="button" value="发送" name="aa" onclick="checkvalue();findAllSms();" class="title4"></td></tr>
 
                              
                            
