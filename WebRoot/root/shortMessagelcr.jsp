@@ -143,9 +143,9 @@ Integer currentPage=(Integer)request.getAttribute("currentPage");
                            <td><input type="checkbox" name="phone" id="checkBox" value="<s:property value="#vo.u.phone"/>" /></td>
                            
                            </tr>
-                           
                            </s:iterator>
-                           <tr><td> <input type="button" value="发送" name="aa" onclick="checkvalue();findAllSms();" class="title4"></td></tr>
+                           
+                           <tr><td colspan="6" align="center"> <input type="button" value="发送" name="aa" onclick="checkvalue();findAllSms();" class="title4"></td></tr>
                              
                            
                            </table>
