@@ -305,24 +305,17 @@ public class RootactService {
 	//改变Lcract状态
 	//测试lcractmerge
 	public void changeLcract(Integer id,String flag){
-		//Lcract lcract=lcractdao.findById(id);	
 		//测试lcractmerge
          Lcractmerge mer=lcractmergedao.findById(id);
 		 Lcract lcract=lcractdao.findById(Integer.parseInt(mer.getParameter()));
 		Userinfo userinfo=userinfodao.findById(lcract.getLcrid());		
         if(flag.endsWith("2")){
-//        	if(lcract.getBidid()!=null){
-//        		Bidinfo bidinfo=bidinfodao.findById(lcract.getBidid());
-//            	lcract.setState("已确认");
-//    			lcractdao.update(lcract);			
-//    			//System.out.println("++++++++++++++++++++++++++++++++++++==改变状态已发生"+lcract.getState());
-//    			insertRecords(lcract, bidinfo, userinfo);
-//    			System.out.println("插入流水");
-//    			
-//    			
-//    			
-//        	}
-//        	
+        	if(lcract.getBidid()!=null){
+        		Bidinfo bidinfo=bidinfodao.findById(lcract.getBidid());
+            	lcract.setState("已确认");
+    			lcractdao.update(lcract);			
+    			insertRecords(lcract, bidinfo, userinfo);
+        	}
         	if(lcract.getRemark()!=null&&lcract.getRemark().equals("提现")){
         		lcract.setState("已确认");
         		lcractdao.update(lcract);
@@ -345,12 +338,6 @@ public class RootactService {
 			
 		}
 	}
-	
-	
-	
-	
-	
-	
 	
 	// 获取tempdata ,bidinfo.repaytype
 	public void insertLcract(Tempdata tempdata,Bidinfo bidinfo){
@@ -497,81 +484,72 @@ public class RootactService {
 			return insertRepayPlan(bidinfo.getNumber(),bidinfodao.findById(id));
 		}
 		//生成还款计划2
-		     public List insertRepayPlan(Double totalmoney,Bidinfo bidinfo) throws ParseException{
-		    	List planlist=new ArrayList();
-		    	DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-				format.setLenient(false);
-				String otime=lcractdao.tTime(bidinfo.getId());
-				Timestamp ttime = new Timestamp(format.parse(otime).getTime());
-				
-				if(ttime!=null){
-				
-				
-		 		//Calendar cal = Calendar.getInstance();
-		 		//cal.setTime(ttime);
-		 		//cal.add(Calendar.MONTH, bidinfo.getDeadline());
-		 		//bidinfo.setStart(ttime);
-		 	   // bidinfo.setEnd(new Timestamp(cal.getTime().getTime()));
-		 		if(bidinfo.getRepaytype().equals("月返息")){
-		 			double money =totalmoney*bidinfo.getProfit()/12/100;
-		 			for(int i=0;i<bidinfo.getDeadline();i++){
-		 				repayPlan repayplan=new repayPlan();
-		 				repayplan.setBidid(bidinfo.getId());  
-		 				BigDecimal b = new BigDecimal(money);
-		 			    double f = b.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();
-		 				repayplan.setMoney(f);
-		 				Calendar tempcal=Calendar.getInstance();
-		 				tempcal.setTime(ttime);
-		 				tempcal.add(Calendar.MONTH, i);
-		 				repayplan.setTime(new Timestamp(tempcal.getTime().getTime()));
-		 				if(i==bidinfo.getDeadline()-1){
+	     public List insertRepayPlan(Double totalmoney,Bidinfo bidinfo) throws ParseException{
+	    	List planlist=new ArrayList();
+	    	DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+			format.setLenient(false);
+			String otime=lcractdao.tTime(bidinfo.getId());
+			Timestamp ttime = new Timestamp(format.parse(otime).getTime());
+			if(ttime!=null){
+	 		Calendar cal = Calendar.getInstance();
+	 		cal.setTime(ttime);
+	 		cal.add(Calendar.MONTH, bidinfo.getDeadline());
+	 		bidinfo.setStart(ttime);
+	 	    bidinfo.setEnd(new Timestamp(cal.getTime().getTime()));
+	 		if(bidinfo.getRepaytype().equals("月返息")){
+	 			double money =totalmoney*bidinfo.getProfit()/12/100;
+	 			for(int i=0;i<bidinfo.getDeadline();i++){
+	 				repayPlan repayplan=new repayPlan();
+	 				repayplan.setBidid(bidinfo.getId());  
+	 				BigDecimal b = new BigDecimal(money);
+	 			    double f = b.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();
+	 				repayplan.setMoney(f);
+	 				Calendar tempcal=Calendar.getInstance();
+	 				tempcal.setTime(ttime);
+	 				tempcal.add(Calendar.MONTH, i);
+	 				repayplan.setTime(new Timestamp(tempcal.getTime().getTime()));
+	 				if(i==bidinfo.getDeadline()-1){
 		 				BigDecimal b1 = new BigDecimal(money+totalmoney);
 		 			    double f1 = b1.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();
 		 				repayplan.setMoney(f1);
-		 				}
-		 				String daotime=lcractdao.firstTime(bidinfo.getId());
-		 				Timestamp firsttime = new Timestamp(format.parse(daotime).getTime());
-		 				if(firsttime==null){
-		 					repayplan.setState("已偿还");
-		 				}else{
-		 				
+	 				}
+	 				String daotime=lcractdao.firstTime(bidinfo.getId());
+	 				Timestamp firsttime = new Timestamp(format.parse(daotime).getTime());
+	 				if(firsttime==null){
+	 					repayplan.setState("已偿还");
+	 				}else{
 		 				if(repayplan.getTime().compareTo(firsttime)==-1){
 		 					repayplan.setState("已偿还");
 		 				}else{
 		 					repayplan.setState("未偿还");
 		 				}
-		 				
-		 				
-		 				}
-		 				
-		 				planlist.add(repayplan);
-		 			}
-		 		}else if(bidinfo.getRepaytype().equals("等额本息")){
-		 		}else if(bidinfo.getRepaytype().equals("到期还本付息")){
-		 			
-		 			    double money =totalmoney*bidinfo.getProfit()/12/100*bidinfo.getDeadline();
-		 			    int i=bidinfo.getDeadline();
-		 			    repayPlan repayplan=new repayPlan();
-		 			    repayplan.setBidid(bidinfo.getId());
-		 			    BigDecimal b = new BigDecimal(money);
-		 			    double f = b.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();
-		 				repayplan.setMoney(f);
-		 				Calendar tempcal=Calendar.getInstance();
-		 				tempcal.setTime(ttime);
-		 				tempcal.add(Calendar.MONTH, i);
-		 				repayplan.setTime(new Timestamp(tempcal.getTime().getTime()));
-		 				repayplan.setMoney(money+totalmoney);
-		 				planlist.add(repayplan);
-		 		}
-		 		
-		 			 return planlist;
-		 			 
-		 			 
-				}else{
-					return planlist=null;
-				}
-		 	
-		     }
+	 				}
+	 				
+	 				planlist.add(repayplan);
+	 			}
+	 		}else if(bidinfo.getRepaytype().equals("等额本息")){
+	 			
+	 		}else if(bidinfo.getRepaytype().equals("到期还本付息")){
+	 			    double money =totalmoney*bidinfo.getProfit()/12/100*bidinfo.getDeadline();
+	 			    int i=bidinfo.getDeadline();
+	 			    repayPlan repayplan=new repayPlan();
+	 			    repayplan.setBidid(bidinfo.getId());
+	 			    BigDecimal b = new BigDecimal(money);
+	 			    double f = b.setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();
+	 				repayplan.setMoney(f);
+	 				Calendar tempcal=Calendar.getInstance();
+	 				tempcal.setTime(ttime);
+	 				tempcal.add(Calendar.MONTH, i);
+	 				repayplan.setTime(new Timestamp(tempcal.getTime().getTime()));
+	 				repayplan.setMoney(money+totalmoney);
+	 				planlist.add(repayplan);
+	 		}
+	 			 return planlist;
+			}else{
+				return planlist=null;
+			}
+	 	
+	     }
 	
 	
 	
@@ -655,7 +633,7 @@ public class RootactService {
 		userinfodao.update(userinfo);
 		
 	}
-//	//计算加权平均收益
+	//计算加权平均收益
 //	public void calculateProfit(String flag,Userinfo userinfo){
 //		if(flag.equals("精")){
 //			 Map map=SplitList(tempdataservice.findByLcrid(user.getUserid()));
@@ -666,7 +644,7 @@ public class RootactService {
 //					}
 //				}
 //			}
-//			
+//		
 //		}else{
 //			
 //			
