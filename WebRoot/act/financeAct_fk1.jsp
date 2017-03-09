@@ -126,16 +126,16 @@ Integer currentPage=(Integer)request.getAttribute("currentPage");
     <td><s:property value="#vo.payment"/> </td> 
    <td><s:date name="#vo.time" format="yyyy-MM-dd HH:mm:ss" /></td> 
     <td><s:property value="#vo.remark"/> </td> 
-   <td><s:property value="#vo.state"/></td> 
+   <td>待审</td> 
    
-     <s:if test="#session.finance.authority==1"> 
+     <%-- <s:if test="#session.finance.authority==1"> --%> 
     <td  style="width:150px;"> <a href="rootact/changeLcract.action?finance=1&flag=2&id=${vo.id}" class="a5d6">批准</a>
         <a href="rootact/changeLcract.action?flag=0&id=${vo.id}" class="a5d6">不批准</a>
    </td>
-   </s:if>
+   <%-- </s:if>
     <s:else>
   <td></td>
-  </s:else>
+  </s:else> --%>
     <!--   <td> <a href="rootact/changeLcract.action?flag=2&id=${vo.id}">确认</a>
         <a href="rootact/changeLcract.action?flag=0&id=${vo.id}">取消</a>
    </td>

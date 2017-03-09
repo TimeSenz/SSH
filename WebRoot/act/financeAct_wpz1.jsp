@@ -211,7 +211,7 @@
 												<th>时间</th>
 												<th>备注</th>
 												<th>状态</th>
-												<th>操作</th>
+												<!-- <th>操作</th> -->
 											</tr>
 											<s:if test="lcr_not_list.size==0">
 												<tr>
@@ -245,7 +245,7 @@
 																value="#vo.remark" /></a></td>
 																
 													<td><s:property value="#vo.state" /></td>
-													<s:if test="#session.finance.authority==0">
+													<%-- <s:if test="#session.finance.authority==0">
 													<s:if  test="#vo.bidid==null"><td style="width: 150px;"> <a href="lcract/changeLcractState.action?flag=0&id=${vo.id}" class="a5d6">批准</a></s:if>
 													<s:else>
 														<td style="width: 150px;"><a class="a5d6"   href="javascript:AuditingShow1(<s:property value="#vo.id" />,<s:property value="#vo.bidid" />,'<s:date name="#vo.time" format="yyyy-MM-dd HH:mm:ss" />','<s:property value="#vo.state" />','1')" >批准</a> 
@@ -258,7 +258,7 @@
 													
 													<s:else>
 														<td></td>
-													</s:else>
+													</s:else> --%>
 													<!-- <td><s:a href="bidinfo/findById.action?id=%{#vo.id}">开始出借</s:a></td> -->
 
 												</tr>
